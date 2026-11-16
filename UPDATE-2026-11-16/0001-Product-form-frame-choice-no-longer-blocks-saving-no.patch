@@ -1,0 +1,67 @@
+From 111239c1a43e20b4772ca80e5647831c13eb258a Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Mon, 16 Nov 2026 19:20:36 +0000
+Subject: [PATCH] Product form: frame choice no longer blocks saving (not
+ required; blank treated as site setting)
+
+Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_01MRvpWmAc3KFzoaYrni1esC
+---
+ .../Resources/Products/ProductResource.php    |  5 +++--
+ tests/Feature/CatalogAdminTest.php            | 20 +++++++++++++++++++
+ 2 files changed, 23 insertions(+), 2 deletions(-)
+
+diff --git a/app/Filament/Resources/Products/ProductResource.php b/app/Filament/Resources/Products/ProductResource.php
+index 4efd7f9..cd8eb52 100644
+--- a/app/Filament/Resources/Products/ProductResource.php
++++ b/app/Filament/Resources/Products/ProductResource.php
+@@ -269,12 +269,13 @@ public static function form(Schema $schema): Schema
+                             MediaPicker::document('spec_sheet_id', __('admin.fields.spec_sheet')),
+                         ]),
+                         Section::make(__('frames.admin.product_mode'))->columns(2)->schema([
+-                            \Filament\Forms\Components\Select::make('frame_mode')->label(__('frames.admin.product_mode'))->live()->native(false)->default('inherit')->required()
++                            \Filament\Forms\Components\Select::make('frame_mode')->label(__('frames.admin.product_mode'))->live()->native(false)->default('inherit')->selectablePlaceholder(false)
++                                ->dehydrateStateUsing(fn ($state): string => in_array($state, ['frame', 'none'], true) ? $state : 'inherit')
+                                 ->options(['inherit' => __('frames.admin.inherit'), 'frame' => __('frames.admin.frame'), 'none' => __('frames.admin.none')]),
+                             \Filament\Forms\Components\Select::make('frame_id')->label(__('frames.admin.product_frame'))->native(false)
+                                 ->options(fn () => \App\Models\ProductFrame::query()->where('is_active', true)->orderBy('display_order')->pluck('name', 'id'))
+                                 ->visible(fn (\Filament\Schemas\Components\Utilities\Get $get): bool => $get('frame_mode') === 'frame')
+-                                ->required(fn (\Filament\Schemas\Components\Utilities\Get $get): bool => $get('frame_mode') === 'frame'),
++                                ->dehydrateStateUsing(fn ($state, \Filament\Schemas\Components\Utilities\Get $get) => $get('frame_mode') === 'frame' ? $state : null),
+                         ]),
+                     ]),
+ 
+diff --git a/tests/Feature/CatalogAdminTest.php b/tests/Feature/CatalogAdminTest.php
+index 9113d35..e728ea4 100644
+--- a/tests/Feature/CatalogAdminTest.php
++++ b/tests/Feature/CatalogAdminTest.php
+@@ -68,6 +68,26 @@ public function the_edit_form_opens_with_the_existing_varieties_forms_and_pairs_
+             ->assertFormSet(['matrix_varieties' => [$this->v['manzanilla']], 'matrix_forms' => [$this->f['whole']], 'matrix_cells' => [$this->v['manzanilla'].':'.$this->f['whole']]]);
+     }
+ 
++    #[Test]
++    public function a_product_can_be_saved_with_each_frame_choice_and_old_rows_without_a_value_still_save(): void
++    {
++        $p = $this->product();
++        \Illuminate\Support\Facades\DB::table('products')->where('id', $p->id)->update(['frame_mode' => '']);
++        $frame = \App\Models\ProductFrame::query()->firstOrFail();
++
++        Livewire::test(EditProduct::class, ['record' => $p->getRouteKey()])
++            ->fillForm(['display_order' => 7])->call('save')->assertHasNoFormErrors();
++        $this->assertSame('inherit', $p->fresh()->frame_mode);
++
++        Livewire::test(EditProduct::class, ['record' => $p->getRouteKey()])
++            ->fillForm(['frame_mode' => 'frame', 'frame_id' => $frame->id])->call('save')->assertHasNoFormErrors();
++        $this->assertSame([$frame->id, 'frame'], [$p->fresh()->frame_id, $p->fresh()->frame_mode]);
++
++        Livewire::test(EditProduct::class, ['record' => $p->getRouteKey()])
++            ->fillForm(['frame_mode' => 'none'])->call('save')->assertHasNoFormErrors();
++        $this->assertSame('none', $p->fresh()->frame_mode);
++    }
++
+     #[Test]
+     public function selecting_several_varieties_and_forms_and_ticking_pairs_creates_exactly_those_products_and_persists(): void
+     {
+-- 
+2.43.0
+
