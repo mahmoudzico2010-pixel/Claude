@@ -27,3 +27,7 @@ Nothing new fails in the full suite after this release.
 ## Rehearsal script hardening (re-verified after your review)
 Verified by running it: positive SQLite run = REHEARSAL PASSED (13 checks, both paths; log `rehearsal-sqlite.log`). Refusals, each exit 1 and never printing PASSED: MySQL name without "rehearsal/disposable"; missing `REHEARSAL_CONFIRM_DB`; target equal to the `.env` database; MySQL unreachable (refuses before any wipe/migrate); non-empty target (1 table found). Injected faults (`REHEARSAL_SELFTEST=count|repeat|rollback`) each make the script FAIL: product count 58, repeat import changed data, rollback left a value different from the original.
 **MySQL 5.7 is still NOT RUN.**
+
+## Bundled photographs (new)
+PASS: CatalogImport59Test::the_release_bundles_all_124_photographs… — the folder holds exactly 124 WebP files; classification gives 41 confirmed / 83 queued; `catalog:import-59 --apply` with NO `--photos` argument creates 59 products, 124 media records, 83 pending reviews and 12 primary images, and a second run adds no duplicate media; `--no-photos` works. Checksums of the bundled files equal the supplied ZIP (sha256 of the sorted list identical).
+PASS: scripts/rehearse-install-paths.sh sqlite with the bundled photos and no PHOTOS variable — REHEARSAL PASSED, 13 checks, both paths (`rehearsal-sqlite.log`). MySQL 5.7: NOT RUN.

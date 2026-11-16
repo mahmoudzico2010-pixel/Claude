@@ -1,5 +1,5 @@
 == target check
-  target: {"connection":"sqlite","driver":"sqlite","database":"\/tmp\/wadi-rehearsal-79eQ.sqlite","host":"","tables":1,"env":"testing"}
+  target: {"connection":"sqlite","driver":"sqlite","database":"\/tmp\/wadi-rehearsal-cDf3.sqlite","host":"","tables":1,"env":"testing"}
 
 ================ PATH B: neither phase installed ================
 == path B: dry run must write nothing
