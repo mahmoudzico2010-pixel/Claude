@@ -1,0 +1,68 @@
+================ PATH B: neither phase installed ================
+
+### php artisan migrate --force
+
+   INFO  Running migrations.  
+
+  2026_11_17_000100_catalog_import_keys_and_media_review ........ 11.45ms DONE
+  2026_11_18_000100_catalog_phase2 ............................. 101.49ms DONE
+  2026_11_19_000100_product_image_provenance ..................... 3.23ms DONE
+
+
+### php artisan catalogue:hierarchy
+created 0, names filled 0, products moved 0
+REVIEW  kalamata-style-olives: Kalamata-style olives: natural black or another type? Confirm the subcategory.
+REVIEW  jalapeno-peppers-sliced: Jalapeño peppers: green or red pepper subcategory? Confirm.
+REVIEW  cherry-peppers: Cherry peppers: red pepper? Confirm (colour not recorded).
+REVIEW  guindilla-peppers: Guindilla peppers: green pepper? Confirm.
+REVIEW  pickled-cucumbers: Pickled cucumbers: Gherkins or Cucumber? They are separate subcategories — confirm.
+Header image missing (brand panel shown until one is chosen): table-olives, green-olives, natural-black-olives, black-oxidized-olives, peppers, green-peppers, yellow-peppers, red-pepper, pickled-products, gherkins, onion, cucumber, mixed-pickles, mixes-paste, hareesa, vega-olive, olive-oil, extra-virgin-olive-oil
+
+### php artisan catalog:import-59 --photos=../zip124
+DRY RUN (nothing written): {"products_created":55,"products_reconciled":4,"translations_filled":2926,"translations_kept":24,"varieties_created":3,"forms_created":1,"media_created":124,"media_reused":0,"gallery_links":41,"primary_set":12,"review_queued":83}
+
+### php artisan catalog:import-59 --apply --photos=../zip124
+APPLIED: {"products_created":55,"products_reconciled":4,"translations_filled":2926,"translations_kept":24,"varieties_created":3,"forms_created":1,"media_created":124,"media_reused":0,"gallery_links":41,"primary_set":12,"review_queued":83}
+
+### php artisan catalog:import-59 --apply --photos=../zip124
+APPLIED: {"products_created":0,"products_reconciled":59,"translations_filled":0,"translations_kept":2950,"varieties_created":0,"forms_created":0,"media_created":0,"media_reused":124,"gallery_links":0,"primary_set":0,"review_queued":0}
+products with import_key: 59 (expect 59); drafts: 55
+
+--- rollback rehearsal (engine): change colour on 2 products, then roll back
+changed 2
+restored 2 denied 0 conflicts 0
+
+================ PATH A: Phase 1 already installed ================
+APPLIED: {"products_created":55,"products_reconciled":4,"translations_filled":2926,"translations_kept":24,"varieties_created":3,"forms_created":1,"media_created":124,"media_reused":0,"gallery_links":41,"primary_set":12,"review_queued":83}
+schema is Phase-1 shaped: imported_hashes column absent
+--- deploy this release's files, then:
+
+### php artisan catalog:import-59 --apply --photos=../zip124
+
+In CatalogImport59.php line 46:
+                                                                               
+  The database is not up to date (product_translations.imported_hashes is mis  
+  sing). Run `php artisan migrate --force` first, then the import.             
+                                                                               
+
+(expected: refuses until migrated)
+
+### php artisan migrate --force
+
+   INFO  Running migrations.  
+
+  2026_11_18_000100_catalog_phase2 ................................... 1s DONE
+  2026_11_19_000100_product_image_provenance ..................... 3.98ms DONE
+
+
+### php artisan catalog:import-59 --apply --photos=../zip124
+APPLIED: {"products_created":0,"products_reconciled":59,"translations_filled":0,"translations_kept":2950,"varieties_created":0,"forms_created":0,"media_created":0,"media_reused":124,"gallery_links":0,"primary_set":0,"review_queued":0}
+products with import_key: 59 (expect 59); human/Phase-1 translations kept; alt rows: 410
+  2026_11_16_000200_create_product_frames ............................ [1] Ran  
+  2026_11_16_000300_catalogue_hierarchy .............................. [1] Ran  
+  2026_11_17_000100_catalog_import_keys_and_media_review ............. [2] Ran  
+  2026_11_18_000100_catalog_phase2 ................................... [3] Ran  
+  2026_11_19_000100_product_image_provenance ......................... [3] Ran  
+
+
+REHEARSAL DONE (sqlite)
