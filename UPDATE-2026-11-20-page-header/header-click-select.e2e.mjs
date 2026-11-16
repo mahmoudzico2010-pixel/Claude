@@ -1,0 +1,13 @@
+import { createRequire } from 'module';
+const require = createRequire('/opt/node22/lib/node_modules/');
+const { chromium } = require('playwright');
+const b = await chromium.launch(); const p = await (await b.newContext({ viewport: { width: 1700, height: 1100 } })).newPage();
+await p.goto('http://127.0.0.1:8000/admin/login'); await p.fill('input[type=email]','admin@example.com'); await p.fill('input[type=password]','LocalTest#2026'); await p.click('button[type=submit]'); await p.waitForTimeout(2500);
+await p.goto('http://127.0.0.1:8000/admin/page-builder?page=contact-us'); await p.waitForLoadState('networkidle'); await p.waitForTimeout(3500);
+console.log('header panel before click:', await p.locator('[data-testid=header-panel]').count());
+const f = p.frameLocator('iframe').first();
+await f.locator('[data-page-header] h1').click(); await p.waitForTimeout(2500);
+console.log('header panel after clicking the banner:', await p.locator('[data-testid=header-panel]').count());
+await p.getByText('Outline', { exact: true }).first().click(); await p.waitForTimeout(800);
+console.log('outline item present:', await p.locator('[data-testid=outline-header]').count());
+await b.close();

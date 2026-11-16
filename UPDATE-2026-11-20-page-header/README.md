@@ -21,5 +21,5 @@ Browser proof (screenshots): editor with the Contact Us banner selected and its 
 ## Be aware / not done
 - The screenshots use a clearly-labelled STAND-IN image (I do not have your factory photograph); upload your real photo via the media library.
 - Eyebrow/title/subtitle and the editor labels exist in English and Arabic; the other 8 admin languages are not translated. The PUBLIC text per language is whatever you type (empty = the page's own translation).
-- The live "click banner → selects" link is tested in a real browser only for selection highlighting (screenshot) — the click-to-select message path itself is not covered by an automated browser test.
+- Click-to-select was driven in a real browser (Chromium): with another item selected, clicking the banner inside the Preview opened the Page Header / Hero panel, and the Outline shows the named item (`tests/Browser/header-click-select.e2e.mjs`, run against the local site; it hard-codes the local admin login, edit before reuse).
 - Not run on MySQL 5.7 (same limitation as the corrected release); the new table uses only plain columns and JSON.
