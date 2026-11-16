@@ -2,9 +2,9 @@
 
 Install (staging first; back up the database OUTSIDE the document root as in the corrected release README):
 1. Unzip `wadi-page-header-update.zip` over the site root.
-2. `php artisan migrate --force` — two migrations: `2026_11_20_000100_create_page_headers` (new table; no row = the page keeps today's banner) and `2026_11_20_000200_remove_duplicate_starter_titles` (removes ONLY unpublished starter drafts' duplicate title heading created by the earlier "Edit visually", so a page never shows two titles).
+2. `php artisan migrate --force` — two migrations: `2026_11_20_000100_create_page_headers` (new table; no row = the page keeps today's banner) and `2026_11_20_000200_flag_duplicate_starter_titles` (creates `builder_node_reviews`; it DELETES NOTHING: an unpublished heading whose text equals the page title may be a starter heading from the earlier "Edit visually" or one a person wrote, so it is only flagged — the Page Builder then shows a notice with "Remove this heading" / "Keep it". `down()` drops only the flags table; no heading is ever touched). New starter drafts no longer create a title heading.
 3. `php artisan optimize:clear`.
-Rollback: restore the backup, or `php artisan migrate:status` then `php artisan migrate:rollback --pretend` before rolling back the latest batch (drops `page_headers`; pages return to their original banner automatically). Prerequisite: the corrected cumulative release (this update was built and tested on top of it).
+Rollback: restore the backup, or `php artisan migrate:status` then `php artisan migrate:rollback --pretend` before rolling back the latest batch (drops `page_headers` and `builder_node_reviews`; pages return to their original banner automatically). Prerequisite: the corrected cumulative release (this update was built and tested on top of it).
 
 ## What it does
 - The banner on EVERY inner page is rendered by one shared component (`x-page-hero`). It now looks up the page's settings; with none, it renders the original markup byte-for-byte (Export/About HTML hashes were identical before/after customising Contact Us).

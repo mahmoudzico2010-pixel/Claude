@@ -23,3 +23,7 @@ Also re-run and passing: BulkProductEditor (9), Bulk editor UI (4), Photo review
 ## Pre-existing failures (fail identically on the original code in this sandbox)
 QuoteRequestTest 7, LanguageActivationTest 3, InstallPackageTest 1, ContactMessageTest 1, CatalogQuoteTest 1 (e.g. e-mail DNS validation, audit-log rows in a fresh install check). NetworkDiagnosticTest fails only inside the full-suite run (passes alone, same as on the original code).
 Nothing new fails in the full suite after this release.
+
+## Rehearsal script hardening (re-verified after your review)
+Verified by running it: positive SQLite run = REHEARSAL PASSED (13 checks, both paths; log `rehearsal-sqlite.log`). Refusals, each exit 1 and never printing PASSED: MySQL name without "rehearsal/disposable"; missing `REHEARSAL_CONFIRM_DB`; target equal to the `.env` database; MySQL unreachable (refuses before any wipe/migrate); non-empty target (1 table found). Injected faults (`REHEARSAL_SELFTEST=count|repeat|rollback`) each make the script FAIL: product count 58, repeat import changed data, rollback left a value different from the original.
+**MySQL 5.7 is still NOT RUN.**
