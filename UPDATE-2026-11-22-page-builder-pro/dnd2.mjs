@@ -1,0 +1,21 @@
+import { createRequire } from 'module';
+const require = createRequire('/opt/node22/lib/node_modules/');
+const { chromium } = require('playwright');
+const b = await chromium.launch(); const p = await (await b.newContext({ viewport: { width: 1600, height: 1000 } })).newPage();
+await p.goto('http://127.0.0.1:8000/admin/login'); await p.fill('input[type=email]','admin@example.com'); await p.fill('input[type=password]','LocalTest#2026'); await p.click('button[type=submit]'); await p.waitForTimeout(2500);
+await p.goto('http://127.0.0.1:8000/admin/page-builder?page=quality'); await p.waitForLoadState('networkidle'); await p.waitForTimeout(2000);
+await p.getByRole('tab',{name:/Structure/}).click(); await p.waitForTimeout(500);
+const rows = p.locator('#wr-tree li[data-type="badge"], #wr-tree li[data-type="icon_box"]');
+p.on('request', r => { if (r.url().includes('livewire') && r.method()==='POST') console.log('LW', (r.postData()||'').match(/"method":"[a-zA-Z]+"[^}]*/g)?.join(' ')); });
+const before = await p.evaluate(()=>[...document.querySelectorAll('#wr-tree > li')].map(l=>l.dataset.id).join(','));
+const h = p.locator('#wr-tree > li').nth(1).locator('> .wr-row .wr-handle');
+const t = p.locator('#wr-tree > li').nth(0).locator('> .wr-row');
+const hb = await h.boundingBox(), tb = await t.boundingBox();
+await p.mouse.move(hb.x+4,hb.y+6); await p.mouse.down(); await p.mouse.move(hb.x+4,hb.y+30,{steps:5}); await p.mouse.move(tb.x+60,tb.y+2,{steps:20}); await p.waitForTimeout(400); await p.mouse.move(tb.x+60,tb.y,{steps:3}); await p.mouse.up(); await p.waitForTimeout(3000);
+const after = await p.evaluate(()=>[...document.querySelectorAll('#wr-tree > li')].map(l=>l.dataset.id).join(','));
+console.log('before',before,'\nafter ',after);
+// Ctrl+Z
+await p.locator('body').click({position:{x:900,y:20}});
+await p.keyboard.press('Control+z'); await p.waitForTimeout(2500);
+console.log('undo ', await p.evaluate(()=>[...document.querySelectorAll('#wr-tree > li')].map(l=>l.dataset.id).join(',')));
+await b.close();
