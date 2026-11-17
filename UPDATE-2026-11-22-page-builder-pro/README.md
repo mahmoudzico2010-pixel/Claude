@@ -17,6 +17,8 @@ Optional: `wadi-page-builder-pro-tests.zip` (tests only). Open any page → **Ed
 | **Left panel tabs** | Elements (search + tiles) · Structure (tree) · Templates (8 ready sections + your own) |
 | **Templates** | Hero with call to action, 3 features, statistics band, 2 testimonials, FAQ accordion, quote banner, timeline, wave divider (English + Arabic text; other languages start with English, edit in the right panel). Right-click → **Save as template** keeps your own block for reuse. |
 | **Return to basic version** | Bar above the editor: **Use basic version** (website shows the page's original content; your layout is kept, nothing deleted) · **Use builder layout** · **Reset layout to original content** (undoable) · **Open basic editor**. |
+| **Content blocks element** (Business group) | Shows any Content Blocks section (company values, statistics, production steps, quality points, export services, private-label benefits) as cards, a list or big numbers; active blocks only, in your display order, in the visitor's language. Edit the texts in Content Blocks as before. |
+| **Click to add** | Clicking an element while a section or row is selected now adds it to the nearest column that accepts it (before: "A section cannot contain…"). |
 | **Pro tools** | Right-click menu (duplicate, copy, paste, move up/down, hide/show, save as template, delete) in the preview and in the tree · Ctrl+Z / Ctrl+Shift+Z / Ctrl+Y · Ctrl+S save · Ctrl+D duplicate · Ctrl+C / Ctrl+V · Delete · Esc. Shortcuts also work while the cursor is inside the preview. |
 
 ## Verified
