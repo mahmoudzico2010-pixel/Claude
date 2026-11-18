@@ -1,0 +1,8 @@
+# Test report — performance + old-URL redirects (what really ran)
+Sandbox, PHP 8.3, Laravel 13.34, **SQLite**; Chromium + Lighthouse 13.6.0 on a **local test server with demo data** (16 test slides). **The live site was not reachable; MySQL 5.7: NOT RUN.** Nothing deployed.
+* Full suite: **1353 passed, 11 skipped, 20 failed** — the same 20 sandbox-environment failures as before this release (RFQ e-mail DNS, network diagnostics, trusted-proxy defaults, language-activation fixtures); 0 new.
+* New tests: only the first slide image is loaded up front (others wait in `data-src`); old-website addresses redirect once to the same page / never to the homepage / no open redirect / drafts 404; variety with capital letters opens and every sitemap URL answers; `media:variants` adds copies, leaves the original untouched, is idempotent.
+* Browser: slider rotation checked over 8 slides on phone (390 px) and desktop widths with real images, 0 page errors. Network count on identical 16-slide data: **before 15 images at load, after 3 (21 KiB)**.
+* Lighthouse (local, same data): mobile payload 1,158 → 505 KiB; desktop 1,272 → 626 KiB; mobile performance after = 91 on three runs (before 92 / 83 / 84); desktop 95 → 99; desktop LCP 1.5 → 0.9 s. Mobile LCP in the sandbox stays ≈3.4 s (simulated throttling + the render-blocking stylesheet) — **not** improved by this release.
+* Install rehearsal: ZIP unzipped over a clean copy of the previous release; routes registered (10 legacy-URL routes); `media:variants` test passes there.
+* **Not tested:** the live site, your real slide/product images, MySQL 5.7, real Googlebot behaviour, the exact old address Google shows.
