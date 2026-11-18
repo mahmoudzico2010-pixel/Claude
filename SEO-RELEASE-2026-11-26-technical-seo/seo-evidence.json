@@ -1,0 +1,98 @@
+{
+ "home-en": {
+  "before": {
+   "title": "Wadi El Rayan for Food Industries — Table Olives &amp; Pickled Vegetables Exporter",
+   "h1": 1,
+   "canonical": "http://127.0.0.1:8000/en",
+   "hreflangs": 11,
+   "desc": "Egyptian manufacturer, packer and exporter of table olives, extra virgin olive oil, jalapeño and cherry pepper"
+  },
+  "after": {
+   "title": "Wadi El Rayan for Food Industries — Table Olives &amp; Pickled Vegetables Exporter",
+   "h1": 1,
+   "canonical": "https://wadielrayan.net/en",
+   "hreflangs": 11,
+   "desc": "Egyptian manufacturer, packer and exporter of table olives, extra virgin olive oil, jalapeño and cherry pepper"
+  }
+ },
+ "home-ar": {
+  "before": {
+   "title": "وادي الريان للصناعات الغذائية — تصدير زيتون المائدة والمخللات",
+   "h1": 1,
+   "canonical": "http://127.0.0.1:8000/ar",
+   "hreflangs": 11,
+   "desc": "شركة مصرية لتصنيع وتعبئة وتصدير زيتون المائدة وزيت الزيتون البكر الممتاز والفلفل والمخللات لعملاء الجملة والتص"
+  },
+  "after": {
+   "title": "وادي الريان للصناعات الغذائية — تصدير زيتون المائدة والمخللات",
+   "h1": 1,
+   "canonical": "https://wadielrayan.net/ar",
+   "hreflangs": 11,
+   "desc": "شركة مصرية لتصنيع وتعبئة وتصدير زيتون المائدة وزيت الزيتون البكر الممتاز والفلفل والمخللات لعملاء الجملة والتص"
+  }
+ },
+ "products": {
+  "before": {
+   "title": "Products — Wadi El Rayan",
+   "h1": 1,
+   "canonical": "http://127.0.0.1:8000/en/products",
+   "hreflangs": 11,
+   "desc": "Egyptian manufacturer, packer and exporter of table olives, extra virgin olive oil, jalapeño and cherry pepper"
+  },
+  "after": {
+   "title": "Products | Wadi El Rayan",
+   "h1": 1,
+   "canonical": "https://wadielrayan.net/en/products",
+   "hreflangs": 11,
+   "desc": "Browse table olives and pickled vegetables from Wadi El Rayan in Egypt: varieties, cuts and pack formats for i"
+  }
+ },
+ "contact": {
+  "before": {
+   "title": "Contact Us — Wadi El Rayan",
+   "h1": 1,
+   "canonical": "http://127.0.0.1:8000/en/contact",
+   "hreflangs": 11,
+   "desc": "Egyptian manufacturer, packer and exporter of table olives, extra virgin olive oil, jalapeño and cherry pepper"
+  },
+  "after": {
+   "title": "Contact Us | Wadi El Rayan",
+   "h1": 1,
+   "canonical": "https://wadielrayan.net/en/contact",
+   "hreflangs": 11,
+   "desc": "Contact the Wadi El Rayan export team in Egypt for product information, packaging options and quotation reques"
+  }
+ },
+ "private-label": {
+  "before": {
+   "title": "Private Label — Wadi El Rayan",
+   "h1": 1,
+   "canonical": "http://127.0.0.1:8000/en/private-label",
+   "hreflangs": 11,
+   "desc": "Your brand, packed on our lines."
+  },
+  "after": {
+   "title": "Private Label | Wadi El Rayan",
+   "h1": 1,
+   "canonical": "https://wadielrayan.net/en/private-label",
+   "hreflangs": 2,
+   "desc": "Private label olives and pickled vegetables from Wadi El Rayan in Egypt. Explore packaging options and request"
+  }
+ },
+ "product": {
+  "before": {
+   "title": "Picual Green Olives – Whole | Wadi El Rayan — Wadi El Rayan",
+   "h1": 1,
+   "canonical": "http://127.0.0.1:8000/en/products/green-olives-whole",
+   "hreflangs": 11,
+   "desc": "Whole Green Olives with the stone, ready for the table, the antipasto board and the deli counter."
+  },
+  "after": {
+   "title": "Picual Green Olives – Whole | Wadi El Rayan",
+   "h1": 1,
+   "canonical": "https://wadielrayan.net/en/products/green-olives-whole",
+   "hreflangs": 11,
+   "desc": "Whole Green Olives with the stone, ready for the table, the antipasto board and the deli counter."
+  }
+ }
+}

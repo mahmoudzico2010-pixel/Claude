@@ -1,0 +1,1449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>http://127.0.0.1:8000/en</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur"/>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/about</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/about"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/about"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/about"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/about"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/about"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/about"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/about"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/about"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/about"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/about"/>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/team</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/team"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/team"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/team"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/team"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/team"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/team"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/team"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/team"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/team"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/team"/>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/quality</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/quality"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/quality"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/quality"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/quality"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/quality"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/quality"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/quality"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/quality"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/quality"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/quality"/>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/export</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/export"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/export"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/export"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/export"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/export"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/export"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/export"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/export"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/export"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/export"/>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/private-label</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/private-label"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/private-label"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/private-label"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/private-label"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/private-label"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/private-label"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/private-label"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/private-label"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/private-label"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/private-label"/>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/news</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/news"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/news"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/news"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/news"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/news"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/news"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/news"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/news"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/news"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/news"/>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/request-a-quote</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/request-a-quote"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/request-a-quote"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/request-a-quote"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/request-a-quote"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/request-a-quote"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/request-a-quote"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/request-a-quote"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/request-a-quote"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/request-a-quote"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/request-a-quote"/>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/contact</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/contact"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/contact"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/contact"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/contact"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/contact"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/contact"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/contact"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/contact"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/contact"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/contact"/>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/green-olives-whole</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/green-olives-whole"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/green-olives-pitted</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/green-olives-pitted"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/green-olives-sliced</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/green-olives-sliced"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/black-olives-natural</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/black-olives-natural"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/black-olives-natural"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/black-olives-natural"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/black-olives-natural"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/black-olives-natural"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/black-olives-natural"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/black-olives-natural"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/black-olives-natural"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/black-olives-natural"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/black-olives-natural"/>
+        <lastmod>2026-11-16T21:05:25+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/kalamata-style-olives</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/kalamata-style-olives"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/kalamata-style-olives"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/kalamata-style-olives"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/kalamata-style-olives"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/kalamata-style-olives"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/kalamata-style-olives"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/kalamata-style-olives"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/kalamata-style-olives"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/kalamata-style-olives"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/kalamata-style-olives"/>
+        <lastmod>2026-11-16T21:05:25+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/extra-virgin-olive-oil</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/extra-virgin-olive-oil"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/extra-virgin-olive-oil"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/extra-virgin-olive-oil"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/extra-virgin-olive-oil"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/extra-virgin-olive-oil"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/extra-virgin-olive-oil"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/extra-virgin-olive-oil"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/extra-virgin-olive-oil"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/extra-virgin-olive-oil"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/extra-virgin-olive-oil"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/jalapeno-peppers-sliced</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/jalapeno-peppers-sliced"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/jalapeno-peppers-sliced"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/jalapeno-peppers-sliced"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/jalapeno-peppers-sliced"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/jalapeno-peppers-sliced"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/jalapeno-peppers-sliced"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/jalapeno-peppers-sliced"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/jalapeno-peppers-sliced"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/jalapeno-peppers-sliced"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/jalapeno-peppers-sliced"/>
+        <lastmod>2026-11-16T21:05:25+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/cherry-peppers</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/cherry-peppers"/>
+        <lastmod>2026-11-16T21:05:25+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/guindilla-peppers</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/guindilla-peppers"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/guindilla-peppers"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/guindilla-peppers"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/guindilla-peppers"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/guindilla-peppers"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/guindilla-peppers"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/guindilla-peppers"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/guindilla-peppers"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/guindilla-peppers"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/guindilla-peppers"/>
+        <lastmod>2026-11-16T21:05:25+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/mixed-pickled-vegetables</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/mixed-pickled-vegetables"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/mixed-pickled-vegetables"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/mixed-pickled-vegetables"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/mixed-pickled-vegetables"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/mixed-pickled-vegetables"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/mixed-pickled-vegetables"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/mixed-pickled-vegetables"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/mixed-pickled-vegetables"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/mixed-pickled-vegetables"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/mixed-pickled-vegetables"/>
+        <lastmod>2026-11-16T21:05:25+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/pickled-cucumbers</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/pickled-cucumbers"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/pickled-cucumbers"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/pickled-cucumbers"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/pickled-cucumbers"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/pickled-cucumbers"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/pickled-cucumbers"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/pickled-cucumbers"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/pickled-cucumbers"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/pickled-cucumbers"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/pickled-cucumbers"/>
+        <lastmod>2026-11-16T21:05:25+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/manzanilla-green-olives-whole</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/manzanilla-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/manzanilla-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/manzanilla-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/manzanilla-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/manzanilla-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/manzanilla-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/manzanilla-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/manzanilla-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/manzanilla-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/manzanilla-green-olives-whole"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/manzanilla-green-olives-pitted</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/manzanilla-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/manzanilla-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/manzanilla-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/manzanilla-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/manzanilla-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/manzanilla-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/manzanilla-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/manzanilla-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/manzanilla-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/manzanilla-green-olives-pitted"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/manzanilla-green-olives-sliced</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/manzanilla-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/manzanilla-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/manzanilla-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/manzanilla-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/manzanilla-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/manzanilla-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/manzanilla-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/manzanilla-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/manzanilla-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/manzanilla-green-olives-sliced"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/manzanilla-green-olives-halves</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/manzanilla-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/manzanilla-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/manzanilla-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/manzanilla-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/manzanilla-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/manzanilla-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/manzanilla-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/manzanilla-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/manzanilla-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/manzanilla-green-olives-halves"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/manzanilla-green-olives-stuffed</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/manzanilla-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/manzanilla-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/manzanilla-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/manzanilla-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/manzanilla-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/manzanilla-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/manzanilla-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/manzanilla-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/manzanilla-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/manzanilla-green-olives-stuffed"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/azizi-green-olives-whole</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/azizi-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/azizi-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/azizi-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/azizi-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/azizi-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/azizi-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/azizi-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/azizi-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/azizi-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/azizi-green-olives-whole"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/azizi-green-olives-pitted</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/azizi-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/azizi-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/azizi-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/azizi-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/azizi-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/azizi-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/azizi-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/azizi-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/azizi-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/azizi-green-olives-pitted"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/azizi-green-olives-sliced</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/azizi-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/azizi-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/azizi-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/azizi-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/azizi-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/azizi-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/azizi-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/azizi-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/azizi-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/azizi-green-olives-sliced"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/azizi-green-olives-halves</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/azizi-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/azizi-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/azizi-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/azizi-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/azizi-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/azizi-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/azizi-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/azizi-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/azizi-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/azizi-green-olives-halves"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/azizi-green-olives-stuffed</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/azizi-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/azizi-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/azizi-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/azizi-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/azizi-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/azizi-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/azizi-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/azizi-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/azizi-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/azizi-green-olives-stuffed"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/aks-green-olives-whole</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/aks-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/aks-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/aks-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/aks-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/aks-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/aks-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/aks-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/aks-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/aks-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/aks-green-olives-whole"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/aks-green-olives-pitted</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/aks-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/aks-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/aks-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/aks-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/aks-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/aks-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/aks-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/aks-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/aks-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/aks-green-olives-pitted"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/aks-green-olives-sliced</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/aks-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/aks-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/aks-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/aks-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/aks-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/aks-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/aks-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/aks-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/aks-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/aks-green-olives-sliced"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/aks-green-olives-halves</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/aks-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/aks-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/aks-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/aks-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/aks-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/aks-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/aks-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/aks-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/aks-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/aks-green-olives-halves"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/aks-green-olives-stuffed</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/aks-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/aks-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/aks-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/aks-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/aks-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/aks-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/aks-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/aks-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/aks-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/aks-green-olives-stuffed"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/picual-green-olives-halves</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/picual-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/picual-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/picual-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/picual-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/picual-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/picual-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/picual-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/picual-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/picual-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/picual-green-olives-halves"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/picual-green-olives-stuffed</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/picual-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/picual-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/picual-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/picual-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/picual-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/picual-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/picual-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/picual-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/picual-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/picual-green-olives-stuffed"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/dolce-green-olives-whole</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/dolce-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/dolce-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/dolce-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/dolce-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/dolce-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/dolce-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/dolce-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/dolce-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/dolce-green-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/dolce-green-olives-whole"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/dolce-green-olives-pitted</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/dolce-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/dolce-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/dolce-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/dolce-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/dolce-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/dolce-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/dolce-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/dolce-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/dolce-green-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/dolce-green-olives-pitted"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/dolce-green-olives-sliced</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/dolce-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/dolce-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/dolce-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/dolce-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/dolce-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/dolce-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/dolce-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/dolce-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/dolce-green-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/dolce-green-olives-sliced"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/dolce-green-olives-halves</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/dolce-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/dolce-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/dolce-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/dolce-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/dolce-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/dolce-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/dolce-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/dolce-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/dolce-green-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/dolce-green-olives-halves"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/dolce-green-olives-stuffed</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/dolce-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/dolce-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/dolce-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/dolce-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/dolce-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/dolce-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/dolce-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/dolce-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/dolce-green-olives-stuffed"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/dolce-green-olives-stuffed"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/manzanilla-natural-black-olives-whole</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/manzanilla-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/manzanilla-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/manzanilla-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/manzanilla-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/manzanilla-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/manzanilla-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/manzanilla-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/manzanilla-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/manzanilla-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/manzanilla-natural-black-olives-whole"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/manzanilla-natural-black-olives-pitted</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/manzanilla-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/manzanilla-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/manzanilla-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/manzanilla-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/manzanilla-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/manzanilla-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/manzanilla-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/manzanilla-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/manzanilla-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/manzanilla-natural-black-olives-pitted"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/manzanilla-natural-black-olives-sliced</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/manzanilla-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/manzanilla-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/manzanilla-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/manzanilla-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/manzanilla-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/manzanilla-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/manzanilla-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/manzanilla-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/manzanilla-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/manzanilla-natural-black-olives-sliced"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/manzanilla-natural-black-olives-halves</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/manzanilla-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/manzanilla-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/manzanilla-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/manzanilla-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/manzanilla-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/manzanilla-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/manzanilla-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/manzanilla-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/manzanilla-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/manzanilla-natural-black-olives-halves"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/picual-natural-black-olives-whole</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/picual-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/picual-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/picual-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/picual-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/picual-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/picual-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/picual-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/picual-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/picual-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/picual-natural-black-olives-whole"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/picual-natural-black-olives-pitted</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/picual-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/picual-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/picual-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/picual-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/picual-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/picual-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/picual-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/picual-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/picual-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/picual-natural-black-olives-pitted"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/picual-natural-black-olives-sliced</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/picual-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/picual-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/picual-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/picual-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/picual-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/picual-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/picual-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/picual-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/picual-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/picual-natural-black-olives-sliced"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/picual-natural-black-olives-halves</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/picual-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/picual-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/picual-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/picual-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/picual-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/picual-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/picual-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/picual-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/picual-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/picual-natural-black-olives-halves"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/kalamata-natural-black-olives-whole</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/kalamata-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/kalamata-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/kalamata-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/kalamata-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/kalamata-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/kalamata-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/kalamata-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/kalamata-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/kalamata-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/kalamata-natural-black-olives-whole"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/kalamata-natural-black-olives-pitted</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/kalamata-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/kalamata-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/kalamata-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/kalamata-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/kalamata-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/kalamata-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/kalamata-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/kalamata-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/kalamata-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/kalamata-natural-black-olives-pitted"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/kalamata-natural-black-olives-sliced</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/kalamata-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/kalamata-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/kalamata-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/kalamata-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/kalamata-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/kalamata-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/kalamata-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/kalamata-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/kalamata-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/kalamata-natural-black-olives-sliced"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/kalamata-natural-black-olives-halves</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/kalamata-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/kalamata-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/kalamata-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/kalamata-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/kalamata-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/kalamata-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/kalamata-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/kalamata-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/kalamata-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/kalamata-natural-black-olives-halves"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/dolce-natural-black-olives-whole</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/dolce-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/dolce-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/dolce-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/dolce-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/dolce-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/dolce-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/dolce-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/dolce-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/dolce-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/dolce-natural-black-olives-whole"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/dolce-natural-black-olives-pitted</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/dolce-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/dolce-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/dolce-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/dolce-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/dolce-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/dolce-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/dolce-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/dolce-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/dolce-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/dolce-natural-black-olives-pitted"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/dolce-natural-black-olives-sliced</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/dolce-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/dolce-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/dolce-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/dolce-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/dolce-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/dolce-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/dolce-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/dolce-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/dolce-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/dolce-natural-black-olives-sliced"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/dolce-natural-black-olives-halves</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/dolce-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/dolce-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/dolce-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/dolce-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/dolce-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/dolce-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/dolce-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/dolce-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/dolce-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/dolce-natural-black-olives-halves"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/sers-cola-natural-black-olives-whole</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/sers-cola-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/sers-cola-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/sers-cola-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/sers-cola-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/sers-cola-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/sers-cola-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/sers-cola-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/sers-cola-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/sers-cola-natural-black-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/sers-cola-natural-black-olives-whole"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/sers-cola-natural-black-olives-pitted</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/sers-cola-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/sers-cola-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/sers-cola-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/sers-cola-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/sers-cola-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/sers-cola-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/sers-cola-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/sers-cola-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/sers-cola-natural-black-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/sers-cola-natural-black-olives-pitted"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/sers-cola-natural-black-olives-sliced</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/sers-cola-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/sers-cola-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/sers-cola-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/sers-cola-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/sers-cola-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/sers-cola-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/sers-cola-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/sers-cola-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/sers-cola-natural-black-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/sers-cola-natural-black-olives-sliced"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/sers-cola-natural-black-olives-halves</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/sers-cola-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/sers-cola-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/sers-cola-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/sers-cola-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/sers-cola-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/sers-cola-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/sers-cola-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/sers-cola-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/sers-cola-natural-black-olives-halves"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/sers-cola-natural-black-olives-halves"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/black-oxidized-olives-whole</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/black-oxidized-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/black-oxidized-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/black-oxidized-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/black-oxidized-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/black-oxidized-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/black-oxidized-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/black-oxidized-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/black-oxidized-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/black-oxidized-olives-whole"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/black-oxidized-olives-whole"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/black-oxidized-olives-pitted</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/black-oxidized-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/black-oxidized-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/black-oxidized-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/black-oxidized-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/black-oxidized-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/black-oxidized-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/black-oxidized-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/black-oxidized-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/black-oxidized-olives-pitted"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/black-oxidized-olives-pitted"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/black-oxidized-olives-sliced</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/black-oxidized-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/black-oxidized-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/black-oxidized-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/black-oxidized-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/black-oxidized-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/black-oxidized-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/black-oxidized-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/black-oxidized-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/black-oxidized-olives-sliced"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/black-oxidized-olives-sliced"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/green-guindillas-peppers</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/green-guindillas-peppers"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/green-guindillas-peppers"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/green-guindillas-peppers"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/green-guindillas-peppers"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/green-guindillas-peppers"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/green-guindillas-peppers"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/green-guindillas-peppers"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/green-guindillas-peppers"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/green-guindillas-peppers"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/green-guindillas-peppers"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/sliced-green-jalape-os</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/sliced-green-jalape-os"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/sliced-green-jalape-os"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/sliced-green-jalape-os"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/sliced-green-jalape-os"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/sliced-green-jalape-os"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/sliced-green-jalape-os"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/sliced-green-jalape-os"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/sliced-green-jalape-os"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/sliced-green-jalape-os"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/sliced-green-jalape-os"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/green-lombardi-peppers</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/green-lombardi-peppers"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/green-lombardi-peppers"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/green-lombardi-peppers"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/green-lombardi-peppers"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/green-lombardi-peppers"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/green-lombardi-peppers"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/green-lombardi-peppers"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/green-lombardi-peppers"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/green-lombardi-peppers"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/green-lombardi-peppers"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/green-mexican-peppers</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/green-mexican-peppers"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/green-mexican-peppers"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/green-mexican-peppers"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/green-mexican-peppers"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/green-mexican-peppers"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/green-mexican-peppers"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/green-mexican-peppers"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/green-mexican-peppers"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/green-mexican-peppers"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/green-mexican-peppers"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/whole-red-cherry-peppers</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/whole-red-cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/whole-red-cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/whole-red-cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/whole-red-cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/whole-red-cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/whole-red-cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/whole-red-cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/whole-red-cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/whole-red-cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/whole-red-cherry-peppers"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/cored-red-cherry-peppers</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/cored-red-cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/cored-red-cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/cored-red-cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/cored-red-cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/cored-red-cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/cored-red-cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/cored-red-cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/cored-red-cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/cored-red-cherry-peppers"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/cored-red-cherry-peppers"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/sliced-red-jalape-os</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/sliced-red-jalape-os"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/sliced-red-jalape-os"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/sliced-red-jalape-os"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/sliced-red-jalape-os"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/sliced-red-jalape-os"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/sliced-red-jalape-os"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/sliced-red-jalape-os"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/sliced-red-jalape-os"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/sliced-red-jalape-os"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/sliced-red-jalape-os"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/red-baby-peppers</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/red-baby-peppers"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/red-baby-peppers"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/red-baby-peppers"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/red-baby-peppers"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/red-baby-peppers"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/red-baby-peppers"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/red-baby-peppers"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/red-baby-peppers"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/red-baby-peppers"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/red-baby-peppers"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/yellow-baby-peppers</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/yellow-baby-peppers"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/yellow-baby-peppers"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/yellow-baby-peppers"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/yellow-baby-peppers"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/yellow-baby-peppers"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/yellow-baby-peppers"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/yellow-baby-peppers"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/yellow-baby-peppers"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/yellow-baby-peppers"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/yellow-baby-peppers"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/mixed-pickles</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/mixed-pickles"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/mixed-pickles"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/mixed-pickles"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/mixed-pickles"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/mixed-pickles"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/mixed-pickles"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/mixed-pickles"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/mixed-pickles"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/mixed-pickles"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/mixed-pickles"/>
+        <lastmod>2026-11-16T23:22:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/variety/picual</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/variety/picual"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/variety/picual"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/variety/picual"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/variety/picual"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/variety/picual"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/variety/picual"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/variety/picual"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/variety/picual"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/variety/picual"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/variety/picual"/>
+        <lastmod>2026-11-16T18:33:36+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/variety/aks</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/variety/aks"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/variety/aks"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/variety/aks"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/variety/aks"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/variety/aks"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/variety/aks"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/variety/aks"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/variety/aks"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/variety/aks"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/variety/aks"/>
+        <lastmod>2026-11-16T20:20:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/variety/dolce</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/variety/dolce"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/variety/dolce"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/variety/dolce"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/variety/dolce"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/variety/dolce"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/variety/dolce"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/variety/dolce"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/variety/dolce"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/variety/dolce"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/variety/dolce"/>
+        <lastmod>2026-11-16T20:20:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/variety/sers-cola</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/variety/sers-cola"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/variety/sers-cola"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/variety/sers-cola"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/variety/sers-cola"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/variety/sers-cola"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/variety/sers-cola"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/variety/sers-cola"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/variety/sers-cola"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/variety/sers-cola"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/variety/sers-cola"/>
+        <lastmod>2026-11-16T20:20:19+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/variety/manzanilla</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/variety/manzanilla"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/variety/manzanilla"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/variety/manzanilla"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/variety/manzanilla"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/variety/manzanilla"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/variety/manzanilla"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/variety/manzanilla"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/variety/manzanilla"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/variety/manzanilla"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/variety/manzanilla"/>
+        <lastmod>2026-11-16T18:33:36+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/variety/kalamata</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/variety/kalamata"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/variety/kalamata"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/variety/kalamata"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/variety/kalamata"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/variety/kalamata"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/variety/kalamata"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/variety/kalamata"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/variety/kalamata"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/variety/kalamata"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/variety/kalamata"/>
+        <lastmod>2026-11-16T18:33:36+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/products/variety/aggizi</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/products/variety/aggizi"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/products/variety/aggizi"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/products/variety/aggizi"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/products/variety/aggizi"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/products/variety/aggizi"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/products/variety/aggizi"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/products/variety/aggizi"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/products/variety/aggizi"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/products/variety/aggizi"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/products/variety/aggizi"/>
+        <lastmod>2026-11-16T20:29:13+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/team/test-general-manager</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/team/test-general-manager"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/team/test-general-manager"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/team/test-general-manager"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/team/test-general-manager"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/team/test-general-manager"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/team/test-general-manager"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/team/test-general-manager"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/team/test-general-manager"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/team/test-general-manager"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/team/test-general-manager"/>
+        <lastmod>2026-11-17T01:56:43+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/team/test-export-lead</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/team/test-export-lead"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/team/test-export-lead"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/team/test-export-lead"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/team/test-export-lead"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/team/test-export-lead"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/team/test-export-lead"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/team/test-export-lead"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/team/test-export-lead"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/team/test-export-lead"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/team/test-export-lead"/>
+        <lastmod>2026-11-17T01:56:43+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/team/test-quality-lead</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/team/test-quality-lead"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/team/test-quality-lead"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/team/test-quality-lead"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/team/test-quality-lead"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/team/test-quality-lead"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/team/test-quality-lead"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/team/test-quality-lead"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/team/test-quality-lead"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/team/test-quality-lead"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/team/test-quality-lead"/>
+        <lastmod>2026-11-17T01:56:43+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/team/test-procurement-lead</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/team/test-procurement-lead"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/team/test-procurement-lead"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/team/test-procurement-lead"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/team/test-procurement-lead"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/team/test-procurement-lead"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/team/test-procurement-lead"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/team/test-procurement-lead"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/team/test-procurement-lead"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/team/test-procurement-lead"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/team/test-procurement-lead"/>
+        <lastmod>2026-11-17T01:56:43+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/team/test-export-coordinator</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/team/test-export-coordinator"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/team/test-export-coordinator"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/team/test-export-coordinator"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/team/test-export-coordinator"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/team/test-export-coordinator"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/team/test-export-coordinator"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/team/test-export-coordinator"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/team/test-export-coordinator"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/team/test-export-coordinator"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/team/test-export-coordinator"/>
+        <lastmod>2026-11-17T01:56:43+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/team/test-export-assistant</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/team/test-export-assistant"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/team/test-export-assistant"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/team/test-export-assistant"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/team/test-export-assistant"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/team/test-export-assistant"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/team/test-export-assistant"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/team/test-export-assistant"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/team/test-export-assistant"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/team/test-export-assistant"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/team/test-export-assistant"/>
+        <lastmod>2026-11-17T01:56:43+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/team/test-lab-analyst</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/team/test-lab-analyst"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/team/test-lab-analyst"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/team/test-lab-analyst"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/team/test-lab-analyst"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/team/test-lab-analyst"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/team/test-lab-analyst"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/team/test-lab-analyst"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/team/test-lab-analyst"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/team/test-lab-analyst"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/team/test-lab-analyst"/>
+        <lastmod>2026-11-17T01:56:43+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>http://127.0.0.1:8000/en/team/amira-demo-hassan</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="http://127.0.0.1:8000/ar/team/amira-demo-hassan"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://127.0.0.1:8000/en/team/amira-demo-hassan"/>
+        <xhtml:link rel="alternate" hreflang="es" href="http://127.0.0.1:8000/es/team/amira-demo-hassan"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="http://127.0.0.1:8000/fr/team/amira-demo-hassan"/>
+        <xhtml:link rel="alternate" hreflang="it" href="http://127.0.0.1:8000/it/team/amira-demo-hassan"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="http://127.0.0.1:8000/pt/team/amira-demo-hassan"/>
+        <xhtml:link rel="alternate" hreflang="el" href="http://127.0.0.1:8000/el/team/amira-demo-hassan"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="http://127.0.0.1:8000/ru/team/amira-demo-hassan"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://127.0.0.1:8000/zh/team/amira-demo-hassan"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="http://127.0.0.1:8000/ur/team/amira-demo-hassan"/>
+        <lastmod>2026-11-17T02:07:12+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.4</priority>
+    </url>
+</urlset>
