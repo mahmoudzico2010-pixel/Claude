@@ -1,0 +1,19 @@
+# OPTIONAL — one-hop redirect at the web-server level (recommended on cPanel/HostGator).
+# The application already redirects www -> non-www (GET/HEAD only) once SEO_PUBLIC_URL is set, but Apache's own HTTP->HTTPS rule
+# in public/.htaccess runs first and keeps the host, so http://www.… takes two hops. To make it ONE hop, add these lines at the
+# very TOP of public/.htaccess (above the existing "RewriteEngine On" block), after taking a copy of the file:
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # any www host (http or https) -> https non-www, keeping path and query string
+    RewriteCond %{HTTP_HOST} ^www\.wadielrayan\.net$ [NC]
+    RewriteRule ^ https://wadielrayan.net%{REQUEST_URI} [L,R=301,QSA]
+</IfModule>
+
+# Notes
+# * Do NOT paste this if your site is served from a different domain, or if you decided to keep www as the preferred host.
+# * If cPanel -> Domains -> Redirects is easier for you: create a "Permanent (301)" redirect of http(s)://www.wadielrayan.net/ to
+#   https://wadielrayan.net/ with "Redirect with or without www" = off and "Wild Card Redirect" = on. Test it as in the README.
+# * Unlike the in-app redirect (GET/HEAD only), Apache redirects EVERY method, and a redirected POST arrives as a GET. The site's forms
+#   post to relative addresses, so this only matters for a hand-made link or integration that POSTs to the www address — point it at
+#   the non-www address first.
