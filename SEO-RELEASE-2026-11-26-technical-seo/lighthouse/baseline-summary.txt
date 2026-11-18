@@ -1,0 +1,26 @@
+| report | requested URL | final URL | perf | a11y | best-pr | SEO |
+|--|--|--|--|--|--|--|
+| category-en-desktop.report | http://127.0.0.1:8000/en/products/category/black-oxidized-olives | http://127.0.0.1:8000/en/products/category/black-oxidized-olives | 100 | 96 | 100 | 92 |
+| category-en-mobile.report | http://127.0.0.1:8000/en/products/category/black-oxidized-olives | http://127.0.0.1:8000/en/products/category/black-oxidized-olives | 88 | 96 | 100 | 92 |
+| home-ar-desktop.report | http://127.0.0.1:8000/ar | http://127.0.0.1:8000/ar | 100 | 96 | 100 | 100 |
+| home-ar-mobile.report | http://127.0.0.1:8000/ar | http://127.0.0.1:8000/ar | 99 | 96 | 100 | 100 |
+| home-en-desktop.report | http://127.0.0.1:8000/en | http://127.0.0.1:8000/en | 100 | 96 | 100 | 92 |
+| home-en-mobile.report | http://127.0.0.1:8000/en | http://127.0.0.1:8000/en | 100 | 96 | 100 | 92 |
+| privatelabel-ar-desktop.report | http://127.0.0.1:8000/ar/private-label | http://127.0.0.1:8000/ar/private-label | 100 | 95 | 100 | 100 |
+| privatelabel-ar-mobile.report | http://127.0.0.1:8000/ar/private-label | http://127.0.0.1:8000/ar/private-label | 99 | 94 | 100 | 100 |
+| privatelabel-en-desktop.report | http://127.0.0.1:8000/en/private-label | http://127.0.0.1:8000/en/private-label | 97 | 95 | 100 | 100 |
+| privatelabel-en-mobile.report | http://127.0.0.1:8000/en/private-label | http://127.0.0.1:8000/en/private-label | 72 | 94 | 100 | 100 |
+| product-ar-desktop.report | http://127.0.0.1:8000/ar/products/green-olives-whole | http://127.0.0.1:8000/ar/products/green-olives-whole | 99 | 97 | 100 | 100 |
+| product-ar-mobile.report | http://127.0.0.1:8000/ar/products/green-olives-whole | http://127.0.0.1:8000/ar/products/green-olives-whole | 46 | 100 | 100 | 100 |
+| product-en-desktop.report | http://127.0.0.1:8000/en/products/green-olives-whole | http://127.0.0.1:8000/en/products/green-olives-whole | 99 | 97 | 100 | 92 |
+| product-en-mobile.report | http://127.0.0.1:8000/en/products/green-olives-whole | http://127.0.0.1:8000/en/products/green-olives-whole | 83 | 97 | 100 | 92 |
+
+Lighthouse 13.6.0 date 2026-11-18
+
+Failing/partial audits:
+- [accessibility] color-contrast — Background and foreground colors do not have a sufficient contrast ratio.: 13 reports (category-en-desktop.report, category-en-mobile.report, home-ar-desktop.report, home-ar-mobile.report…)
+- [accessibility] heading-order — Heading elements are not in a sequentially-descending order: 4 reports (privatelabel-ar-desktop.report, privatelabel-ar-mobile.report, privatelabel-en-desktop.report, privatelabel-en-mobile.report)
+- [performance] cumulative-layout-shift — Cumulative Layout Shift: 2 reports (category-en-mobile.report, product-ar-mobile.report)
+- [performance] largest-contentful-paint — Largest Contentful Paint: 3 reports (category-en-mobile.report, product-ar-mobile.report, product-en-mobile.report)
+- [performance] total-blocking-time — Total Blocking Time: 2 reports (privatelabel-en-mobile.report, product-ar-mobile.report)
+- [seo] link-text — Links do not have descriptive text: 6 reports (category-en-desktop.report, category-en-mobile.report, home-en-desktop.report, home-en-mobile.report…)
