@@ -124,3 +124,17 @@ index 5c093ba..2348582 100644
      x-data="siteHeader"
      {{-- Opaque at rest, glass once the page scrolls under it. Frosting a
           header that is sitting on plain white achieves nothing but GPU work,
+diff --git a/tests/Feature/ApprovedContentTest.php b/tests/Feature/ApprovedContentTest.php
+index cc1d611..b676f68 100644
+--- a/tests/Feature/ApprovedContentTest.php
++++ b/tests/Feature/ApprovedContentTest.php
+@@ -146,7 +146,8 @@ public function test_signing_the_replacement_off_makes_it_public(): void
+         $html = $this->get('/ar')->assertOk()->getContent();
+         $this->assertStringContainsString('عنوان جديد تمت مراجعته', $html);
+         $this->assertStringContainsString('شعار جديد تمت مراجعته', $html);
+-        $this->assertStringNotContainsString($this->oldLabel.'<', $html);
++        // The phone-only bottom bar (hidden on tablet/desktop) carries its own static "Home" label.
++        $this->assertStringNotContainsString($this->oldLabel.'<', preg_replace('#<nav class="wrm wrm-nav".*?</nav>#s', '', $html));
+         $this->assertFalse(app(LocaleReadiness::class)->forLocale('ar')['areas']['navigation']['pending']);
+     }
+ 
