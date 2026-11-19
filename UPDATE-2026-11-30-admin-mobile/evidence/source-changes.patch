@@ -1,0 +1,988 @@
+diff --git a/app/Filament/Resources/Products/ProductResource.php b/app/Filament/Resources/Products/ProductResource.php
+index e3e2efd..e868e30 100644
+--- a/app/Filament/Resources/Products/ProductResource.php
++++ b/app/Filament/Resources/Products/ProductResource.php
+@@ -255,6 +255,8 @@ public static function form(Schema $schema): Schema
+                                 ->label(__('admin.fields.images'))
+                                 ->helperText(__('admin.product.gallery_hint'))
+                                 ->orderColumn('display_order')
++                                // Move up / down buttons: a touch alternative to dragging. Hidden above the phone breakpoint (see the panel head hook), so desktop and tablet keep the drag handle only.
++                                ->reorderableWithButtons()
+                                 ->defaultItems(0)
+                                 ->columns(2)
+                                 ->addActionLabel(__('admin.actions.create'))
+diff --git a/app/Http/Controllers/Admin/AdminLanguageController.php b/app/Http/Controllers/Admin/AdminLanguageController.php
+new file mode 100644
+index 0000000..9ff8996
+--- /dev/null
++++ b/app/Http/Controllers/Admin/AdminLanguageController.php
+@@ -0,0 +1,30 @@
++<?php
++
++declare(strict_types=1);
++
++namespace App\Http\Controllers\Admin;
++
++use App\Http\Controllers\Controller;
++use App\Support\Admin\AdminLocales;
++use Illuminate\Http\RedirectResponse;
++use Illuminate\Http\Request;
++
++/** Stores the control-panel interface language (cookie only: no database change, no effect on content or the public site). */
++final class AdminLanguageController extends Controller
++{
++    public function __invoke(Request $request): RedirectResponse
++    {
++        $code = (string) $request->input('lang', '');
++        abort_unless(AdminLocales::isAvailable($code), 422);
++
++        // Back to the page the administrator was on, but only inside the panel.
++        $back = (string) $request->input('return', '');
++        $path = parse_url($back, PHP_URL_PATH);
++        $prefix = '/'.trim((string) config('wadi.admin.path', 'admin'), '/');
++        $to = is_string($path) && str_starts_with($path, $prefix)
++            ? $path.(($q = parse_url($back, PHP_URL_QUERY)) ? '?'.$q : '')
++            : $prefix;
++
++        return redirect($to)->withCookie(cookie(AdminLocales::COOKIE, $code, 60 * 24 * 365, '/', null, $request->isSecure(), true, false, 'lax'));
++    }
++}
+diff --git a/app/Http/Middleware/SetAdminLocale.php b/app/Http/Middleware/SetAdminLocale.php
+new file mode 100644
+index 0000000..470c834
+--- /dev/null
++++ b/app/Http/Middleware/SetAdminLocale.php
+@@ -0,0 +1,30 @@
++<?php
++
++declare(strict_types=1);
++
++namespace App\Http\Middleware;
++
++use App\Support\Admin\AdminLocales;
++use Closure;
++use Illuminate\Http\Request;
++use Illuminate\Support\Facades\App;
++use Symfony\Component\HttpFoundation\Response;
++
++/**
++ * Applies the administrator's chosen interface language to the control panel (and to Livewire updates, which is why it is a
++ * persistent panel middleware). With no valid choice the panel keeps the site's configured language, so nothing changes for
++ * an administrator who never switches.
++ */
++final class SetAdminLocale
++{
++    public function handle(Request $request, Closure $next): Response
++    {
++        $chosen = $request->cookie(AdminLocales::COOKIE);
++
++        if (AdminLocales::isAvailable(is_string($chosen) ? $chosen : null)) {
++            App::setLocale($chosen);
++        }
++
++        return $next($request);
++    }
++}
+diff --git a/app/Providers/Filament/AdminPanelProvider.php b/app/Providers/Filament/AdminPanelProvider.php
+index f534a8f..5bc40e0 100644
+--- a/app/Providers/Filament/AdminPanelProvider.php
++++ b/app/Providers/Filament/AdminPanelProvider.php
+@@ -154,6 +154,22 @@ public function panel(Panel $panel): Panel
+             ->authMiddleware([
+                 Authenticate::class,
+             ])
++            // Interface language chosen on the phone language strip (cookie; without a choice the panel language is unchanged).
++            ->middleware([\App\Http\Middleware\SetAdminLocale::class], isPersistent: true)
++            ->routes(fn () => \Illuminate\Support\Facades\Route::post('ui-language', \App\Http\Controllers\Admin\AdminLanguageController::class)->name('ui-language'))
++
++            // Phone-only chrome (language strip, bottom bar). Delete public/css/wr-admin-mobile.css to switch it off completely.
++            ->renderHook(\Filament\View\PanelsRenderHook::HEAD_END, function (): string {
++                $css = public_path('css/wr-admin-mobile.css');
++
++                return is_file($css)
++                    ? '<style>.wam{display:none}@media (min-width:600px){.fi-fo-repeater-item-header-start-actions li:has(>[wire\\:click*="\'moveUp\'"]),.fi-fo-repeater-item-header-start-actions li:has(>[wire\\:click*="\'moveDown\'"]){display:none!important}}</style><link rel="stylesheet" href="'.asset('css/wr-admin-mobile.css').'?v='.filemtime($css).'" media="(max-width: 599px)">'
++                    : '';
++            })
++            ->renderHook(\Filament\View\PanelsRenderHook::BODY_START, fn (): string => is_file(public_path('css/wr-admin-mobile.css')) ? view('filament.mobile-admin.shell')->render() : '')
++            ->renderHook(\Filament\View\PanelsRenderHook::BODY_END, fn (): string => is_file(public_path('js/wr-admin-mobile.js')) && is_file(public_path('css/wr-admin-mobile.css'))
++                ? '<script src="'.asset('js/wr-admin-mobile.js').'?v='.filemtime(public_path('js/wr-admin-mobile.js')).'" defer data-wam-strings=\''.e(json_encode(['unsaved' => __('adminmobile.unsaved_switch'), 'saving' => __('adminmobile.saving'), 'search' => __('adminmobile.search'), 'filters' => __('adminmobile.filters'), 'close' => __('adminmobile.close')], JSON_UNESCAPED_UNICODE)).'\'></script>'
++                : '')
+             ->authGuard('web');
+     }
+ 
+diff --git a/app/Support/Admin/AdminLocales.php b/app/Support/Admin/AdminLocales.php
+new file mode 100644
+index 0000000..8b3cb26
+--- /dev/null
++++ b/app/Support/Admin/AdminLocales.php
+@@ -0,0 +1,56 @@
++<?php
++
++declare(strict_types=1);
++
++namespace App\Support\Admin;
++
++use App\Support\LanguagePicker;
++use App\Support\Locales;
++
++/**
++ * The control panel's interface languages. Only a language that has its own admin translation file (lang/<code>/admin.php) is
++ * offered, so the panel never advertises a language it cannot display. This is the INTERFACE language of the panel; it is
++ * independent of the content-editing language tabs inside forms. The choice lives in a cookie, so an administrator who never
++ * uses the phone language strip keeps exactly the panel language the site is configured with.
++ */
++final class AdminLocales
++{
++    public const COOKIE = 'wr_admin_lang';
++
++    /** @return list<string> */
++    public static function available(): array
++    {
++        $out = [];
++        foreach (array_keys((array) config('wadi.locales', [])) as $code) {
++            if (is_file(lang_path($code.'/admin.php'))) {
++                $out[] = (string) $code;
++            }
++        }
++
++        return $out;
++    }
++
++    public static function isAvailable(?string $code): bool
++    {
++        return is_string($code) && in_array($code, self::available(), true);
++    }
++
++    /** @return list<array{code: string, native: string, flag: string, dir: string, active: bool}> */
++    public static function items(): array
++    {
++        $current = app()->getLocale();
++        $items = [];
++        foreach (self::available() as $code) {
++            $config = (array) config('wadi.locales.'.$code, []);
++            $items[] = [
++                'code' => $code,
++                'native' => (string) ($config['native'] ?? strtoupper($code)),
++                'flag' => LanguagePicker::flag($code),
++                'dir' => Locales::dir($code),
++                'active' => $code === $current,
++            ];
++        }
++
++        return $items;
++    }
++}
+diff --git a/lang/ar/adminmobile.php b/lang/ar/adminmobile.php
+new file mode 100644
+index 0000000..ede0a44
+--- /dev/null
++++ b/lang/ar/adminmobile.php
+@@ -0,0 +1,18 @@
++<?php
++
++return [
++    'dashboard' => 'لوحة المعلومات',
++    'products' => 'المنتجات',
++    'requests' => 'الطلبات',
++    'media' => 'الوسائط',
++    'more' => 'المزيد',
++    'quick_navigation' => 'تنقل سريع',
++    'interface_language' => 'لغة لوحة التحكم',
++    'search' => 'بحث',
++    'unsaved_switch' => 'لديك تغييرات غير محفوظة. تغيير لغة اللوحة يعيد تحميل الصفحة وستضيع هذه التغييرات. هل تريد التغيير على أي حال؟',
++    'saving' => 'جارٍ الحفظ…',
++    'filters' => 'المرشحات',
++    'close' => 'إغلاق',
++    'move_up' => 'تحريك لأعلى',
++    'move_down' => 'تحريك لأسفل',
++];
+diff --git a/lang/en/adminmobile.php b/lang/en/adminmobile.php
+new file mode 100644
+index 0000000..6034d20
+--- /dev/null
++++ b/lang/en/adminmobile.php
+@@ -0,0 +1,18 @@
++<?php
++
++return [
++    'dashboard' => 'Dashboard',
++    'products' => 'Products',
++    'requests' => 'Requests',
++    'media' => 'Media',
++    'more' => 'More',
++    'quick_navigation' => 'Quick navigation',
++    'interface_language' => 'Panel language',
++    'search' => 'Search',
++    'unsaved_switch' => 'You have unsaved changes. Switching the panel language reloads this page and they will be lost. Switch anyway?',
++    'saving' => 'Saving…',
++    'filters' => 'Filters',
++    'close' => 'Close',
++    'move_up' => 'Move up',
++    'move_down' => 'Move down',
++];
+diff --git a/public/css/wr-admin-mobile.css b/public/css/wr-admin-mobile.css
+new file mode 100644
+index 0000000..4e2e07b
+--- /dev/null
++++ b/public/css/wr-admin-mobile.css
+@@ -0,0 +1,214 @@
++/* Wadi El Rayan — control panel, PHONE ONLY (<= 599 px).
++   Linked with media="(max-width: 599px)": above 599 px the browser applies none of it. Every selector is either a new .wam-* class
++   or a Filament class inside this media query. Delete this file to switch the phone chrome off completely. */
++
++:root {
++    --wam-nav-h: 3.75rem;
++    --wam-lang-h: 3.25rem;
++    --wam-olive: #173f35;
++    --wam-forest: #0e2e27;
++    --wam-gold: #c6a15b;
++    --wam-ivory: #f7f5ef;
++    --wam-line: #dcdedb;
++    --wam-safe-b: env(safe-area-inset-bottom, 0px);
++    --wam-end: right;
++}
++html[dir='rtl'] { --wam-end: left; }
++
++/* Anything scrolled into view (a focused field, a validation error, a tapped tab) stops clear of the topbar and of the pinned bars. */
++html { scroll-padding-top: 4rem; scroll-padding-bottom: calc(var(--wam-nav-h) + var(--wam-safe-b) + 5rem); }
++
++/* The chrome is hidden by an inline rule in the head; the phone shows it. (Specificity beats that rule.) */
++html .wam { display: block; }
++
++/* ---------- 1. Language strip (above the panel topbar, outside the drawer) ---------- */
++.wam-langs { position: relative; z-index: 50; background: #fff; border-bottom: 1px solid var(--wam-line); }
++.wam-langs form { margin: 0; }
++.wam-langs-list {
++    display: flex; gap: .125rem; margin: 0; padding: 0 .25rem; list-style: none;
++    overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none; -webkit-overflow-scrolling: touch;
++    scroll-snap-type: x proximity;
++    -webkit-mask-image: linear-gradient(to var(--wam-end), #000 calc(100% - 28px), transparent);
++    mask-image: linear-gradient(to var(--wam-end), #000 calc(100% - 28px), transparent);
++}
++.wam-langs-list.wam-at-end { -webkit-mask-image: none; mask-image: none; }
++.wam-langs-list::-webkit-scrollbar { display: none; }
++.wam-langs-list li { flex: none; scroll-snap-align: center; }
++.wam-lang {
++    appearance: none; background: transparent; border: 0; border-bottom: 3px solid transparent; cursor: pointer;
++    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .125rem;
++    min-width: 4.5rem; min-height: var(--wam-lang-h); padding: .3rem .5rem;
++    font: inherit; font-size: .6875rem; line-height: 1.15; color: #484f4a;
++}
++.wam-flag { display: block; width: 21px; height: 16px; }
++.wam-flag img { display: block; width: 21px; height: 16px; object-fit: cover; border-radius: 2px; box-shadow: 0 0 0 1px rgb(0 0 0 / .14); }
++.wam-lang[aria-current] { color: var(--wam-olive); font-weight: 700; background: #f2f7f5; border-bottom-color: var(--wam-gold); }
++.wam-lang:focus-visible { outline: 3px solid var(--wam-gold); outline-offset: -3px; }
++
++/* ---------- 2. Compact header (the panel's own topbar, restyled) ---------- */
++.fi-topbar { min-height: 3.5rem; padding-inline: .5rem; gap: .25rem; }
++.wam-title {
++    margin-inline-start: .25rem; display: flex; flex-direction: column; min-width: 0; flex: 1 1 auto; text-decoration: none; color: inherit; line-height: 1.15;
++}
++.wam-title small { font-size: .625rem; letter-spacing: .08em; text-transform: uppercase; color: #8a7a4d; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
++.wam-title strong { font-size: 1rem; font-weight: 700; color: var(--wam-olive); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
++.fi-topbar .fi-icon-btn, .wam-search-btn { min-width: 2.75rem; min-height: 2.75rem; }
++.wam-search-btn { appearance: none; background: transparent; border: 0; border-radius: 3px; display: inline-flex; align-items: center; justify-content: center; color: #484f4a; cursor: pointer; }
++.wam-search-btn:focus-visible { outline: 3px solid var(--wam-gold); }
++/* Global search: an icon that opens the field full-width under the topbar. */
++.fi-global-search-ctn { display: none; }
++html.wam-search-open .fi-global-search-ctn {
++    display: block; position: fixed; inset-inline: 0; top: 3.5rem; z-index: 40; padding: .5rem .75rem; background: #fff; border-bottom: 1px solid var(--wam-line); box-shadow: 0 8px 20px rgb(0 0 0 / .12);
++}
++html.wam-search-open .fi-global-search-ctn .fi-global-search, html.wam-search-open .fi-global-search-ctn .fi-global-search-field { width: 100%; }
++
++/* ---------- 3. Bottom navigation ---------- */
++html .wam.wam-nav {
++    display: flex; position: fixed; inset-inline: 0; bottom: 0; z-index: 45; align-items: stretch;
++    height: calc(var(--wam-nav-h) + var(--wam-safe-b)); padding-bottom: var(--wam-safe-b);
++    background: var(--wam-ivory); border-top: 1px solid var(--wam-line); box-shadow: 0 -4px 14px rgb(0 0 0 / .06);
++}
++.wam-nav-item {
++    appearance: none; background: transparent; border: 0; font: inherit; cursor: pointer; text-decoration: none;
++    flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .2rem;
++    color: #5a635c; font-size: .6875rem; line-height: 1.1; padding: .25rem .125rem; border-radius: 0; -webkit-tap-highlight-color: transparent;
++}
++.wam-nav-item span { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
++.wam-nav-item[aria-current='page'], .wam-nav-item[aria-expanded='true'] { color: var(--wam-olive); font-weight: 700; }
++.wam-nav-item[aria-current='page'] svg { background: #f0e6cc; border-radius: 999px; padding: .2rem .8rem; box-sizing: content-box; width: 22px; }
++.wam-nav-item:focus-visible { outline: 3px solid var(--wam-gold); outline-offset: -4px; }
++/* Keyboard open (class set by JS) or a focused field: the bar steps aside so it never sits on top of the input. */
++html.wam-kb .wam.wam-nav { display: none; }
++/* Room for the bar below the page, and above it for toasts. */
++.fi-main-ctn { padding-bottom: calc(var(--wam-nav-h) + var(--wam-safe-b) + 1rem); }
++html.wam-kb .fi-main-ctn { padding-bottom: 1rem; }
++.fi-no { bottom: calc(var(--wam-nav-h) + var(--wam-safe-b) + .5rem) !important; }
++html.wam-kb .fi-no { bottom: .5rem !important; }
++
++/* ---------- 4. The drawer behind "More" is the panel's own organised sidebar ---------- */
++.fi-sidebar-nav a, .fi-sidebar-item-btn, .fi-sidebar-group-btn { min-height: 2.75rem; }
++.fi-sidebar { max-width: 88vw; padding-bottom: calc(var(--wam-nav-h) + var(--wam-safe-b)); }
++
++/* ---------- 5. Pages: headings, actions, forms ---------- */
++.fi-main-ctn { overflow-x: clip; }
++.fi-page-header-main-ctn { padding-block: .75rem; row-gap: .75rem; }
++.fi-header { flex-direction: column; align-items: stretch; gap: .5rem; }
++.fi-header-heading { font-size: 1.375rem; line-height: 1.2; overflow-wrap: anywhere; }
++.fi-header-actions-ctn { flex-wrap: wrap; gap: .5rem; }
++.fi-header-actions-ctn .fi-btn, .fi-header-actions-ctn .fi-ac-btn-action { flex: 1 1 auto; justify-content: center; }
++.fi-btn, .fi-ac-btn-action { min-height: 2.75rem; }
++.fi-icon-btn { min-width: 2.75rem; min-height: 2.75rem; }
++.fi-input, .fi-select-input, select, textarea, input[type='text'], input[type='email'], input[type='tel'], input[type='number'], input[type='search'], input[type='password'], input[type='url'] { font-size: 1rem; min-height: 2.75rem; }
++.fi-input-wrp { min-height: 2.75rem; }
++.fi-fo-field-label-content, .fi-fo-field-wrp-label { font-size: .875rem; }
++.fi-section-content-ctn, .fi-section-content { padding: .875rem; }
++.fi-section-header { padding: .75rem .875rem; }
++/* One readable column for every form grid. */
++.fi-fo-field-wrp, .fi-sc-section, .fi-section { max-width: 100%; }
++.fi-sc-form .fi-grid, .fi-sc .fi-grid { grid-template-columns: minmax(0, 1fr) !important; }
++.fi-grid-col { grid-column: 1 / -1 !important; }
++/* Repeater items: full width, comfortable header buttons. */
++.fi-fo-repeater-item-header { gap: .25rem; padding: .5rem .625rem; flex-wrap: wrap; }
++.fi-fo-repeater-item-header .fi-icon-btn { min-width: 2.75rem; min-height: 2.75rem; }
++
++/* Tabs (content-language tabs, resource tabs, tab sets): one scrollable row with an end fade. */
++.fi-tabs, .fi-sc-tabs > .fi-tabs {
++    display: flex; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; max-width: 100%;
++    -webkit-mask-image: linear-gradient(to var(--wam-end), #000 calc(100% - 28px), transparent);
++    mask-image: linear-gradient(to var(--wam-end), #000 calc(100% - 28px), transparent);
++}
++.fi-tabs.wam-at-end { -webkit-mask-image: none; mask-image: none; }
++.fi-tabs::-webkit-scrollbar { display: none; }
++.fi-tabs-item { flex: none; min-height: 2.75rem; scroll-margin-inline: 1rem; }
++
++/* Save / Publish / Cancel: pinned above the bottom bar while the end of the form is still below the screen (JS adds the class and
++   keeps the row's height reserved); once the end of the form is on screen the row sits in its normal place, so it never covers content. */
++.fi-sc-actions.wam-actions-fixed {
++    position: fixed; inset-inline: 0; top: auto; height: auto; bottom: calc(var(--wam-nav-h) + var(--wam-safe-b)); z-index: 30;
++    padding: .625rem 1rem; background: var(--wam-ivory); border-top: 1px solid var(--wam-line); box-shadow: 0 -6px 16px rgb(0 0 0 / .08);
++}
++html.wam-kb .fi-sc-actions.wam-actions-fixed { bottom: 0; }
++.fi-sc-actions .fi-btn { flex: 1 1 auto; justify-content: center; }
++
++/* ---------- 6. Lists: tables, search, filters ---------- */
++.fi-ta-ctn { max-width: 100%; }
++.fi-ta-content-ctn { overflow-x: auto; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
++.fi-ta-header-toolbar { flex-wrap: wrap; gap: .5rem; padding: .625rem; }
++.fi-ta-record-checkbox, .fi-ta-page-checkbox, .fi-ta-selection-cell input[type='checkbox'] { width: 1.375rem; height: 1.375rem; }
++.fi-ta-selection-cell { min-width: 3rem; }
++.fi-ta-selection-indicator { flex-wrap: wrap; gap: .5rem; padding: .625rem; }
++/* Resource lists as cards: every column stays available, labelled, in one readable stack. (JS sets data-wam-cards and the labels.) */
++.fi-resource-list-records-page .fi-ta-table[data-wam-cards],
++.fi-resource-list-records-page .fi-ta-table[data-wam-cards] > tbody,
++.fi-resource-list-records-page .fi-ta-table[data-wam-cards] > thead { display: block; width: 100%; }
++.fi-resource-list-records-page .fi-ta-table[data-wam-cards] > thead > tr { display: flex; align-items: center; gap: .5rem; padding: .375rem .75rem; }
++.fi-resource-list-records-page .fi-ta-table[data-wam-cards] > thead th { display: none; }
++.fi-resource-list-records-page .fi-ta-table[data-wam-cards] > thead th.fi-ta-selection-cell { display: block; padding: 0; width: auto; }
++.fi-resource-list-records-page .fi-ta-table[data-wam-cards] > tbody > tr.fi-ta-row {
++    display: grid; grid-template-columns: auto auto minmax(0, 1fr); grid-template-rows: repeat(11, auto) 1fr; align-items: start; column-gap: 0; row-gap: .125rem;
++    padding: .75rem .75rem .75rem .5rem; border-bottom: 1px solid var(--wam-line);
++}
++.fi-resource-list-records-page .fi-ta-table[data-wam-cards] > tbody > tr.fi-ta-row > td { display: block; padding: 0; width: auto; min-width: 0; border: 0; }
++.fi-resource-list-records-page .fi-ta-table[data-wam-cards] > tbody > tr.fi-ta-row > td > * { padding-block: .125rem !important; padding-inline: 0 !important; min-height: 0; }
++.fi-resource-list-records-page .fi-ta-table[data-wam-cards] > tbody > tr.fi-ta-row > td[data-wam-role='select'] > * { padding: 0 !important; }
++.fi-resource-list-records-page .fi-ta-table[data-wam-cards] > tbody > tr.fi-ta-row { row-gap: 0; padding-block: .625rem; }
++.fi-resource-list-records-page .fi-ta-table[data-wam-cards] > tbody > tr.fi-ta-row > td[data-wam-role='field'] [class*='fi-ta-'], .fi-resource-list-records-page .fi-ta-table[data-wam-cards] > tbody > tr.fi-ta-row > td[data-wam-role='primary'] [class*='fi-ta-'] { padding-block: .125rem !important; padding-inline: 0 !important; }
++.fi-resource-list-records-page [data-wam-role='select'] { grid-column: 1; grid-row: 1 / span 12; padding-inline-end: .5rem !important; align-self: start; }
++.fi-resource-list-records-page [data-wam-role='image'] { grid-column: 2; grid-row: 1 / span 12; padding-inline-end: .75rem !important; align-self: start; }
++.fi-resource-list-records-page [data-wam-role='primary'] { grid-column: 3; font-size: 1rem; font-weight: 600; }
++.fi-resource-list-records-page [data-wam-role='field'] { grid-column: 3; display: flex !important; gap: .5rem; align-items: baseline; font-size: .875rem; }
++.fi-resource-list-records-page [data-wam-role='field']::before { content: attr(data-wam-label); flex: none; min-width: 5.5rem; max-width: 40%; font-size: .75rem; color: #737a75; text-transform: none; }
++.fi-resource-list-records-page [data-wam-role='field']:empty, .fi-resource-list-records-page [data-wam-role='field']:not(:has(*)):not(:where(:not(:empty))) { display: none !important; }
++.fi-resource-list-records-page [data-wam-role='actions'] { grid-column: 3; padding-top: .375rem !important; }
++.fi-resource-list-records-page [data-wam-role='actions'] .fi-ta-actions { flex-wrap: wrap; gap: .375rem; }
++.fi-resource-list-records-page [data-wam-role='actions'] .fi-btn, .fi-resource-list-records-page [data-wam-role='actions'] .fi-link { min-height: 2.75rem; display: inline-flex; align-items: center; }
++
++/* Filters and the column manager open as bottom sheets. The huge shadow is the scrim (a tap on it closes the panel). */
++.fi-ta-filters-dropdown .fi-dropdown-panel,
++.fi-ta-col-manager-dropdown .fi-dropdown-panel {
++    --container-xs: 100vw; --container-sm: 100vw; --container-md: 100vw; /* Filament's width classes read these (their own max-width rule is !important in a layer) */
++    position: fixed !important; inset: auto 0 0 0 !important; transform: none !important; width: 100% !important;
++    max-height: min(85dvh, 100dvh - 4rem); overflow-y: auto; overscroll-behavior: contain; z-index: 60;
++    border-radius: 14px 14px 0 0; padding-bottom: calc(1rem + var(--wam-safe-b));
++    box-shadow: 0 0 0 100vmax rgb(14 46 39 / .45);
++}
++.fi-ta-filters-dropdown .fi-dropdown-panel::before {
++    content: ''; display: block; width: 2.5rem; height: .3125rem; margin: .5rem auto; border-radius: 99px; background: var(--wam-line);
++}
++.fi-ta-filters-actions-ctn { position: sticky; bottom: 0; background: #fff; padding-block: .5rem; }
++.fi-ta-filters-actions-ctn .fi-btn { width: 100%; justify-content: center; }
++.fi-pagination { flex-wrap: wrap; justify-content: center; gap: .5rem; }
++
++/* ---------- 7. Modals, notifications ---------- */
++.fi-modal-window { max-height: 92dvh; overflow-y: auto; }
++.fi-modal-window-ctn { align-items: flex-end; }
++.fi-modal-window:not(.fi-modal-slide-over-window) { border-radius: 14px 14px 0 0; width: 100%; max-width: none; }
++
++/* ---------- 8. Media and touch ---------- */
++.fi-fo-file-upload, .fi-fo-file-upload .filepond--root { max-width: 100%; }
++.fi-fo-file-upload .filepond--drop-label { min-height: 4.5rem; }
++img, video { max-width: 100%; height: auto; }
++.fi-fo-repeater-item-header-start-actions, .fi-fo-repeater-item-header-end-actions { gap: .25rem; }
++
++/* ---------- 9. Analytics (cards, charts, filters) ---------- */
++/* The report filter bar (inline styles → !important): two columns of full-width fields, big buttons, scrollable data tables. */
++.wr-an-bar { padding: .75rem !important; }
++.wr-an-bar > div:first-child { display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .625rem !important; align-items: end; }
++.wr-an-bar label { min-width: 0; }
++.wr-an-bar select, .wr-an-bar input[type='date'], .wr-an-bar input[type='text'] { max-width: none !important; width: 100% !important; min-height: 2.75rem; font-size: 1rem !important; }
++.wr-an-bar > div:first-child > label:has(input[type='checkbox']), .wr-an-bar > div:first-child > button { grid-column: span 1; min-height: 2.75rem; }
++.wr-an-bar button { min-height: 2.75rem; padding-inline: 1rem !important; }
++.wr-an-noprint { width: 100%; }
++.wr-an-noprint input[type='text'] { width: 100% !important; }
++/* Comparison / preview / report tables keep a readable width and scroll inside their own container (never the whole page). */
++.fi-page-content div:has(> table:not(.fi-ta-table)) { overflow-x: auto; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; max-width: 100%; }
++.fi-page-content table:not(.fi-ta-table) { min-width: 32rem; }
++canvas, .fi-wi-chart, .wr-chart, svg.wr-chart { max-width: 100%; }
++.fi-wi-stats-overview-stats-ctn, .fi-wi-stats-overview { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
++.fi-wi-stats-overview-stat { padding: .75rem; }
++
++/* ---------- 10. Motion ---------- */
++@media (prefers-reduced-motion: reduce) {
++    .wam *, .fi-sidebar, .fi-modal-window, .fi-dropdown-panel { transition: none !important; animation: none !important; }
++    .wam-langs-list, .fi-tabs { scroll-behavior: auto; }
++}
+diff --git a/public/js/wr-admin-mobile.js b/public/js/wr-admin-mobile.js
+new file mode 100644
+index 0000000..1bef40d
+--- /dev/null
++++ b/public/js/wr-admin-mobile.js
+@@ -0,0 +1,261 @@
++/* Wadi El Rayan — control panel, phone-only behaviour (no framework, no service worker, no storage of panel data).
++   Runs only while (max-width: 599px) matches and is fully torn down when the viewport leaves that range. */
++(function () {
++    'use strict';
++    var mq = window.matchMedia('(max-width: 599px)');
++    var cleanup = [];
++    var S = {};
++    try { S = JSON.parse((document.currentScript && document.currentScript.getAttribute('data-wam-strings')) || '{}'); } catch (e) { S = {}; }
++
++    function on(el, type, fn, opts) { if (!el) return; el.addEventListener(type, fn, opts); cleanup.push(function () { el.removeEventListener(type, fn, opts); }); }
++    function $(s, r) { return (r || document).querySelector(s); }
++    function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
++    function sidebarStore() { return window.Alpine && window.Alpine.store ? window.Alpine.store('sidebar') : null; }
++
++    /* ---- language strip: current language scrolled into view, end-of-list fade ---- */
++    function endFade(list) {
++        function upd() {
++            var max = list.scrollWidth - list.clientWidth, x = Math.abs(list.scrollLeft);
++            list.classList.toggle('wam-at-end', max <= 2 || x >= max - 2);
++        }
++        on(list, 'scroll', upd, { passive: true });
++        upd();
++    }
++    function initLangs() {
++        var list = $('[data-wam-langs-list]');
++        if (!list) return;
++        var cur = $('[aria-current]', list);
++        if (cur) {
++            var l = list.getBoundingClientRect(), c = cur.getBoundingClientRect();
++            list.scrollLeft += (c.left + c.width / 2) - (l.left + l.width / 2);
++        }
++        endFade(list);
++        // Switching reloads the page: protect unsaved edits first (the panel's own native prompt is skipped once confirmed here).
++        var form = $('[data-wam-lang-form]');
++        var skip = false;
++        on(form, 'submit', function (e) {
++            if (!dirty) return;
++            if (!window.confirm(S.unsaved || 'You have unsaved changes. Switch anyway?')) { e.preventDefault(); return; }
++            skip = true;
++        });
++        on(window, 'beforeunload', function (e) { if (skip) e.stopImmediatePropagation(); }, true);
++    }
++
++    /* ---- unsaved-change tracking (any edit inside a panel form, not the strip or search) ---- */
++    var dirty = false;
++    function initDirty() {
++        dirty = false;
++        function mark(e) {
++            var t = e.target;
++            if (!t || !t.closest) return;
++            if (t.closest('.wam, .fi-global-search-ctn, .fi-ta-filters, .fi-ta-header-toolbar, .fi-modal')) return;
++            if (t.closest('form, .fi-sc-form')) dirty = true;
++        }
++        on(document, 'input', mark, true);
++        on(document, 'change', mark, true);
++    }
++
++    /* ---- compact header: identity + current screen title; search icon; titles follow the page ---- */
++    var injected = [];
++    function pageTitle() {
++        var h = $('h1.fi-header-heading') || $('.fi-simple-header-heading') || $('h1');
++        var t = h ? h.textContent.replace(/\s+/g, ' ').trim() : '';
++        return t || (document.title || '').split('|')[0].trim();
++    }
++    function brandName() {
++        var a = $('.fi-topbar-start a') || $('.fi-sidebar-header a');
++        return a ? (a.textContent.replace(/\s+/g, ' ').trim() || a.getAttribute('aria-label') || (a.querySelector('img') && a.querySelector('img').alt) || '') : '';
++    }
++    function initHeader() {
++        var topbar = $('.fi-topbar');
++        var endBox = $('.fi-topbar-end');
++        if (topbar && !$('.wam-title', topbar)) {
++            var link = $('.fi-topbar-start a') || $('.fi-sidebar-header a');
++            var a = document.createElement('a');
++            a.className = 'wam-title';
++            a.href = link ? link.getAttribute('href') : '/';
++            var s = document.createElement('small'); s.textContent = brandName();
++            var st = document.createElement('strong'); st.textContent = pageTitle();
++            a.appendChild(s); a.appendChild(st);
++            topbar.insertBefore(a, endBox && endBox.parentNode === topbar ? endBox : null);
++            injected.push(a);
++        }
++        var end = $('.fi-topbar-end');
++        var field = $('.fi-global-search-ctn');
++        if (end && field && !$('.wam-search-btn', end)) {
++            var b = document.createElement('button');
++            b.type = 'button'; b.className = 'wam-search-btn'; b.setAttribute('aria-label', S.search || 'Search'); b.setAttribute('aria-expanded', 'false');
++            b.innerHTML = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4-4"/></svg>';
++            end.insertBefore(b, end.firstChild);
++            injected.push(b);
++            on(b, 'click', function () {
++                var open = document.documentElement.classList.toggle('wam-search-open');
++                b.setAttribute('aria-expanded', open ? 'true' : 'false');
++                if (open) { var i = $('input', field); if (i) i.focus(); }
++            });
++            on(document, 'keydown', function (e) {
++                if (e.key === 'Escape' && document.documentElement.classList.contains('wam-search-open')) {
++                    document.documentElement.classList.remove('wam-search-open'); b.setAttribute('aria-expanded', 'false'); b.focus();
++                }
++            });
++        }
++    }
++
++    /* ---- tabs: end-of-row fade follows the scroll position ---- */
++    function initTabs() {
++        $$('.fi-tabs').forEach(function (t) {
++            endFade(t);
++            var active = $('[aria-selected="true"], .fi-active', t);
++            if (active) { var r = t.getBoundingClientRect(), c = active.getBoundingClientRect(); t.scrollLeft += (c.left + c.width / 2) - (r.left + r.width / 2); }
++        });
++    }
++
++    /* ---- keyboard: the bar steps aside while a field has focus or the viewport shrinks ---- */
++    var FIELD = 'input:not([type=checkbox]):not([type=radio]):not([type=button]):not([type=submit]), textarea, select, [contenteditable=""], [contenteditable="true"]';
++    function initKeyboard() {
++        var root = document.documentElement, base = window.innerHeight;
++        function set(v) { root.classList.toggle('wam-kb', !!v); }
++        on(document, 'focusin', function (e) { if (e.target && e.target.matches && e.target.matches(FIELD)) { set(true); setTimeout(function () { try { e.target.scrollIntoView({ block: 'center', behavior: 'auto' }); } catch (x) { /* ignore */ } }, 250); } });
++        on(document, 'focusout', function () { setTimeout(function () { var a = document.activeElement; if (!(a && a.matches && a.matches(FIELD))) set(false); }, 50); });
++        function keepFocusedVisible() {
++            var a = document.activeElement;
++            if (a && a.matches && a.matches(FIELD)) {
++                var vv = window.visualViewport, h = vv ? vv.height : window.innerHeight, r = a.getBoundingClientRect();
++                if (r.top < 0 || r.bottom > h) { try { a.scrollIntoView({ block: 'center', behavior: 'auto' }); } catch (x) { /* ignore */ } }
++            }
++        }
++        if (window.visualViewport) {
++            on(window.visualViewport, 'resize', function () {
++                var shrunk = window.visualViewport.height < base * 0.78;
++                if (shrunk) set(true); else if (!(document.activeElement && document.activeElement.matches && document.activeElement.matches(FIELD))) set(false);
++                keepFocusedVisible();
++            });
++        }
++        on(window, 'resize', function () { setTimeout(keepFocusedVisible, 60); });
++        cleanup.push(function () { root.classList.remove('wam-kb'); });
++    }
++
++
++    /* ---- form actions (Save / Cancel): pinned above the bottom bar until the end of the form is on screen ---- */
++    function initActions() {
++        var rows = $$('.fi-sc-form .fi-sc-actions').filter(function (a) { return a.querySelector('button[type="submit"]'); });
++        if (!rows.length) return;
++        var ticking = false;
++        function update() {
++            ticking = false;
++            var nav = $('.wam-nav'), kb = document.documentElement.classList.contains('wam-kb');
++            var limit = kb || !nav ? window.innerHeight : nav.getBoundingClientRect().top;
++            rows.forEach(function (a) {
++                var holder = a.parentNode, fixed = a.classList.contains('wam-actions-fixed');
++                var h = fixed ? (parseFloat(holder.style.minHeight) || a.offsetHeight) : a.offsetHeight;
++                var ref = fixed ? holder : a;
++                var natBottom = ref.getBoundingClientRect().bottom, natTop = ref.getBoundingClientRect().top;
++                var shouldFix = natBottom > limit && natTop < window.innerHeight * 3;
++                if (shouldFix && !fixed) { holder.style.minHeight = h + 'px'; a.classList.add('wam-actions-fixed'); }
++                else if (!shouldFix && fixed) { a.classList.remove('wam-actions-fixed'); holder.style.minHeight = ''; }
++            });
++        }
++        function req() { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } }
++        on(window, 'scroll', req, { passive: true }); on(window, 'resize', req);
++        on(document, 'click', function () { setTimeout(req, 350); }); on(document, 'input', req);
++        if (window.visualViewport) on(window.visualViewport, 'resize', req);
++        update();
++        cleanup.push(function () { rows.forEach(function (a) { a.classList.remove('wam-actions-fixed'); if (a.parentNode) a.parentNode.style.minHeight = ''; }); });
++    }
++
++
++    /* ---- resource lists as cards: label every cell from its column header (re-applied after Livewire re-renders the table) ---- */
++    function labelTables() {
++        $$('.fi-resource-list-records-page .fi-ta-table').forEach(function (t) {
++            var heads = $$('thead th', t);
++            if (!heads.length) return;
++            t.setAttribute('data-wam-cards', '');
++            $$('tbody > tr.fi-ta-row', t).forEach(function (tr) {
++                var primary = false;
++                [].slice.call(tr.children).forEach(function (td, i) {
++                    var h = heads[i], lab = h ? (h.textContent || '').replace(/\s+/g, ' ').trim() : '';
++                    if (lab) td.setAttribute('data-wam-label', lab);
++                    var txt = (td.textContent || '').replace(/\s+/g, ' ').trim(), role;
++                    if (td.classList.contains('fi-ta-selection-cell')) role = 'select';
++                    else if (!h || h.classList.contains('fi-ta-actions-header-cell')) role = 'actions';
++                    else if (td.querySelector('img') && !txt) role = 'image';
++                    else if (!primary && txt) { role = 'primary'; primary = true; }
++                    else role = 'field';
++                    td.setAttribute('data-wam-role', role);
++                });
++            });
++        });
++    }
++    function initCards() {
++        labelTables();
++        var host = $('.fi-page-content') || document.body, timer = null;
++        if (!window.MutationObserver) return;
++        var mo = new MutationObserver(function () { if (timer) return; timer = setTimeout(function () { timer = null; labelTables(); }, 120); });
++        mo.observe(host, { childList: true, subtree: true });
++        cleanup.push(function () {
++            mo.disconnect();
++            $$('[data-wam-cards]').forEach(function (n) { n.removeAttribute('data-wam-cards'); });
++            $$('[data-wam-role]').forEach(function (n) { n.removeAttribute('data-wam-role'); n.removeAttribute('data-wam-label'); });
++        });
++    }
++
++    /* ---- "More" opens the panel's own organised drawer, with focus handling ---- */
++    var opener = null;
++    function setBackgroundInert(on_) {
++        $$('.fi-main-ctn, .fi-topbar, .wam-langs, .wam-nav').forEach(function (n) { if (on_) n.setAttribute('inert', ''); else n.removeAttribute('inert'); });
++    }
++    function initDrawer() {
++        var more = $('[data-wam-more]');
++        var side = $('#fi-main-sidebar') || $('.fi-sidebar');
++        if (!more || !side) return;
++        on(more, 'click', function () { var st = sidebarStore(); if (st) { opener = more; st.open(); } });
++        function sync() {
++            var st = sidebarStore(); if (!st) return;
++            var open = !!st.isOpen && mq.matches;
++            more.setAttribute('aria-expanded', open ? 'true' : 'false');
++            if (open) {
++                side.setAttribute('role', 'dialog'); side.setAttribute('aria-modal', 'true');
++                side.setAttribute('aria-label', (more.textContent || '').trim());
++                setBackgroundInert(true);
++                var tryFocus = function (n) {
++                    if (side.contains(document.activeElement)) return;
++                    var first = $('.fi-sidebar-item-btn, .fi-sidebar-group-btn, a', side);
++                    if (first) { first.focus(); }
++                    if (!side.contains(document.activeElement) && n < 8) setTimeout(function () { tryFocus(n + 1); }, 120);
++                };
++                tryFocus(0);
++            } else {
++                side.removeAttribute('role'); side.removeAttribute('aria-modal'); side.removeAttribute('aria-label');
++                setBackgroundInert(false);
++                if (opener) { var o = opener; opener = null; try { o.focus(); } catch (x) { /* ignore */ } }
++            }
++        }
++        var stop = window.Alpine && window.Alpine.effect ? window.Alpine.effect(function () { var st = sidebarStore(); if (st) { void st.isOpen; sync(); } }) : null;
++        cleanup.push(function () { try { if (stop && window.Alpine.release) window.Alpine.release(stop); } catch (x) { /* ignore */ } setBackgroundInert(false); more.setAttribute('aria-expanded', 'false'); });
++        on(document, 'keydown', function (e) { var st = sidebarStore(); if (e.key === 'Escape' && st && st.isOpen) st.close(); });
++    }
++
++    /* ---- activate / deactivate ---- */
++    function activate() {
++        initDirty(); initLangs(); initHeader(); initTabs(); initKeyboard(); initDrawer(); initActions(); initCards();
++        // Livewire re-renders parts of the page after actions: keep the title and tab fades in step.
++        on(document, 'livewire:navigated', function () { initHeader(); initTabs(); });
++        var t = $('.wam-title strong');
++        var h = $('h1.fi-header-heading');
++        if (h && t && window.MutationObserver) {
++            var mo = new MutationObserver(function () { t.textContent = pageTitle(); });
++            mo.observe(h, { childList: true, characterData: true, subtree: true });
++            cleanup.push(function () { mo.disconnect(); });
++        }
++    }
++    function deactivate() {
++        cleanup.splice(0).forEach(function (f) { try { f(); } catch (e) { /* ignore */ } });
++        injected.splice(0).forEach(function (n) { if (n.parentNode) n.parentNode.removeChild(n); });
++        document.documentElement.classList.remove('wam-search-open', 'wam-kb');
++        $$('.wam-at-end').forEach(function (n) { n.classList.remove('wam-at-end'); });
++    }
++    function sync() { deactivate(); if (mq.matches) activate(); }
++    function start() { sync(); if (mq.addEventListener) mq.addEventListener('change', sync); else mq.addListener(sync); }
++    if (window.Alpine) start(); else document.addEventListener('alpine:initialized', start, { once: true });
++    if (document.readyState !== 'loading' && !window.Alpine) setTimeout(function () { if (!cleanup.length && mq.matches && !injected.length) start(); }, 1500);
++})();
+diff --git a/resources/views/filament/mobile-admin/shell.blade.php b/resources/views/filament/mobile-admin/shell.blade.php
+new file mode 100644
+index 0000000..1221407
+--- /dev/null
++++ b/resources/views/filament/mobile-admin/shell.blade.php
+@@ -0,0 +1,81 @@
++{{-- Phone-only control-panel chrome (language strip + bottom bar). Hidden everywhere above 599 px by one inline rule in the head;
++     everything here is additive markup: the panel's own topbar, sidebar and pages are not replaced. --}}
++@php
++    $wamLangs = \App\Support\Admin\AdminLocales::items();
++    $wamAuth = \Filament\Facades\Filament::auth()->check();
++    $wamTry = static function (string $class): bool {
++        try {
++            return class_exists($class) && $class::canAccess();
++        } catch (\Throwable) {
++            return false;
++        }
++    };
++    $wamUrl = static function (string $class): ?string {
++        try {
++            return $class::getUrl();
++        } catch (\Throwable) {
++            return null;
++        }
++    };
++    $wamItems = [];
++    if ($wamAuth) {
++        $candidates = [
++            ['dashboard', __('adminmobile.dashboard'), \Filament\Pages\Dashboard::class],
++            ['products', __('adminmobile.products'), \App\Filament\Resources\Products\ProductResource::class],
++            ['requests', __('adminmobile.requests'), \App\Filament\Resources\QuoteRequests\QuoteRequestResource::class],
++            ['media', __('adminmobile.media'), \App\Filament\Resources\Media\MediaAssetResource::class],
++        ];
++        foreach ($candidates as [$key, $label, $class]) {
++            if ($wamTry($class) && ($url = $wamUrl($class))) {
++                $wamItems[] = ['key' => $key, 'label' => $label, 'url' => $url];
++            }
++        }
++    }
++    $wamPath = '/'.trim(parse_url(request()->url(), PHP_URL_PATH) ?: '/', '/');
++    $wamIcons = [
++        'dashboard' => '<path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/>',
++        'products' => '<path d="M12 3 4 7.5v9L12 21l8-4.5v-9z"/><path d="M4 7.5 12 12l8-4.5M12 12v9"/>',
++        'requests' => '<path d="M4 5h16v11H8l-4 4z"/>',
++        'media' => '<rect x="3" y="4" width="18" height="16" rx="1"/><circle cx="9" cy="10" r="1.6"/><path d="m21 16-5-5-8 8"/>',
++        'more' => '<circle cx="5" cy="12" r="1.4"/><circle cx="12" cy="12" r="1.4"/><circle cx="19" cy="12" r="1.4"/>',
++    ];
++    $wamIcon = static fn (string $k): string => '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">'.($wamIcons[$k] ?? '').'</svg>';
++@endphp
++
++@if (count($wamLangs) > 1)
++    <div class="wam wam-langs" data-wam-langs>
++        <form method="post" action="{{ route('filament.admin.ui-language') }}" data-wam-lang-form>
++            @csrf
++            <input type="hidden" name="return" value="{{ request()->fullUrl() }}">
++            <nav aria-label="{{ __('adminmobile.interface_language') }}">
++                <ul class="wam-langs-list" role="list" data-wam-langs-list>
++                    @foreach ($wamLangs as $l)
++                        <li>
++                            <button type="submit" name="lang" value="{{ $l['code'] }}" class="wam-lang" lang="{{ $l['code'] }}" dir="{{ $l['dir'] }}"
++                                    @if ($l['active']) aria-current="true" @endif>
++                                @php($fc = strtolower($l['flag']))
++                                <span class="wam-flag">@if (is_file(public_path('flags/sm/'.$fc.'.webp')))<img src="{{ asset('flags/sm/'.$fc.'.webp') }}" alt="" width="21" height="16" decoding="async">@elseif (is_file(public_path('flags/'.$fc.'.svg')))<img src="{{ asset('flags/'.$fc.'.svg') }}" alt="" width="21" height="16" decoding="async">@endif</span>
++                                <span class="wam-lang-name">{{ $l['native'] }}</span>
++                            </button>
++                        </li>
++                    @endforeach
++                </ul>
++            </nav>
++        </form>
++    </div>
++@endif
++
++@if ($wamAuth)
++    <nav class="wam wam-nav" aria-label="{{ __('adminmobile.quick_navigation') }}" data-wam-nav>
++        @foreach ($wamItems as $it)
++            @php($p = '/'.trim(parse_url($it['url'], PHP_URL_PATH) ?: '/', '/'))
++            @php($active = $it['key'] === 'dashboard' ? $wamPath === $p : ($wamPath === $p || str_starts_with($wamPath, $p.'/')))
++            <a href="{{ $it['url'] }}" class="wam-nav-item" @if ($active) aria-current="page" @endif>
++                {!! $wamIcon($it['key']) !!}<span>{{ $it['label'] }}</span>
++            </a>
++        @endforeach
++        <button type="button" class="wam-nav-item" data-wam-more aria-haspopup="dialog" aria-controls="fi-main-sidebar" aria-expanded="false">
++            {!! $wamIcon('more') !!}<span>{{ __('adminmobile.more') }}</span>
++        </button>
++    </nav>
++@endif
+diff --git a/tests/Feature/MobileAdminShellTest.php b/tests/Feature/MobileAdminShellTest.php
+new file mode 100644
+index 0000000..35c6ceb
+--- /dev/null
++++ b/tests/Feature/MobileAdminShellTest.php
+@@ -0,0 +1,186 @@
++<?php
++
++declare(strict_types=1);
++
++namespace Tests\Feature;
++
++use App\Models\User;
++use App\Support\Admin\AdminLocales;
++use Illuminate\Foundation\Testing\RefreshDatabase;
++use PHPUnit\Framework\Attributes\Test;
++use Tests\TestCase;
++
++final class MobileAdminShellTest extends TestCase
++{
++    use RefreshDatabase;
++
++    protected function setUp(): void
++    {
++        parent::setUp();
++        $this->seed();
++    }
++
++    private function as(string $role): User
++    {
++        $u = User::factory()->create(['is_active' => true]);
++        $u->assignRole($role);
++        $this->actingAs($u->fresh());
++
++        return $u;
++    }
++
++    #[Test]
++    public function only_languages_with_an_admin_translation_file_are_offered(): void
++    {
++        $codes = AdminLocales::available();
++        $this->assertContains('en', $codes);
++        $this->assertContains('ar', $codes);
++        foreach ($codes as $c) {
++            $this->assertFileExists(lang_path($c.'/admin.php'), 'a language must not be advertised without admin translations');
++        }
++        $this->assertNotContains('xx', $codes);
++        $this->assertFalse(AdminLocales::isAvailable('zz'));
++        $this->assertFalse(AdminLocales::isAvailable(null));
++    }
++
++    #[Test]
++    public function the_phone_shell_is_rendered_hidden_by_default_with_the_strip_and_the_bottom_bar(): void
++    {
++        $this->as(User::ROLE_ADMIN);
++        $html = $this->get('/admin')->getContent();
++
++        $this->assertStringContainsString('<style>.wam{display:none}', $html, 'hidden everywhere until the phone stylesheet applies');
++        $this->assertStringContainsString('css/wr-admin-mobile.css', $html);
++        $this->assertMatchesRegularExpression('#<link rel="stylesheet" href="[^"]*wr-admin-mobile\.css\?v=\d+" media="\(max-width: 599px\)">#', $html);
++        $this->assertStringContainsString('class="wam wam-langs"', $html);
++        $this->assertStringContainsString('class="wam wam-nav"', $html);
++        $this->assertSame(1, substr_count($html, 'js/wr-admin-mobile.js'));
++        // The language strip lists each admin language with its native name and marks the active one.
++        $this->assertMatchesRegularExpression('#class="wam-lang"[^>]*lang="en"[^>]*aria-current="true"|class="wam-lang"[^>]*aria-current="true"#', $html);
++        $this->assertStringContainsString('English', $html);
++        $this->assertStringContainsString('العربية', $html);
++        $this->assertStringNotContainsString('Español', explode('wam-nav', $html)[0] === '' ? '' : substr($html, (int) strpos($html, 'wam-langs'), 2500), 'languages without admin translations are not advertised');
++    }
++
++    #[Test]
++    public function the_bottom_bar_lists_only_what_the_user_may_open(): void
++    {
++        $this->as(User::ROLE_ADMIN);
++        $admin = $this->get('/admin')->getContent();
++        $bar = (string) preg_replace('#^.*?(<nav class="wam wam-nav".*?</nav>).*$#s', '$1', $admin);
++        foreach (['admin/products', 'admin/quote-requests', 'admin/media'] as $path) {
++            $this->assertStringContainsString($path, $bar, "$path is listed for an administrator");
++        }
++
++    }
++
++    /** @return array<string, array{0: string}> */
++    public static function roles(): array
++    {
++        return ['sales' => [User::ROLE_SALES], 'content editor' => [User::ROLE_CONTENT_EDITOR], 'viewer' => [User::ROLE_VIEWER], 'admin' => [User::ROLE_ADMIN]];
++    }
++
++    #[Test]
++    #[\PHPUnit\Framework\Attributes\DataProvider('roles')]
++    public function the_bottom_bar_offers_exactly_the_destinations_the_user_may_open(string $role): void
++    {
++        $this->as($role);
++        $r = $this->get('/admin');
++        if ($r->getStatusCode() === 302) {   // a role without a dashboard is sent to its first allowed screen
++            $r = $this->get($r->headers->get('Location'));
++        }
++        $this->assertSame(200, $r->getStatusCode());
++        $bar = (string) preg_replace('#^.*?(<nav class="wam wam-nav".*?</nav>).*$#s', '$1', $r->getContent());
++        $this->assertStringContainsString('data-wam-more', $bar, 'More is always available');
++
++        $expect = [
++            'admin/products' => \App\Filament\Resources\Products\ProductResource::canAccess(),
++            'admin/quote-requests' => \App\Filament\Resources\QuoteRequests\QuoteRequestResource::canAccess(),
++            'admin/media/media-assets' => \App\Filament\Resources\Media\MediaAssetResource::canAccess(),
++        ];
++        foreach ($expect as $path => $allowed) {
++            $allowed
++                ? $this->assertStringContainsString($path, $bar, "$role may open $path")
++                : $this->assertStringNotContainsString($path, $bar, "$role may not open $path, so the bar must not offer it");
++        }
++    }
++
++    #[Test]
++    public function the_bottom_bar_marks_the_current_route(): void
++    {
++        $this->as(User::ROLE_ADMIN);
++        $html = $this->get('/admin/products')->getContent();
++        $bar = (string) preg_replace('#^.*?(<nav class="wam wam-nav".*?</nav>).*$#s', '$1', $html);
++        $this->assertSame(1, preg_match_all('#aria-current="page"#', $bar));
++        $this->assertMatchesRegularExpression('#href="[^"]*admin/products"[^>]*aria-current="page"#', $bar);
++    }
++
++    #[Test]
++    public function switching_language_sets_a_cookie_only_for_an_available_language_and_stays_in_the_panel(): void
++    {
++        $this->as(User::ROLE_ADMIN);
++
++        $ok = $this->post('/admin/ui-language', ['lang' => 'ar', 'return' => url('/admin/products?tab=x')]);
++        $ok->assertRedirect('/admin/products?tab=x');
++        $ok->assertCookie(AdminLocales::COOKIE);
++
++        $this->post('/admin/ui-language', ['lang' => 'es'])->assertStatus(422);
++        $this->post('/admin/ui-language', ['lang' => 'ar', 'return' => 'https://evil.example/phish'])->assertRedirect('/admin');
++        $this->post('/admin/ui-language', ['lang' => 'ar', 'return' => '/not-the-panel'])->assertRedirect('/admin');
++    }
++
++    #[Test]
++    public function the_chosen_language_reaches_the_panel_and_never_touches_the_public_site(): void
++    {
++        $this->as(User::ROLE_ADMIN);
++
++        $en = $this->get('/admin')->getContent();
++        $this->assertStringContainsString('dir="ltr"', $en);
++
++        $ar = $this->withUnencryptedCookie(AdminLocales::COOKIE, 'ar')->get('/admin')->getContent();
++        $this->assertStringContainsString('dir="rtl"', $ar);
++        $this->assertStringContainsString('lang="ar"', $ar);
++
++        $this->get('/en')->assertOk()->assertSee('lang="en"', false);
++    }
++
++    #[Test]
++    public function the_switch_requires_the_csrf_token_in_a_real_request_and_the_strip_form_carries_it(): void
++    {
++        $this->as(User::ROLE_ADMIN);
++        $html = $this->get('/admin')->getContent();
++        $this->assertMatchesRegularExpression('#<form method="post" action="[^"]*admin/ui-language"[^>]*data-wam-lang-form>\s*<input type="hidden" name="_token"#', $html);
++    }
++
++    #[Test]
++    public function the_login_page_shows_the_language_strip_but_no_bottom_bar(): void
++    {
++        $html = $this->get('/admin/login')->getContent();
++        $this->assertStringContainsString('class="wam wam-langs"', $html);
++        $this->assertStringNotContainsString('class="wam wam-nav"', $html);
++    }
++
++    #[Test]
++    public function the_gallery_reorder_buttons_exist_but_are_hidden_above_the_phone_breakpoint(): void
++    {
++        $html = $this->get('/admin/login')->getContent();
++        $this->assertStringContainsString('@media (min-width:600px){.fi-fo-repeater-item-header-start-actions li:has(', $html);
++        $this->assertStringContainsString("'moveUp'", $html);
++    }
++
++    #[Test]
++    public function the_phone_assets_are_static_files_with_no_service_worker_or_private_storage(): void
++    {
++        foreach (['css/wr-admin-mobile.css', 'js/wr-admin-mobile.js'] as $f) {
++            $this->assertFileExists(public_path($f));
++        }
++        $js = (string) file_get_contents(public_path('js/wr-admin-mobile.js'));
++        $this->assertStringNotContainsString('serviceWorker', $js);
++        $this->assertStringNotContainsString('localStorage', $js);
++        $this->assertStringNotContainsString('sessionStorage', $js);
++        $this->assertStringNotContainsString('indexedDB', $js);
++        $this->assertStringContainsString('(max-width: 599px)', $js);
++        $this->assertLessThan(40 * 1024, filesize(public_path('css/wr-admin-mobile.css')));
++        $this->assertLessThan(30 * 1024, filesize(public_path('js/wr-admin-mobile.js')));
++    }
++}

@@ -1,0 +1,910 @@
+[
+ {
+  "loc": "en",
+  "w": 768,
+  "page": "products",
+  "status": "identical",
+  "size": [
+   768,
+   2501
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 768,
+  "page": "product-edit",
+  "status": "identical",
+  "size": [
+   768,
+   1941
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 768,
+  "page": "quotes",
+  "status": "identical",
+  "size": [
+   768,
+   980
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 768,
+  "page": "media",
+  "status": "identical",
+  "size": [
+   768,
+   3227
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 768,
+  "page": "analytics",
+  "status": "identical",
+  "size": [
+   768,
+   5604
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 768,
+  "page": "settings",
+  "status": "identical",
+  "size": [
+   768,
+   1365
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 768,
+  "page": "users",
+  "status": "identical",
+  "size": [
+   768,
+   900
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 768,
+  "page": "photo-review",
+  "status": "identical",
+  "size": [
+   768,
+   1752
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 768,
+  "page": "packaging",
+  "status": "identical",
+  "size": [
+   768,
+   1116
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 768,
+  "page": "homepage",
+  "status": "identical",
+  "size": [
+   768,
+   1999
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 768,
+  "page": "pages",
+  "status": "identical",
+  "size": [
+   768,
+   1048
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1024,
+  "page": "products",
+  "status": "identical",
+  "size": [
+   1024,
+   2501
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1024,
+  "page": "product-edit",
+  "status": "identical",
+  "size": [
+   1024,
+   1557
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1024,
+  "page": "quotes",
+  "status": "identical",
+  "size": [
+   1024,
+   980
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1024,
+  "page": "media",
+  "status": "identical",
+  "size": [
+   1024,
+   3388
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1024,
+  "page": "analytics",
+  "status": "DIFF",
+  "pixels": 28,
+  "total": 5840896,
+  "bbox": [
+   701,
+   760,
+   983,
+   909
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1024,
+  "page": "settings",
+  "status": "identical",
+  "size": [
+   1024,
+   1005
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1024,
+  "page": "users",
+  "status": "DIFF",
+  "pixels": 4,
+  "total": 921600,
+  "bbox": [
+   104,
+   172,
+   106,
+   174
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1024,
+  "page": "photo-review",
+  "status": "identical",
+  "size": [
+   1024,
+   980
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1024,
+  "page": "packaging",
+  "status": "identical",
+  "size": [
+   1024,
+   1172
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1024,
+  "page": "homepage",
+  "status": "identical",
+  "size": [
+   1024,
+   1737
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1024,
+  "page": "pages",
+  "status": "identical",
+  "size": [
+   1024,
+   1048
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1440,
+  "page": "products",
+  "status": "identical",
+  "size": [
+   1440,
+   2501
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1440,
+  "page": "product-edit",
+  "status": "identical",
+  "size": [
+   1440,
+   1541
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1440,
+  "page": "quotes",
+  "status": "identical",
+  "size": [
+   1440,
+   980
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1440,
+  "page": "media",
+  "status": "identical",
+  "size": [
+   1440,
+   2606
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1440,
+  "page": "analytics",
+  "status": "DIFF",
+  "pixels": 52,
+  "total": 6536160,
+  "bbox": [
+   1158,
+   818,
+   1165,
+   828
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1440,
+  "page": "settings",
+  "status": "identical",
+  "size": [
+   1440,
+   985
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1440,
+  "page": "users",
+  "status": "identical",
+  "size": [
+   1440,
+   900
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1440,
+  "page": "photo-review",
+  "status": "identical",
+  "size": [
+   1440,
+   940
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1440,
+  "page": "packaging",
+  "status": "identical",
+  "size": [
+   1440,
+   900
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1440,
+  "page": "homepage",
+  "status": "identical",
+  "size": [
+   1440,
+   1665
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1440,
+  "page": "pages",
+  "status": "identical",
+  "size": [
+   1440,
+   1048
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1920,
+  "page": "products",
+  "status": "identical",
+  "size": [
+   1920,
+   2501
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1920,
+  "page": "product-edit",
+  "status": "identical",
+  "size": [
+   1920,
+   1529
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1920,
+  "page": "quotes",
+  "status": "identical",
+  "size": [
+   1920,
+   900
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1920,
+  "page": "media",
+  "status": "identical",
+  "size": [
+   1920,
+   2203
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1920,
+  "page": "analytics",
+  "status": "identical",
+  "size": [
+   1920,
+   3197
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1920,
+  "page": "settings",
+  "status": "identical",
+  "size": [
+   1920,
+   985
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1920,
+  "page": "users",
+  "status": "identical",
+  "size": [
+   1920,
+   900
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1920,
+  "page": "photo-review",
+  "status": "identical",
+  "size": [
+   1920,
+   940
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1920,
+  "page": "packaging",
+  "status": "identical",
+  "size": [
+   1920,
+   900
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1920,
+  "page": "homepage",
+  "status": "identical",
+  "size": [
+   1920,
+   1665
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1920,
+  "page": "pages",
+  "status": "identical",
+  "size": [
+   1920,
+   1048
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 768,
+  "page": "products",
+  "status": "identical",
+  "size": [
+   768,
+   2501
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 768,
+  "page": "product-edit",
+  "status": "identical",
+  "size": [
+   768,
+   1941
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 768,
+  "page": "quotes",
+  "status": "identical",
+  "size": [
+   768,
+   980
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 768,
+  "page": "media",
+  "status": "identical",
+  "size": [
+   768,
+   3220
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 768,
+  "page": "analytics",
+  "status": "DIFF",
+  "pixels": 86,
+  "total": 4737024,
+  "bbox": [
+   605,
+   3032,
+   619,
+   3041
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 768,
+  "page": "settings",
+  "status": "identical",
+  "size": [
+   768,
+   1365
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 768,
+  "page": "users",
+  "status": "identical",
+  "size": [
+   768,
+   900
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 768,
+  "page": "photo-review",
+  "status": "identical",
+  "size": [
+   768,
+   1752
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 768,
+  "page": "packaging",
+  "status": "identical",
+  "size": [
+   768,
+   1114
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 768,
+  "page": "homepage",
+  "status": "identical",
+  "size": [
+   768,
+   1951
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 768,
+  "page": "pages",
+  "status": "identical",
+  "size": [
+   768,
+   1048
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1024,
+  "page": "products",
+  "status": "identical",
+  "size": [
+   1024,
+   2501
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1024,
+  "page": "product-edit",
+  "status": "identical",
+  "size": [
+   1024,
+   1549
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1024,
+  "page": "quotes",
+  "status": "identical",
+  "size": [
+   1024,
+   980
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1024,
+  "page": "media",
+  "status": "identical",
+  "size": [
+   1024,
+   3305
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1024,
+  "page": "analytics",
+  "status": "DIFF",
+  "pixels": 131,
+  "total": 5865472,
+  "bbox": [
+   173,
+   820,
+   197,
+   829
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1024,
+  "page": "settings",
+  "status": "identical",
+  "size": [
+   1024,
+   1005
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1024,
+  "page": "users",
+  "status": "identical",
+  "size": [
+   1024,
+   900
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1024,
+  "page": "photo-review",
+  "status": "identical",
+  "size": [
+   1024,
+   980
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1024,
+  "page": "packaging",
+  "status": "identical",
+  "size": [
+   1024,
+   1172
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1024,
+  "page": "homepage",
+  "status": "identical",
+  "size": [
+   1024,
+   1637
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1024,
+  "page": "pages",
+  "status": "identical",
+  "size": [
+   1024,
+   1048
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1440,
+  "page": "products",
+  "status": "identical",
+  "size": [
+   1440,
+   2501
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1440,
+  "page": "product-edit",
+  "status": "identical",
+  "size": [
+   1440,
+   1529
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1440,
+  "page": "quotes",
+  "status": "identical",
+  "size": [
+   1440,
+   900
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1440,
+  "page": "media",
+  "status": "identical",
+  "size": [
+   1440,
+   2544
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1440,
+  "page": "analytics",
+  "status": "DIFF",
+  "pixels": 84,
+  "total": 6495840,
+  "bbox": [
+   323,
+   787,
+   336,
+   796
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1440,
+  "page": "settings",
+  "status": "identical",
+  "size": [
+   1440,
+   985
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1440,
+  "page": "users",
+  "status": "identical",
+  "size": [
+   1440,
+   900
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1440,
+  "page": "photo-review",
+  "status": "identical",
+  "size": [
+   1440,
+   940
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1440,
+  "page": "packaging",
+  "status": "identical",
+  "size": [
+   1440,
+   900
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1440,
+  "page": "homepage",
+  "status": "identical",
+  "size": [
+   1440,
+   1637
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1440,
+  "page": "pages",
+  "status": "identical",
+  "size": [
+   1440,
+   1048
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1920,
+  "page": "products",
+  "status": "identical",
+  "size": [
+   1920,
+   2501
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1920,
+  "page": "product-edit",
+  "status": "identical",
+  "size": [
+   1920,
+   1521
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1920,
+  "page": "quotes",
+  "status": "identical",
+  "size": [
+   1920,
+   900
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1920,
+  "page": "media",
+  "status": "identical",
+  "size": [
+   1920,
+   2175
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1920,
+  "page": "analytics",
+  "status": "DIFF",
+  "pixels": 134,
+  "total": 6109440,
+  "bbox": [
+   472,
+   567,
+   496,
+   576
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1920,
+  "page": "settings",
+  "status": "identical",
+  "size": [
+   1920,
+   985
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1920,
+  "page": "users",
+  "status": "identical",
+  "size": [
+   1920,
+   900
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1920,
+  "page": "photo-review",
+  "status": "identical",
+  "size": [
+   1920,
+   940
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1920,
+  "page": "packaging",
+  "status": "identical",
+  "size": [
+   1920,
+   900
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1920,
+  "page": "homepage",
+  "status": "identical",
+  "size": [
+   1920,
+   1637
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1920,
+  "page": "pages",
+  "status": "identical",
+  "size": [
+   1920,
+   1048
+  ]
+ }
+]

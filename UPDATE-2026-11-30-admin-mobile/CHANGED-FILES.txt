@@ -1,0 +1,11 @@
+app/Filament/Resources/Products/ProductResource.php
+app/Http/Controllers/Admin/AdminLanguageController.php
+app/Http/Middleware/SetAdminLocale.php
+app/Providers/Filament/AdminPanelProvider.php
+app/Support/Admin/AdminLocales.php
+lang/ar/adminmobile.php
+lang/en/adminmobile.php
+public/css/wr-admin-mobile.css
+public/js/wr-admin-mobile.js
+resources/views/filament/mobile-admin/shell.blade.php
+tests/Feature/MobileAdminShellTest.php

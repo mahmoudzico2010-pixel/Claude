@@ -1,0 +1,562 @@
+[
+ {
+  "name": "[360px en] language strip visible at the very top with 2 admin languages (en, ar)",
+  "ok": true,
+  "detail": "[[\"ar\",\"العربية\"],[\"en\",\"English\"]]"
+ },
+ {
+  "name": "[360px en] each language has its configured flag image and native name",
+  "ok": true,
+  "detail": "[[\"ar\",true],[\"en\",true]]"
+ },
+ {
+  "name": "[360px en] only the active language is highlighted (aria-current + bold)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[360px en] language tap targets >= 44 px high",
+  "ok": true,
+  "detail": "[[72,52],[72,52]]"
+ },
+ {
+  "name": "[360px en] document direction follows the language",
+  "ok": true,
+  "detail": "ltr,en"
+ },
+ {
+  "name": "[360px en] bottom bar: 5 destinations (Dashboard, Products, Requests, Media, More) with translated labels",
+  "ok": true,
+  "detail": "Dashboard,Products,Requests,Media,More"
+ },
+ {
+  "name": "[360px en] bottom bar: route-based active state on Products and 44 px targets",
+  "ok": true,
+  "detail": "[null,\"page\",null,null,null]"
+ },
+ {
+  "name": "[360px en] bottom bar fixed to the bottom edge",
+  "ok": true,
+  "detail": "844/844"
+ },
+ {
+  "name": "[360px en] compact header: identity + screen title + menu + notifications + account (+ search)",
+  "ok": true,
+  "detail": "{\"title\":\"Products\",\"brand\":\"Wadi El Rayan\",\"bell\":true,\"avatar\":true,\"menu\":true,\"searchBtn\":true}"
+ },
+ {
+  "name": "[360px en] no whole-page horizontal overflow",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[360px en] More opens the organised drawer: dialog semantics, background inert, focus inside",
+  "ok": true,
+  "detail": "{\"role\":\"dialog\",\"modal\":\"true\",\"exp\":\"true\",\"inertMain\":true,\"inertLangs\":true,\"inside\":true,\"groups\":7,\"x\":0,\"rt\":317,\"iw\":360}"
+ },
+ {
+  "name": "[360px en] Escape closes the drawer, removes inert and returns focus to More",
+  "ok": true,
+  "detail": "{\"exp\":\"false\",\"inert\":false,\"focus\":true}"
+ },
+ {
+  "name": "[360px ar] language strip visible at the very top with 2 admin languages (en, ar)",
+  "ok": true,
+  "detail": "[[\"ar\",\"العربية\"],[\"en\",\"English\"]]"
+ },
+ {
+  "name": "[360px ar] each language has its configured flag image and native name",
+  "ok": true,
+  "detail": "[[\"ar\",true],[\"en\",true]]"
+ },
+ {
+  "name": "[360px ar] only the active language is highlighted (aria-current + bold)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[360px ar] language tap targets >= 44 px high",
+  "ok": true,
+  "detail": "[[72,52],[72,52]]"
+ },
+ {
+  "name": "[360px ar] document direction follows the language",
+  "ok": true,
+  "detail": "rtl,ar"
+ },
+ {
+  "name": "[360px ar] bottom bar: 5 destinations (Dashboard, Products, Requests, Media, More) with translated labels",
+  "ok": true,
+  "detail": "لوحة المعلومات,المنتجات,الطلبات,الوسائط,المزيد"
+ },
+ {
+  "name": "[360px ar] bottom bar: route-based active state on Products and 44 px targets",
+  "ok": true,
+  "detail": "[null,\"page\",null,null,null]"
+ },
+ {
+  "name": "[360px ar] bottom bar fixed to the bottom edge",
+  "ok": true,
+  "detail": "844/844"
+ },
+ {
+  "name": "[360px ar] compact header: identity + screen title + menu + notifications + account (+ search)",
+  "ok": true,
+  "detail": "{\"title\":\"المنتجات\",\"brand\":\"وادي الريان\",\"bell\":true,\"avatar\":true,\"menu\":true,\"searchBtn\":true}"
+ },
+ {
+  "name": "[360px ar] no whole-page horizontal overflow",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[360px ar] More opens the organised drawer: dialog semantics, background inert, focus inside",
+  "ok": true,
+  "detail": "{\"role\":\"dialog\",\"modal\":\"true\",\"exp\":\"true\",\"inertMain\":true,\"inertLangs\":true,\"inside\":true,\"groups\":7,\"x\":43,\"rt\":360,\"iw\":360}"
+ },
+ {
+  "name": "[360px ar] Escape closes the drawer, removes inert and returns focus to More",
+  "ok": true,
+  "detail": "{\"exp\":\"false\",\"inert\":false,\"focus\":true}"
+ },
+ {
+  "name": "[360px] no script errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px en] language strip visible at the very top with 2 admin languages (en, ar)",
+  "ok": true,
+  "detail": "[[\"ar\",\"العربية\"],[\"en\",\"English\"]]"
+ },
+ {
+  "name": "[390px en] each language has its configured flag image and native name",
+  "ok": true,
+  "detail": "[[\"ar\",true],[\"en\",true]]"
+ },
+ {
+  "name": "[390px en] only the active language is highlighted (aria-current + bold)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px en] language tap targets >= 44 px high",
+  "ok": true,
+  "detail": "[[72,52],[72,52]]"
+ },
+ {
+  "name": "[390px en] document direction follows the language",
+  "ok": true,
+  "detail": "ltr,en"
+ },
+ {
+  "name": "[390px en] bottom bar: 5 destinations (Dashboard, Products, Requests, Media, More) with translated labels",
+  "ok": true,
+  "detail": "Dashboard,Products,Requests,Media,More"
+ },
+ {
+  "name": "[390px en] bottom bar: route-based active state on Products and 44 px targets",
+  "ok": true,
+  "detail": "[null,\"page\",null,null,null]"
+ },
+ {
+  "name": "[390px en] bottom bar fixed to the bottom edge",
+  "ok": true,
+  "detail": "844/844"
+ },
+ {
+  "name": "[390px en] compact header: identity + screen title + menu + notifications + account (+ search)",
+  "ok": true,
+  "detail": "{\"title\":\"Products\",\"brand\":\"Wadi El Rayan\",\"bell\":true,\"avatar\":true,\"menu\":true,\"searchBtn\":true}"
+ },
+ {
+  "name": "[390px en] no whole-page horizontal overflow",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px en] More opens the organised drawer: dialog semantics, background inert, focus inside",
+  "ok": true,
+  "detail": "{\"role\":\"dialog\",\"modal\":\"true\",\"exp\":\"true\",\"inertMain\":true,\"inertLangs\":true,\"inside\":true,\"groups\":7,\"x\":0,\"rt\":320,\"iw\":390}"
+ },
+ {
+  "name": "[390px en] Escape closes the drawer, removes inert and returns focus to More",
+  "ok": true,
+  "detail": "{\"exp\":\"false\",\"inert\":false,\"focus\":true}"
+ },
+ {
+  "name": "[390px ar] language strip visible at the very top with 2 admin languages (en, ar)",
+  "ok": true,
+  "detail": "[[\"ar\",\"العربية\"],[\"en\",\"English\"]]"
+ },
+ {
+  "name": "[390px ar] each language has its configured flag image and native name",
+  "ok": true,
+  "detail": "[[\"ar\",true],[\"en\",true]]"
+ },
+ {
+  "name": "[390px ar] only the active language is highlighted (aria-current + bold)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px ar] language tap targets >= 44 px high",
+  "ok": true,
+  "detail": "[[72,52],[72,52]]"
+ },
+ {
+  "name": "[390px ar] document direction follows the language",
+  "ok": true,
+  "detail": "rtl,ar"
+ },
+ {
+  "name": "[390px ar] bottom bar: 5 destinations (Dashboard, Products, Requests, Media, More) with translated labels",
+  "ok": true,
+  "detail": "لوحة المعلومات,المنتجات,الطلبات,الوسائط,المزيد"
+ },
+ {
+  "name": "[390px ar] bottom bar: route-based active state on Products and 44 px targets",
+  "ok": true,
+  "detail": "[null,\"page\",null,null,null]"
+ },
+ {
+  "name": "[390px ar] bottom bar fixed to the bottom edge",
+  "ok": true,
+  "detail": "844/844"
+ },
+ {
+  "name": "[390px ar] compact header: identity + screen title + menu + notifications + account (+ search)",
+  "ok": true,
+  "detail": "{\"title\":\"المنتجات\",\"brand\":\"وادي الريان\",\"bell\":true,\"avatar\":true,\"menu\":true,\"searchBtn\":true}"
+ },
+ {
+  "name": "[390px ar] no whole-page horizontal overflow",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px ar] More opens the organised drawer: dialog semantics, background inert, focus inside",
+  "ok": true,
+  "detail": "{\"role\":\"dialog\",\"modal\":\"true\",\"exp\":\"true\",\"inertMain\":true,\"inertLangs\":true,\"inside\":true,\"groups\":7,\"x\":70,\"rt\":390,\"iw\":390}"
+ },
+ {
+  "name": "[390px ar] Escape closes the drawer, removes inert and returns focus to More",
+  "ok": true,
+  "detail": "{\"exp\":\"false\",\"inert\":false,\"focus\":true}"
+ },
+ {
+  "name": "[390px] no script errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[430px en] language strip visible at the very top with 2 admin languages (en, ar)",
+  "ok": true,
+  "detail": "[[\"ar\",\"العربية\"],[\"en\",\"English\"]]"
+ },
+ {
+  "name": "[430px en] each language has its configured flag image and native name",
+  "ok": true,
+  "detail": "[[\"ar\",true],[\"en\",true]]"
+ },
+ {
+  "name": "[430px en] only the active language is highlighted (aria-current + bold)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[430px en] language tap targets >= 44 px high",
+  "ok": true,
+  "detail": "[[72,52],[72,52]]"
+ },
+ {
+  "name": "[430px en] document direction follows the language",
+  "ok": true,
+  "detail": "ltr,en"
+ },
+ {
+  "name": "[430px en] bottom bar: 5 destinations (Dashboard, Products, Requests, Media, More) with translated labels",
+  "ok": true,
+  "detail": "Dashboard,Products,Requests,Media,More"
+ },
+ {
+  "name": "[430px en] bottom bar: route-based active state on Products and 44 px targets",
+  "ok": true,
+  "detail": "[null,\"page\",null,null,null]"
+ },
+ {
+  "name": "[430px en] bottom bar fixed to the bottom edge",
+  "ok": true,
+  "detail": "844/844"
+ },
+ {
+  "name": "[430px en] compact header: identity + screen title + menu + notifications + account (+ search)",
+  "ok": true,
+  "detail": "{\"title\":\"Products\",\"brand\":\"Wadi El Rayan\",\"bell\":true,\"avatar\":true,\"menu\":true,\"searchBtn\":true}"
+ },
+ {
+  "name": "[430px en] no whole-page horizontal overflow",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[430px en] More opens the organised drawer: dialog semantics, background inert, focus inside",
+  "ok": true,
+  "detail": "{\"role\":\"dialog\",\"modal\":\"true\",\"exp\":\"true\",\"inertMain\":true,\"inertLangs\":true,\"inside\":true,\"groups\":7,\"x\":0,\"rt\":320,\"iw\":430}"
+ },
+ {
+  "name": "[430px en] Escape closes the drawer, removes inert and returns focus to More",
+  "ok": true,
+  "detail": "{\"exp\":\"false\",\"inert\":false,\"focus\":true}"
+ },
+ {
+  "name": "[430px ar] language strip visible at the very top with 2 admin languages (en, ar)",
+  "ok": true,
+  "detail": "[[\"ar\",\"العربية\"],[\"en\",\"English\"]]"
+ },
+ {
+  "name": "[430px ar] each language has its configured flag image and native name",
+  "ok": true,
+  "detail": "[[\"ar\",true],[\"en\",true]]"
+ },
+ {
+  "name": "[430px ar] only the active language is highlighted (aria-current + bold)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[430px ar] language tap targets >= 44 px high",
+  "ok": true,
+  "detail": "[[72,52],[72,52]]"
+ },
+ {
+  "name": "[430px ar] document direction follows the language",
+  "ok": true,
+  "detail": "rtl,ar"
+ },
+ {
+  "name": "[430px ar] bottom bar: 5 destinations (Dashboard, Products, Requests, Media, More) with translated labels",
+  "ok": true,
+  "detail": "لوحة المعلومات,المنتجات,الطلبات,الوسائط,المزيد"
+ },
+ {
+  "name": "[430px ar] bottom bar: route-based active state on Products and 44 px targets",
+  "ok": true,
+  "detail": "[null,\"page\",null,null,null]"
+ },
+ {
+  "name": "[430px ar] bottom bar fixed to the bottom edge",
+  "ok": true,
+  "detail": "844/844"
+ },
+ {
+  "name": "[430px ar] compact header: identity + screen title + menu + notifications + account (+ search)",
+  "ok": true,
+  "detail": "{\"title\":\"المنتجات\",\"brand\":\"وادي الريان\",\"bell\":true,\"avatar\":true,\"menu\":true,\"searchBtn\":true}"
+ },
+ {
+  "name": "[430px ar] no whole-page horizontal overflow",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[430px ar] More opens the organised drawer: dialog semantics, background inert, focus inside",
+  "ok": true,
+  "detail": "{\"role\":\"dialog\",\"modal\":\"true\",\"exp\":\"true\",\"inertMain\":true,\"inertLangs\":true,\"inside\":true,\"groups\":7,\"x\":110,\"rt\":430,\"iw\":430}"
+ },
+ {
+  "name": "[430px ar] Escape closes the drawer, removes inert and returns focus to More",
+  "ok": true,
+  "detail": "{\"exp\":\"false\",\"inert\":false,\"focus\":true}"
+ },
+ {
+  "name": "[430px] no script errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[resize 1440px] mobile chrome absent (strip/nav/title/search button)",
+  "ok": true,
+  "detail": "{\"strip\":\"none\",\"nav\":\"none\",\"title\":false,\"searchBtn\":false}"
+ },
+ {
+  "name": "[resize 1024px] mobile chrome absent (strip/nav/title/search button)",
+  "ok": true,
+  "detail": "{\"strip\":\"none\",\"nav\":\"none\",\"title\":false,\"searchBtn\":false}"
+ },
+ {
+  "name": "[resize 768px] mobile chrome absent (strip/nav/title/search button)",
+  "ok": true,
+  "detail": "{\"strip\":\"none\",\"nav\":\"none\",\"title\":false,\"searchBtn\":false}"
+ },
+ {
+  "name": "[resize 600px] mobile chrome absent (strip/nav/title/search button)",
+  "ok": true,
+  "detail": "{\"strip\":\"none\",\"nav\":\"none\",\"title\":false,\"searchBtn\":false}"
+ },
+ {
+  "name": "[resize 599px] mobile chrome present (strip/nav/title/search button)",
+  "ok": true,
+  "detail": "{\"strip\":\"block\",\"nav\":\"flex\",\"title\":true,\"searchBtn\":true}"
+ },
+ {
+  "name": "[resize 390px] mobile chrome present (strip/nav/title/search button)",
+  "ok": true,
+  "detail": "{\"strip\":\"block\",\"nav\":\"flex\",\"title\":true,\"searchBtn\":true}"
+ },
+ {
+  "name": "[1024px] keyboard focus never reaches the mobile chrome (80 tab stops)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[edit] product saved from the phone: success feedback shown and value persisted",
+  "ok": true,
+  "detail": "Saved | تعديل جوال 1795090277652"
+ },
+ {
+  "name": "[edit] Save button is wired to Livewire loading state (no double submit)",
+  "ok": true,
+  "detail": "{\"loadingAttr\":true}"
+ },
+ {
+  "name": "[validation] required field: the panel switches to the tab holding the error, shows the message, keeps the other pending edit",
+  "ok": true,
+  "detail": "{\"invalid\":true,\"msg\":\"Please fill out this field.\",\"shown\":true,\"ar\":\"محتفظ به 1795090279691\"}"
+ },
+ {
+  "name": "[validation] nothing was written to the database on the failed save",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[validation] server-side error is shown inline, entered values are preserved, no navigation",
+  "ok": true,
+  "detail": "{\"err\":[\"The uRL slug has already been taken.\"],\"ar\":\"محتفظ به 1795090279691\",\"slug\":\"green-olives-pitted\",\"url\":\"/admin/products/green-olives-whole/edit\"}"
+ },
+ {
+  "name": "[validation] the slug of the other product was not overwritten (database unchanged)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[language] switching with unsaved edits asks first (translated message) and Cancel keeps the page and the data",
+  "ok": true,
+  "detail": "You have unsaved changes. Switching the panel language reloads this page and the"
+ },
+ {
+  "name": "[language] confirming the switch reloads the panel in Arabic (RTL)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[media] uploaded photo is selected as the main image in the form",
+  "ok": true,
+  "detail": "up-1795090232402.png"
+ },
+ {
+  "name": "[media] primary image assigned and saved",
+  "ok": true,
+  "detail": "{\"pid\":130,\"fn\":\"up-1795090232402.png\"} before=1"
+ },
+ {
+  "name": "[gallery] move up / move down buttons are visible on the phone with 44 px targets",
+  "ok": true,
+  "detail": "[[\"Move\",true,44],[\"Move up\",true,44],[\"Move down\",true,44],[\"Delete\",true,44]]"
+ },
+ {
+  "name": "[gallery] reordering with the button persists the new order",
+  "ok": true,
+  "detail": "118,119,120 -> 119,118,120"
+ },
+ {
+  "name": "[bulk] current-page selection shows the exact count and the \"select all\" offer",
+  "ok": true,
+  "detail": "25 records selected Select all 66 Deselect all"
+ },
+ {
+  "name": "[bulk] all-filtered selection minus one excluded record: exact count 65",
+  "ok": true,
+  "detail": "65 records selected Select all 66 Deselect all"
+ },
+ {
+  "name": "[bulk] bulk-edit page states the exact scope: 65 products across every page, unticked rows excluded",
+  "ok": true,
+  "detail": "All 65 products matching your filters (across every page) Rows you unticked are not included. Category Keep Keep Set Cultivar Keep Keep Set Clear Cut / style Keep Keep Set Clear Processing Keep Keep S"
+ },
+ {
+  "name": "[bulk] preview is produced before anything is written",
+  "ok": true,
+  "detail": "العربية English Dashboard Products Requests Media More Skip to content WADI EL RAYAN Bulk edit products Bulk edit produc"
+ },
+ {
+  "name": "[bulk] the Apply button states the exact number of changes from the preview",
+  "ok": true,
+  "detail": "Apply 4 changes"
+ },
+ {
+  "name": "[bulk] apply changed only the previewed records (the unticked product is untouched) and recorded a run",
+  "ok": true,
+  "detail": "featured 5 -> 1; excluded 1 -> 1; runs 1 -> 2"
+ },
+ {
+  "name": "[bulk] history with a Roll back control is available after applying",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[analytics] filter bar usable on the phone: country filter applied, no page overflow, data tables still present",
+  "ok": true,
+  "detail": "{\"val\":\"unknown\",\"w\":true,\"tables\":1,\"cards\":4} :All,unknown:Unknown / unavailable,EG:Egypt"
+ },
+ {
+  "name": "[analytics] export controls reachable (CSV/PDF)",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[permissions] Viewer: bottom bar offers exactly what the server allows",
+  "ok": true,
+  "detail": "{\"offered\":{\"products\":true,\"requests\":true,\"media\":true},\"accessible\":{\"products\":true,\"requests\":true,\"media\":true}}"
+ },
+ {
+  "name": "[permissions] Viewer: a destination hidden from the bar is still refused by the server when typed in (403)",
+  "ok": true,
+  "detail": "403"
+ },
+ {
+  "name": "[permissions] Sales: bottom bar offers exactly what the server allows",
+  "ok": true,
+  "detail": "{\"offered\":{\"products\":true,\"requests\":true,\"media\":true},\"accessible\":{\"products\":true,\"requests\":true,\"media\":true}}"
+ },
+ {
+  "name": "[permissions] Sales: a destination hidden from the bar is still refused by the server when typed in (403)",
+  "ok": true,
+  "detail": "403"
+ },
+ {
+  "name": "[keyboard] focusing a field hides the bottom bar so it cannot cover the input",
+  "ok": true,
+  "detail": "{\"kb\":true,\"navDisplay\":\"none\"}"
+ },
+ {
+  "name": "[keyboard] with a 430 px-high viewport (keyboard open) the focused field stays on screen",
+  "ok": true,
+  "detail": "{\"top\":211,\"bottom\":271,\"ih\":430,\"active\":true}"
+ },
+ {
+  "name": "[keyboard] closing it brings the bottom bar back",
+  "ok": true,
+  "detail": "{\"kb\":false,\"navDisplay\":\"flex\"}"
+ },
+ {
+  "name": "[editing] at the top of a long form, Save / Cancel are pinned just above the bottom bar",
+  "ok": true,
+  "detail": "{\"fixed\":true,\"bottomVsNav\":0,\"inView\":true}"
+ },
+ {
+  "name": "[editing] at the end of the form the buttons sit in place (nothing is covered) and clear the bottom bar",
+  "ok": true,
+  "detail": "{\"fixed\":false,\"clearOfNav\":true,\"inView\":true}"
+ }
+]
