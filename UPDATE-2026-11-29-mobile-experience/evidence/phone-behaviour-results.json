@@ -1,0 +1,482 @@
+[
+ {
+  "name": "[360px] language strip shows all enabled languages",
+  "ok": true,
+  "detail": "count=10"
+ },
+ {
+  "name": "[360px] language tap targets >= 44x44",
+  "ok": true,
+  "detail": "[72,52]"
+ },
+ {
+  "name": "[360px] current language highlighted and scrolled into view",
+  "ok": true,
+  "detail": "{\"code\":\"en\",\"inView\":true}"
+ },
+ {
+  "name": "[360px] more-languages hint is shown",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[360px] font size of language names >= 12px",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[360px] bottom nav has 5 items, each >= 44px tall",
+  "ok": true,
+  "detail": "Home|Products|Packaging|Quote|More"
+ },
+ {
+  "name": "[360px] bottom nav marks Products active on a product page",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[360px] bottom nav sits at the bottom edge",
+  "ok": true,
+  "detail": "{\"bottom\":0,\"h\":61}"
+ },
+ {
+  "name": "[360px] WhatsApp button clears the bottom bar",
+  "ok": true,
+  "detail": "null"
+ },
+ {
+  "name": "[360px] no horizontal page overflow",
+  "ok": true,
+  "detail": "360 vs 360"
+ },
+ {
+  "name": "[360px] the desktop header is hidden",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[360px] exactly one <h1> on the page",
+  "ok": true,
+  "detail": "h1=1"
+ },
+ {
+  "name": "[360px] no script errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] language strip shows all enabled languages",
+  "ok": true,
+  "detail": "count=10"
+ },
+ {
+  "name": "[390px] language tap targets >= 44x44",
+  "ok": true,
+  "detail": "[72,52]"
+ },
+ {
+  "name": "[390px] current language highlighted and scrolled into view",
+  "ok": true,
+  "detail": "{\"code\":\"en\",\"inView\":true}"
+ },
+ {
+  "name": "[390px] more-languages hint is shown",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] font size of language names >= 12px",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] bottom nav has 5 items, each >= 44px tall",
+  "ok": true,
+  "detail": "Home|Products|Packaging|Quote|More"
+ },
+ {
+  "name": "[390px] bottom nav marks Products active on a product page",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] bottom nav sits at the bottom edge",
+  "ok": true,
+  "detail": "{\"bottom\":0,\"h\":61}"
+ },
+ {
+  "name": "[390px] WhatsApp button clears the bottom bar",
+  "ok": true,
+  "detail": "null"
+ },
+ {
+  "name": "[390px] no horizontal page overflow",
+  "ok": true,
+  "detail": "390 vs 390"
+ },
+ {
+  "name": "[390px] the desktop header is hidden",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] exactly one <h1> on the page",
+  "ok": true,
+  "detail": "h1=1"
+ },
+ {
+  "name": "[390px] no script errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] More sheet opens and takes focus",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] focus stays inside the sheet while tabbing",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] page behind is inert while the sheet is open",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] Escape closes the sheet and returns focus to the opener",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] inert removed after closing",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] More lists the remaining navigation",
+  "ok": true,
+  "detail": "About Us|Quality|Export|Private Label|News|Contact|Privacy choices"
+ },
+ {
+  "name": "[390px] backdrop tap closes the sheet",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[430px] language strip shows all enabled languages",
+  "ok": true,
+  "detail": "count=10"
+ },
+ {
+  "name": "[430px] language tap targets >= 44x44",
+  "ok": true,
+  "detail": "[72,52]"
+ },
+ {
+  "name": "[430px] current language highlighted and scrolled into view",
+  "ok": true,
+  "detail": "{\"code\":\"en\",\"inView\":true}"
+ },
+ {
+  "name": "[430px] more-languages hint is shown",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[430px] font size of language names >= 12px",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[430px] bottom nav has 5 items, each >= 44px tall",
+  "ok": true,
+  "detail": "Home|Products|Packaging|Quote|More"
+ },
+ {
+  "name": "[430px] bottom nav marks Products active on a product page",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[430px] bottom nav sits at the bottom edge",
+  "ok": true,
+  "detail": "{\"bottom\":0,\"h\":61}"
+ },
+ {
+  "name": "[430px] WhatsApp button clears the bottom bar",
+  "ok": true,
+  "detail": "null"
+ },
+ {
+  "name": "[430px] no horizontal page overflow",
+  "ok": true,
+  "detail": "430 vs 430"
+ },
+ {
+  "name": "[430px] the desktop header is hidden",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[430px] exactly one <h1> on the page",
+  "ok": true,
+  "detail": "h1=1"
+ },
+ {
+  "name": "[430px] no script errors",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] switching to Español opens the equivalent product page (not the homepage)",
+  "ok": true,
+  "detail": "/es/products/green-olives-whole"
+ },
+ {
+  "name": "[390px] Español becomes the highlighted language",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] Arabic page is RTL with the strip mirrored",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] a Filters button is available",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] filter sheet opens as a dialog",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] active-filter count updates live",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] Clear unticks everything and the count disappears",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] Apply filters navigates with the filter in the URL",
+  "ok": true,
+  "detail": "category[]=green-olives"
+ },
+ {
+  "name": "[390px] the count shows the active filter after reload",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] Escape closes the filter sheet and returns focus to its button",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] Back from a product restores the list scroll position",
+  "ok": true,
+  "detail": "before=2559 after=2559"
+ },
+ {
+  "name": "[390px] gallery has visible previous/next controls",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] next arrow changes the gallery image",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] quote fields use phone-friendly types / autofill / 16px text",
+  "ok": true,
+  "detail": "{\"email\":\"email\",\"tel\":\"tel\",\"emailAc\":\"email\",\"im\":\"tel\",\"size\":16}"
+ },
+ {
+  "name": "[390px] bottom bar hides while a field has the keyboard",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] bottom bar returns after the field loses focus",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] double tap on Submit sends the request only once",
+  "ok": true,
+  "detail": "posts=1"
+ },
+ {
+  "name": "[390px] consent notice sits above the bottom bar",
+  "ok": true,
+  "detail": "{\"gap\":7,\"fits\":true}"
+ },
+ {
+  "name": "[390px] the floating Privacy-choices pill is not drawn over the page",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] More sheet offers Privacy choices once a choice was made",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] tapping it reopens the consent notice",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[600px] every phone-only element is display:none",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[600px] existing header is visible",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[600px] no phone class or wrapped table left on <html>",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[600px] keyboard focus never enters a phone-only control",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[600px] body has no extra bottom padding",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[768px] every phone-only element is display:none",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[768px] existing header is visible",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[768px] no phone class or wrapped table left on <html>",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[768px] keyboard focus never enters a phone-only control",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[768px] body has no extra bottom padding",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[1024px] every phone-only element is display:none",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[1024px] existing header is visible",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[1024px] no phone class or wrapped table left on <html>",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[1024px] keyboard focus never enters a phone-only control",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[1024px] body has no extra bottom padding",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[1440px] every phone-only element is display:none",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[1440px] existing header is visible",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[1440px] no phone class or wrapped table left on <html>",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[1440px] keyboard focus never enters a phone-only control",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[1440px] body has no extra bottom padding",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[1920px] every phone-only element is display:none",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[1920px] existing header is visible",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[1920px] no phone class or wrapped table left on <html>",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[1920px] keyboard focus never enters a phone-only control",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[1920px] body has no extra bottom padding",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[599px] phone shell is active at the upper bound",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[600px] resizing across the boundary switches the shell off",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[390px] and back on again after resizing down",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[1024px] an open sheet is closed and scrolling restored when the viewport grows",
+  "ok": true,
+  "detail": ""
+ }
+]

@@ -1,0 +1,1442 @@
+[
+ {
+  "loc": "en",
+  "w": 600,
+  "page": "home",
+  "status": "identical",
+  "size": [
+   600,
+   9061
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 600,
+  "page": "products",
+  "status": "identical",
+  "size": [
+   600,
+   12506
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 600,
+  "page": "category",
+  "status": "identical",
+  "size": [
+   600,
+   18222
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 600,
+  "page": "product",
+  "status": "identical",
+  "size": [
+   600,
+   8680
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 600,
+  "page": "quality",
+  "status": "identical",
+  "size": [
+   600,
+   2101
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 600,
+  "page": "export",
+  "status": "identical",
+  "size": [
+   600,
+   3650
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 600,
+  "page": "private-label",
+  "status": "identical",
+  "size": [
+   600,
+   2434
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 600,
+  "page": "about",
+  "status": "identical",
+  "size": [
+   600,
+   4457
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 600,
+  "page": "team",
+  "status": "identical",
+  "size": [
+   600,
+   3099
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 600,
+  "page": "news",
+  "status": "identical",
+  "size": [
+   600,
+   1676
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 600,
+  "page": "contact",
+  "status": "identical",
+  "size": [
+   600,
+   2571
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 600,
+  "page": "quote",
+  "status": "identical",
+  "size": [
+   600,
+   4186
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 767,
+  "page": "home",
+  "status": "identical",
+  "size": [
+   767,
+   6138
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 767,
+  "page": "products",
+  "status": "identical",
+  "size": [
+   767,
+   5919
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 767,
+  "page": "category",
+  "status": "identical",
+  "size": [
+   767,
+   8210
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 767,
+  "page": "product",
+  "status": "identical",
+  "size": [
+   767,
+   6747
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 767,
+  "page": "quality",
+  "status": "identical",
+  "size": [
+   767,
+   1913
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 767,
+  "page": "export",
+  "status": "identical",
+  "size": [
+   767,
+   3176
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 767,
+  "page": "private-label",
+  "status": "identical",
+  "size": [
+   767,
+   2122
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 767,
+  "page": "about",
+  "status": "identical",
+  "size": [
+   767,
+   4206
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 767,
+  "page": "team",
+  "status": "identical",
+  "size": [
+   767,
+   3183
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 767,
+  "page": "news",
+  "status": "identical",
+  "size": [
+   767,
+   1630
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 767,
+  "page": "contact",
+  "status": "identical",
+  "size": [
+   767,
+   2279
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 767,
+  "page": "quote",
+  "status": "identical",
+  "size": [
+   767,
+   3380
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 768,
+  "page": "home",
+  "status": "identical",
+  "size": [
+   768,
+   5899
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 768,
+  "page": "products",
+  "status": "identical",
+  "size": [
+   768,
+   5954
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 768,
+  "page": "category",
+  "status": "identical",
+  "size": [
+   768,
+   8212
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 768,
+  "page": "product",
+  "status": "identical",
+  "size": [
+   768,
+   6732
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 768,
+  "page": "quality",
+  "status": "identical",
+  "size": [
+   768,
+   1927
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 768,
+  "page": "export",
+  "status": "identical",
+  "size": [
+   768,
+   3196
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 768,
+  "page": "private-label",
+  "status": "identical",
+  "size": [
+   768,
+   2141
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 768,
+  "page": "about",
+  "status": "identical",
+  "size": [
+   768,
+   4379
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 768,
+  "page": "team",
+  "status": "identical",
+  "size": [
+   768,
+   3192
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 768,
+  "page": "news",
+  "status": "identical",
+  "size": [
+   768,
+   1685
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 768,
+  "page": "contact",
+  "status": "identical",
+  "size": [
+   768,
+   2386
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 768,
+  "page": "quote",
+  "status": "identical",
+  "size": [
+   768,
+   3401
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1024,
+  "page": "home",
+  "status": "identical",
+  "size": [
+   1024,
+   4889
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1024,
+  "page": "products",
+  "status": "identical",
+  "size": [
+   1024,
+   5394
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1024,
+  "page": "category",
+  "status": "identical",
+  "size": [
+   1024,
+   9317
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1024,
+  "page": "product",
+  "status": "identical",
+  "size": [
+   1024,
+   4455
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1024,
+  "page": "quality",
+  "status": "identical",
+  "size": [
+   1024,
+   1761
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1024,
+  "page": "export",
+  "status": "identical",
+  "size": [
+   1024,
+   3049
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1024,
+  "page": "private-label",
+  "status": "identical",
+  "size": [
+   1024,
+   1946
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1024,
+  "page": "about",
+  "status": "identical",
+  "size": [
+   1024,
+   4056
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1024,
+  "page": "team",
+  "status": "identical",
+  "size": [
+   1024,
+   3080
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1024,
+  "page": "news",
+  "status": "identical",
+  "size": [
+   1024,
+   1404
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1024,
+  "page": "contact",
+  "status": "identical",
+  "size": [
+   1024,
+   1917
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1024,
+  "page": "quote",
+  "status": "identical",
+  "size": [
+   1024,
+   2972
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1440,
+  "page": "home",
+  "status": "identical",
+  "size": [
+   1440,
+   4916
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1440,
+  "page": "products",
+  "status": "identical",
+  "size": [
+   1440,
+   4308
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1440,
+  "page": "category",
+  "status": "identical",
+  "size": [
+   1440,
+   6396
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1440,
+  "page": "product",
+  "status": "identical",
+  "size": [
+   1440,
+   4597
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1440,
+  "page": "quality",
+  "status": "identical",
+  "size": [
+   1440,
+   1714
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1440,
+  "page": "export",
+  "status": "identical",
+  "size": [
+   1440,
+   3067
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1440,
+  "page": "private-label",
+  "status": "identical",
+  "size": [
+   1440,
+   1869
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1440,
+  "page": "about",
+  "status": "identical",
+  "size": [
+   1440,
+   4034
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1440,
+  "page": "team",
+  "status": "identical",
+  "size": [
+   1440,
+   2852
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1440,
+  "page": "news",
+  "status": "identical",
+  "size": [
+   1440,
+   1381
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1440,
+  "page": "contact",
+  "status": "identical",
+  "size": [
+   1440,
+   1894
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1440,
+  "page": "quote",
+  "status": "identical",
+  "size": [
+   1440,
+   2950
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1920,
+  "page": "home",
+  "status": "identical",
+  "size": [
+   1920,
+   4916
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1920,
+  "page": "products",
+  "status": "identical",
+  "size": [
+   1920,
+   4308
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1920,
+  "page": "category",
+  "status": "identical",
+  "size": [
+   1920,
+   6396
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1920,
+  "page": "product",
+  "status": "identical",
+  "size": [
+   1920,
+   4608
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1920,
+  "page": "quality",
+  "status": "identical",
+  "size": [
+   1920,
+   1714
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1920,
+  "page": "export",
+  "status": "identical",
+  "size": [
+   1920,
+   3067
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1920,
+  "page": "private-label",
+  "status": "identical",
+  "size": [
+   1920,
+   1869
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1920,
+  "page": "about",
+  "status": "identical",
+  "size": [
+   1920,
+   4034
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1920,
+  "page": "team",
+  "status": "identical",
+  "size": [
+   1920,
+   2852
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1920,
+  "page": "news",
+  "status": "identical",
+  "size": [
+   1920,
+   1381
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1920,
+  "page": "contact",
+  "status": "identical",
+  "size": [
+   1920,
+   1894
+  ]
+ },
+ {
+  "loc": "en",
+  "w": 1920,
+  "page": "quote",
+  "status": "identical",
+  "size": [
+   1920,
+   2950
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 600,
+  "page": "home",
+  "status": "identical",
+  "size": [
+   600,
+   9028
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 600,
+  "page": "products",
+  "status": "identical",
+  "size": [
+   600,
+   12461
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 600,
+  "page": "category",
+  "status": "identical",
+  "size": [
+   600,
+   18148
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 600,
+  "page": "product",
+  "status": "identical",
+  "size": [
+   600,
+   8992
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 600,
+  "page": "quality",
+  "status": "identical",
+  "size": [
+   600,
+   2164
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 600,
+  "page": "export",
+  "status": "identical",
+  "size": [
+   600,
+   3740
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 600,
+  "page": "private-label",
+  "status": "identical",
+  "size": [
+   600,
+   2463
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 600,
+  "page": "about",
+  "status": "identical",
+  "size": [
+   600,
+   4245
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 600,
+  "page": "team",
+  "status": "identical",
+  "size": [
+   600,
+   3190
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 600,
+  "page": "news",
+  "status": "identical",
+  "size": [
+   600,
+   1745
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 600,
+  "page": "contact",
+  "status": "identical",
+  "size": [
+   600,
+   2747
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 600,
+  "page": "quote",
+  "status": "identical",
+  "size": [
+   600,
+   4472
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 767,
+  "page": "home",
+  "status": "identical",
+  "size": [
+   767,
+   6186
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 767,
+  "page": "products",
+  "status": "identical",
+  "size": [
+   767,
+   6046
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 767,
+  "page": "category",
+  "status": "identical",
+  "size": [
+   767,
+   8358
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 767,
+  "page": "product",
+  "status": "identical",
+  "size": [
+   767,
+   6926
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 767,
+  "page": "quality",
+  "status": "identical",
+  "size": [
+   767,
+   1920
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 767,
+  "page": "export",
+  "status": "identical",
+  "size": [
+   767,
+   3292
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 767,
+  "page": "private-label",
+  "status": "identical",
+  "size": [
+   767,
+   2195
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 767,
+  "page": "about",
+  "status": "identical",
+  "size": [
+   767,
+   4100
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 767,
+  "page": "team",
+  "status": "identical",
+  "size": [
+   767,
+   3203
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 767,
+  "page": "news",
+  "status": "identical",
+  "size": [
+   767,
+   1699
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 767,
+  "page": "contact",
+  "status": "identical",
+  "size": [
+   767,
+   2424
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 767,
+  "page": "quote",
+  "status": "identical",
+  "size": [
+   767,
+   3548
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 768,
+  "page": "home",
+  "status": "identical",
+  "size": [
+   768,
+   5959
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 768,
+  "page": "products",
+  "status": "identical",
+  "size": [
+   768,
+   6026
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 768,
+  "page": "category",
+  "status": "identical",
+  "size": [
+   768,
+   8329
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 768,
+  "page": "product",
+  "status": "identical",
+  "size": [
+   768,
+   6909
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 768,
+  "page": "quality",
+  "status": "identical",
+  "size": [
+   768,
+   1934
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 768,
+  "page": "export",
+  "status": "identical",
+  "size": [
+   768,
+   3311
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 768,
+  "page": "private-label",
+  "status": "identical",
+  "size": [
+   768,
+   2213
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 768,
+  "page": "about",
+  "status": "identical",
+  "size": [
+   768,
+   4205
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 768,
+  "page": "team",
+  "status": "identical",
+  "size": [
+   768,
+   3212
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 768,
+  "page": "news",
+  "status": "identical",
+  "size": [
+   768,
+   1708
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 768,
+  "page": "contact",
+  "status": "identical",
+  "size": [
+   768,
+   2522
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 768,
+  "page": "quote",
+  "status": "identical",
+  "size": [
+   768,
+   3569
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1024,
+  "page": "home",
+  "status": "identical",
+  "size": [
+   1024,
+   4698
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1024,
+  "page": "products",
+  "status": "identical",
+  "size": [
+   1024,
+   5423
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1024,
+  "page": "category",
+  "status": "identical",
+  "size": [
+   1024,
+   9354
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1024,
+  "page": "product",
+  "status": "identical",
+  "size": [
+   1024,
+   4571
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1024,
+  "page": "quality",
+  "status": "identical",
+  "size": [
+   1024,
+   1706
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1024,
+  "page": "export",
+  "status": "identical",
+  "size": [
+   1024,
+   3068
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1024,
+  "page": "private-label",
+  "status": "identical",
+  "size": [
+   1024,
+   1926
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1024,
+  "page": "about",
+  "status": "identical",
+  "size": [
+   1024,
+   3936
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1024,
+  "page": "team",
+  "status": "identical",
+  "size": [
+   1024,
+   3126
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1024,
+  "page": "news",
+  "status": "identical",
+  "size": [
+   1024,
+   1435
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1024,
+  "page": "contact",
+  "status": "identical",
+  "size": [
+   1024,
+   2011
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1024,
+  "page": "quote",
+  "status": "identical",
+  "size": [
+   1024,
+   3093
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1440,
+  "page": "home",
+  "status": "identical",
+  "size": [
+   1440,
+   4809
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1440,
+  "page": "products",
+  "status": "identical",
+  "size": [
+   1440,
+   4403
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1440,
+  "page": "category",
+  "status": "identical",
+  "size": [
+   1440,
+   6441
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1440,
+  "page": "product",
+  "status": "identical",
+  "size": [
+   1440,
+   4778
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1440,
+  "page": "quality",
+  "status": "identical",
+  "size": [
+   1440,
+   1706
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1440,
+  "page": "export",
+  "status": "identical",
+  "size": [
+   1440,
+   3157
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1440,
+  "page": "private-label",
+  "status": "identical",
+  "size": [
+   1440,
+   1926
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1440,
+  "page": "about",
+  "status": "identical",
+  "size": [
+   1440,
+   3907
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1440,
+  "page": "team",
+  "status": "identical",
+  "size": [
+   1440,
+   2911
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1440,
+  "page": "news",
+  "status": "identical",
+  "size": [
+   1440,
+   1435
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1440,
+  "page": "contact",
+  "status": "identical",
+  "size": [
+   1440,
+   2011
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1440,
+  "page": "quote",
+  "status": "identical",
+  "size": [
+   1440,
+   3093
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1920,
+  "page": "home",
+  "status": "identical",
+  "size": [
+   1920,
+   4809
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1920,
+  "page": "products",
+  "status": "identical",
+  "size": [
+   1920,
+   4403
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1920,
+  "page": "category",
+  "status": "identical",
+  "size": [
+   1920,
+   6441
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1920,
+  "page": "product",
+  "status": "identical",
+  "size": [
+   1920,
+   4820
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1920,
+  "page": "quality",
+  "status": "identical",
+  "size": [
+   1920,
+   1706
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1920,
+  "page": "export",
+  "status": "identical",
+  "size": [
+   1920,
+   3157
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1920,
+  "page": "private-label",
+  "status": "identical",
+  "size": [
+   1920,
+   1926
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1920,
+  "page": "about",
+  "status": "identical",
+  "size": [
+   1920,
+   3907
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1920,
+  "page": "team",
+  "status": "identical",
+  "size": [
+   1920,
+   2911
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1920,
+  "page": "news",
+  "status": "identical",
+  "size": [
+   1920,
+   1435
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1920,
+  "page": "contact",
+  "status": "identical",
+  "size": [
+   1920,
+   2011
+  ]
+ },
+ {
+  "loc": "ar",
+  "w": 1920,
+  "page": "quote",
+  "status": "identical",
+  "size": [
+   1920,
+   3093
+  ]
+ }
+]

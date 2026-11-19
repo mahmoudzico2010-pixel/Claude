@@ -3,11 +3,11 @@
 Phone range: **viewport 599 px and narrower.** Tablet and desktop (600 px and up) are untouched. Same website, routes, content, CMS and backend; admin panel not changed. **No migration, no npm, no Composer, no service worker.**
 
 ## How desktop and tablet are protected (by construction, then by measurement)
-* The phone stylesheet `public/css/wr-mobile.css` is linked with `media="(max-width: 599px)"`: above 599 px the browser does not apply a single rule from it.
+* The phone stylesheet `public/css/wr-mobile.css` is inlined in the page head as `<style media="(max-width: 599px)">` (no extra request): above 599 px the browser does not apply a single rule from it.
 * All new markup carries the class `wrm` and is `display:none` by default (one tiny inline rule), so on desktop/tablet it is never drawn, never focusable and never announced.
 * `public/js/wr-mobile.js` runs only while the phone media query matches. It is switched on/off live when the viewport crosses 599/600 px: listeners removed, injected buttons and table wrappers removed, open sheets closed, scrolling restored.
 * No shared design token, Tailwind rule or compiled asset was changed; new variables are `--wrm-*` only.
-* **Measured:** 96 of 96 full-page screenshots at 768 / 1024 / 1440 / 1920 px (12 page types × English and Arabic) are **pixel-identical** before and after (see `evidence/`).
+* **Measured:** 144 of 144 full-page screenshots at 600 / 767 / 768 / 1024 / 1440 / 1920 px (12 page types × English and Arabic) are **pixel-identical** before and after (see `evidence/`).
 
 ## What phones get
 1. **Language strip** above the header (outside any menu): every enabled language from the language manager, its configured flag over its native name, current language highlighted, horizontal scroll with fade + chevron hints, current language scrolled into view, 72 × 52 px tap targets. Links reuse the site's own equivalent-page logic (`switch_locale_url`), so a product page opens the same product in the new language and the existing fallback applies when no translation exists. The desktop language selector is untouched.
@@ -23,7 +23,7 @@ Phone range: **viewport 599 px and narrower.** Tablet and desktop (600 px and up
 
 ## Changed files
 New: `public/css/wr-mobile.css`, `public/js/wr-mobile.js`, `resources/views/partials/mobile-shell.blade.php`, `lang/{ar,en,es,fr,it,pt,el,ru,zh,ur}/mobile.php`.
-Modified (each change is an invisible hook): `resources/views/layouts/public.blade.php` (viewport-fit=cover, phone stylesheet/script links, include), `resources/views/partials/header.blade.php` (`data-wr-site-header` attribute), `resources/views/pages/products/index.blade.php` (`data-wr-*` hooks), `resources/views/components/field.blade.php` (autocomplete / inputmode hints).
+Modified (each change is an invisible hook): `resources/views/layouts/public.blade.php` (viewport-fit=cover, inlined phone stylesheet, script link, include; `product-card.blade.php` only gains a phone entry in the image `sizes` attribute), `resources/views/partials/header.blade.php` (`data-wr-site-header` attribute), `resources/views/pages/products/index.blade.php` (`data-wr-*` hooks), `resources/views/components/field.blade.php` (autocomplete / inputmode hints).
 Tests (not required on the server): `tests/Feature/MobileShellTest.php`.
 
 ## Install / rollback
@@ -32,3 +32,8 @@ See `EXACT-ADMIN-STEPS-AR.md` (Arabic) — in short: back up → extract the ZIP
 ## Not built (and why)
 * **Product search**: the site has no text search of products, so no search icon was invented (filters are provided).
 * **Tablet / large-phone-landscape (600–767 px)** deliberately keep the existing responsive layout.
+
+
+## Performance-related additions (found by measuring)
+* `public/flags/sm/*.webp` – 249 small WebP copies (64×48, ≤2.5 KB each) of the bundled flag SVGs. The phone language strip uses the thumbnail when it exists and falls back to the original SVG otherwise, so the configured flag is always the one shown. The original flags are untouched.
+* `components/product-card.blade.php` – only the `sizes` attribute gains `(max-width: 599px) 46vw,` first; at 600 px and wider the attribute resolves exactly as before.

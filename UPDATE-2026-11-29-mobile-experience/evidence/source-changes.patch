@@ -1,0 +1,126 @@
+diff --git a/resources/views/components/field.blade.php b/resources/views/components/field.blade.php
+index 8d1ca23..739d49a 100644
+--- a/resources/views/components/field.blade.php
++++ b/resources/views/components/field.blade.php
+@@ -12,8 +12,14 @@
+     'dir' => null,
+ ])
+ 
+-@php($hasError = $errors->has($name))
+-@php($id = 'field-'.str_replace(['[', ']', '.'], ['-', '', '-'], $name))
++@php
++    $hasError = $errors->has($name);
++    $id = 'field-'.str_replace(['[', ']', '.'], ['-', '', '-'], $name);
++    // Keyboard and autofill hints only (no visual effect): the right on-screen keyboard and one-tap autofill on phones.
++    $autoMap = ['email' => 'email', 'phone' => 'tel', 'whatsapp' => 'tel', 'company_name' => 'organization', 'contact_person' => 'name', 'name' => 'name'];
++    $autoComplete = $autoMap[$name] ?? null;
++    $inputMode = match (true) { $type === 'tel' => 'tel', $type === 'email' => 'email', $type === 'number' => 'decimal', default => null };
++@endphp
+ 
+ <div>
+     <label for="{{ $id }}" @class(['field-label', 'field-required' => $required])>{{ $label }}</label>
+@@ -49,6 +55,8 @@
+                @if ($required) required @endif
+                @if ($placeholder) placeholder="{{ $placeholder }}" @endif
+                @if ($dir) dir="{{ $dir }}" @endif
++               @if ($autoComplete && ! $attributes->has('autocomplete')) autocomplete="{{ $autoComplete }}" @endif
++               @if ($inputMode && ! $attributes->has('inputmode')) inputmode="{{ $inputMode }}" @endif
+                @if ($hasError) aria-invalid="true" aria-describedby="{{ $id }}-error" @endif
+                {{ $attributes->class(['input', 'input-error' => $hasError]) }}>
+     @endif
+diff --git a/resources/views/components/product-card.blade.php b/resources/views/components/product-card.blade.php
+index 2513288..2780093 100644
+--- a/resources/views/components/product-card.blade.php
++++ b/resources/views/components/product-card.blade.php
+@@ -21,14 +21,14 @@
+         <div class="media-frame {{ $frameData ? '' : 'media-frame-4-3' }} media-frame-zoom {{ $frameData ? 'bg-white' : 'bg-surface-sunken' }}" @if ($frameData) style="--media-frame-ratio: {{ $frameData['ratio'] }}" @endif>
+             @if ($image && $frameData)
+                 {{-- Framed: the whole product sits inside the inner padding; the transparent artwork is drawn above it. --}}
+-                <img src="{{ $image->urlFor(640) }}" @if ($image->srcset()) srcset="{{ $image->srcset() }}" sizes="(min-width: 1024px) 24rem, (min-width: 640px) 45vw, 90vw" @endif
++                <img src="{{ $image->urlFor(640) }}" @if ($image->srcset()) srcset="{{ $image->srcset() }}" sizes="(max-width: 599px) 46vw, (min-width: 1024px) 24rem, (min-width: 640px) 45vw, 90vw" @endif
+                      alt="{{ $image->alt() }}" loading="lazy" decoding="async"
+                      style="object-fit: {{ $frameData['fit'] }}; padding: {{ $frameData['padding'] }}%; box-sizing: border-box">
+                 <img src="{{ $frameData['url'] }}" alt="" aria-hidden="true" loading="lazy" decoding="async" class="wr-frame-overlay"
+                      style="position:absolute;inset:0;width:100%;height:100%;object-fit:fill;pointer-events:none;z-index:2;padding:0">
+             @elseif ($image)
+                 <img src="{{ $image->urlFor(640) }}"
+-                     @if ($image->srcset()) srcset="{{ $image->srcset() }}" sizes="(min-width: 1024px) 24rem, (min-width: 640px) 45vw, 90vw" @endif
++                     @if ($image->srcset()) srcset="{{ $image->srcset() }}" sizes="(max-width: 599px) 46vw, (min-width: 1024px) 24rem, (min-width: 640px) 45vw, 90vw" @endif
+                      alt="{{ $image->alt() }}"
+                      loading="lazy" decoding="async"
+                      width="{{ $image->width }}" height="{{ $image->height }}">
+diff --git a/resources/views/layouts/public.blade.php b/resources/views/layouts/public.blade.php
+index 7e26fef..908d0bd 100644
+--- a/resources/views/layouts/public.blade.php
++++ b/resources/views/layouts/public.blade.php
+@@ -7,7 +7,7 @@
+ <html lang="{{ $locale }}" dir="{{ $dir }}">
+ <head>
+     <meta charset="utf-8">
+-    <meta name="viewport" content="width=device-width, initial-scale=1">
++    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+ 
+     <title>{{ $meta['title'] }}</title>
+ 
+@@ -75,6 +75,13 @@
+         <script type="application/ld+json">{!! json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) !!}</script>
+     @endforeach
+ 
++    {{-- Phone-only experience (<= 599 px). The stylesheet is applied by the browser only at that width; nothing above it changes. --}}
++    @php($wrmCss = public_path('css/wr-mobile.css'))
++    @if (is_file($wrmCss))
++        <style media="(max-width: 599px)">{!! file_get_contents($wrmCss) !!}</style>
++        <script src="{{ asset('js/wr-mobile.js') }}?v={{ filemtime(public_path('js/wr-mobile.js')) }}" defer></script>
++    @endif
++
+     @include('partials.analytics')
+     @include('partials.wr-analytics')
+ 
+@@ -98,6 +105,10 @@
+ 
+     <a href="#main" class="skip-link">{{ __('site.skip_to_content') }}</a>
+ 
++    @if (is_file($wrmCss))
++        @include('partials.mobile-shell')
++    @endif
++
+     @include('partials.header')
+ 
+     <main id="main">
+diff --git a/resources/views/pages/products/index.blade.php b/resources/views/pages/products/index.blade.php
+index 35350ab..d178b77 100644
+--- a/resources/views/pages/products/index.blade.php
++++ b/resources/views/pages/products/index.blade.php
+@@ -26,8 +26,9 @@
+             <div class="lg:grid lg:grid-cols-12 lg:gap-12">
+ 
+                 {{-- Filters --}}
+-                <aside class="lg:col-span-3" x-data="{ open: false }">
+-                    <div class="flex items-center justify-between lg:hidden">
++                <aside class="lg:col-span-3" x-data="{ open: false }" data-wr-filters>
++                    <span hidden data-wrm-filter-strings data-label="{{ __('mobile.filters') }}" data-active="{{ __('mobile.filters_active') }}" data-title="{{ __('site.products.filter_by') }}" data-close="{{ __('site.close') }}" data-clear="{{ __('site.products.clear_filters') }}"></span>
++                    <div class="flex items-center justify-between lg:hidden" data-wr-filter-toggle>
+                         <h2 class="text-h3 text-ink">{{ __('site.products.filter_by') }}</h2>
+                         <button type="button" @click="open = !open" class="btn btn-outline px-4 py-2 text-sm">
+                             <span x-text="open ? '{{ __('site.close') }}' : '{{ __('admin.actions.filter') }}'"></span>
+@@ -43,7 +44,7 @@
+                          Hidden by class rather than x-show, so a desktop
+                          visitor sees the filters even if the JavaScript bundle
+                          has not run yet. --}}
+-                    <div class="hidden lg:block" :class="{ '!block': open }">
++                    <div class="hidden lg:block" :class="{ '!block': open }" data-wr-filter-panel>
+                         @include('partials.product-filters')
+                     </div>
+                 </aside>
+diff --git a/resources/views/partials/header.blade.php b/resources/views/partials/header.blade.php
+index 5c093ba..2348582 100644
+--- a/resources/views/partials/header.blade.php
++++ b/resources/views/partials/header.blade.php
+@@ -45,6 +45,7 @@
+ @endphp
+ 
+ <header
++    data-wr-site-header
+     x-data="siteHeader"
+     {{-- Opaque at rest, glass once the page scrolls under it. Frosting a
+          header that is sitting on plain white achieves nothing but GPU work,
