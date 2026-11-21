@@ -1,0 +1,12 @@
+app/Filament/Forms/Components/MediaPicker.php
+app/Http/Controllers/MediaFileController.php
+app/Models/MediaAsset.php
+app/Services/Media/MediaManager.php
+app/Services/Uploads/ChunkedUploads.php
+config/wadi.php
+lang/ar/media.php
+lang/en/media.php
+resources/views/filament/pages/upload-large-files.blade.php
+resources/views/home/intro.blade.php
+resources/views/pages/news/_gallery.blade.php
+tests/Feature/IphoneVideoUploadTest.php
