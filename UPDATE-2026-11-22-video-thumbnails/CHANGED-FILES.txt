@@ -1,0 +1,6 @@
+app/Models/MediaAsset.php
+app/Services/Media/MediaManager.php
+app/Support/Media/Mp4Probe.php
+public/js/wr-news-gallery.js
+resources/views/pages/news/_gallery.blade.php
+tests/Feature/VideoStripAndSizeTest.php
