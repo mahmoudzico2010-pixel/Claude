@@ -12,7 +12,7 @@
    * Public display as a range: **17–21 Oct 2026**, **28 Sep – 2 Oct 2026**, **29 Dec 2026 – 3 Jan 2027**, single day **17 Oct 2026**; the label reads **Dates** (period) or **Date** (single day) in all languages; the same range is on the news list, the home news block and in the structured data (`startDate` / `endDate`).
 
 ## Install
-1. Back up the database and the site. 2. Unzip `wadi-news-gallery-update.zip` over the site (25 files). 3. `php artisan migrate --force` — **one additive migration** (new table `news_post_media`; nothing existing is altered). 4. `php artisan optimize:clear && php artisan view:clear`.
+1. Back up the database and the site. 2. Unzip `wadi-news-gallery-update.zip` over the site (22 files). 3. `php artisan migrate --force` — **one additive migration** (new table `news_post_media`; nothing existing is altered). 4. `php artisan optimize:clear && php artisan view:clear`.
 Rollback: restore the backup of the changed files; the new table can stay (harmless) or `php artisan migrate:rollback --step=1` drops it (deletes gallery links only, never media files).
 
 ## Limits
