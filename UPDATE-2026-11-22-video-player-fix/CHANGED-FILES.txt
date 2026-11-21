@@ -1,0 +1,14 @@
+app/Http/Controllers/MediaFileController.php
+lang/ar/newsgallery.php
+lang/el/newsgallery.php
+lang/en/newsgallery.php
+lang/es/newsgallery.php
+lang/fr/newsgallery.php
+lang/it/newsgallery.php
+lang/pt/newsgallery.php
+lang/ru/newsgallery.php
+lang/ur/newsgallery.php
+lang/zh/newsgallery.php
+public/js/wr-news-gallery.js
+resources/views/pages/news/_gallery.blade.php
+tests/Feature/MediaFileRangeTest.php
