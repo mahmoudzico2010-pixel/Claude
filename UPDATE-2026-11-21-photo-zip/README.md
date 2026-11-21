@@ -13,9 +13,13 @@ In **Catalogue → Photo review** there is a new button **Upload ZIP of photos**
 * Assigning stays the existing deliberate step: pick a photo → pick an **existing product** (or press *Select this product* on the suggestion) → *Assign this photo* (gallery) or tick **Primary** → Save. Ticking *Primary* on a product that already has one shows a warning; **Undo** restores the previous primary.
 
 ## Install
-1. Back up the site. 2. Unzip `wadi-photo-zip-update.zip` over the site (5 files, no migration, no npm). 3. `php artisan optimize:clear && php artisan view:clear`.
-Rollback: restore the 4 changed files from the backup and delete `app/Services/Catalog/PhotoZipImporter.php`.
+1. Back up the site. 2. Unzip `wadi-photo-zip-update.zip` over the site (6 files, no migration, no npm). 3. `php artisan optimize:clear && php artisan view:clear`.
+Rollback: restore the 4 changed files from the backup and delete the two new files `app/Services/Catalog/PhotoZipImporter.php` and `app/Services/Catalog/ProductPhotoMatcher.php`.
 
 ## Limits (important)
 * **Server upload size:** the ZIP travels in one request, so it must fit the host's `upload_max_filesize`/`post_max_size` (the dialog shows the figure). The 40-photo ZIP you sent is **4.2 MB**. If your host allows less, upload it in smaller ZIPs — duplicates are skipped, so splitting is safe. Per ZIP: up to 100 photos, 300 MB uncompressed.
 * The file-name suggestion is only a hint (exact slug match). Photos are AI-generated illustrations per the ZIP's README — review them before publishing; this feature does not publish anything.
+
+## Smart file-name matching (added)
+Each photo's file name is matched to existing products and the top 3 are shown in the queue with a score and a band (**Strong ≥ 90 · Possible ≥ 65 · Weak ≥ 40**). Case, accents, `_`/space separators, copy/final/number suffixes, plurals and spelling variants (halved = halves, jalapeno = jalape-os …) are normalised; a cut or colour that contradicts the product (e.g. *sliced* vs *whole*) is penalised; products without a photo win ties; near-ties are flagged "close call". Camera-style names (`IMG_2231`, `BEKO0402`) get no suggestion. A hint only: nothing is assigned until you choose the product and press Assign. It also works for photos already in the queue.
+Checked on the 40 files you sent: all 40 rank their exact product first. Full-suite result was still pending when this was packaged.

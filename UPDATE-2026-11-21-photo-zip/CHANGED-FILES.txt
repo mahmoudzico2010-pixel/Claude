@@ -1,6 +1,8 @@
 app/Filament/Pages/PhotoReviewQueue.php
 app/Services/Catalog/PhotoZipImporter.php
+app/Services/Catalog/ProductPhotoMatcher.php
 lang/ar/photoreview.php
 lang/en/photoreview.php
 resources/views/filament/pages/photo-review-queue.blade.php
 tests/Feature/PhotoZipImportTest.php
+tests/Feature/ProductPhotoMatcherTest.php
