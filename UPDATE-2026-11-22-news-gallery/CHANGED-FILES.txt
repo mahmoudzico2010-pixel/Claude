@@ -1,3 +1,4 @@
+app/Filament/Forms/Components/MediaPicker.php
 app/Filament/Resources/News/NewsPostResource.php
 app/Http/Controllers/NewsController.php
 app/Models/MediaAsset.php
