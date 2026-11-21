@@ -15,8 +15,11 @@ I reproduced the image item on a category page (mobile): **257 KiB** of wasted i
 Addresses in the CURRENT structure (`/en/products/…`, `/ar/news/…`) that really don't exist (e.g. an unpublished page) stay a true 404 and are no longer redirected
 (two older tests expected exactly that). Old-style addresses are still resolved as before.
 
+## Full-suite result (sandbox)
+Before this fix the full suite showed 7 NEW failures caused by the resolver (media/packaging 404 rules, explicit old-category mappings, traversal/host-in-path guards, hidden products). All fixed: the resolver now never touches media/storage/packaging, ignores traversal or scheme-in-path addresses, and the explicit mappings in `config/legacy.php` stay authoritative; the general resolver only improves on a bare products-index answer. The related suites (SeoRelease, FreshDeployment, MediaFileRange, PackagingRoutes, CatalogStructure, PackagingCatalogImport, LegacyUrlResolver, IndexingHygiene) pass (89 tests). A final full run is reported in chat. The other known failures are the sandbox-only ones (QuoteRequest, ContactMessage, CatalogQuote, NetworkDiagnostic, TrustedProxy, InstallPackage, LanguageActivation, MediaUploadPolicy megapixel limits).
+
 ## Install
-Upload `pkg/` over the site (5 files, one is the 480 px image). Clear `storage/framework/views/*`. Then run the `media:variants` command above (the step that matters most).
+Upload `pkg/` over the site (6 files, incl. the controller; one is the 480 px image). Clear `storage/framework/views/*`. Then run the `media:variants` command above (the step that matters most).
 Rollback: restore the files. No migration.
 
 ## Not changed / honest limits

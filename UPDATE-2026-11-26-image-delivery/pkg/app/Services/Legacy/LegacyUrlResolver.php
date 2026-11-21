@@ -56,6 +56,8 @@ final class LegacyUrlResolver
     /** Section names of the current site; under a language prefix they are never legacy addresses. */
     private const CURRENT_SECTIONS = ['products', 'packaging', 'news', 'team', 'about', 'contact', 'quality', 'export', 'private-label', 'request-a-quote', 'privacy', 'terms', 'search', 'documents', 'certifications'];
 
+    private const UNTOUCHED = ['media', 'storage', 'packaging', 'build', 'css', 'js', 'flags', 'frames', 'fonts', 'images', 'language', 'livewire', 'filament', 'api', '_wr', 'up', 'installer', 'robots.txt', 'sitemap.xml'];
+
     private const NOISE = ['public', 'index', 'php', 'html', 'htm', 'page', 'pages', 'all', 'item', 'items', 'p', 'view', 'details', 'detail', 'en', 'ar', 'es', 'fr', 'it', 'pt', 'el', 'ru', 'zh', 'ur'];
 
     private ProductPhotoMatcher $matcher;
@@ -75,9 +77,18 @@ final class LegacyUrlResolver
         }
         // An address in the CURRENT structure (/en/products/..., /ar/news/...) that does not exist is a real 404 (e.g. an unpublished page):
         // redirecting it elsewhere would hide the fact and create soft-404s. Only old-style addresses are resolved.
+        // Traversal, a scheme or a host in the path (`..`, `https:/evil.example`, `//x`) is never "an old address": a plain 404.
+        $decoded = strtolower(rawurldecode($request->getPathInfo()));
+        if (str_contains($decoded, '..') || str_contains($decoded, ':') || str_contains($decoded, '//') || str_contains($decoded, '\\') || preg_match('/[\x00-\x1f]/', $decoded) === 1) {
+            return null;
+        }
         $raw = array_values(array_filter(explode('/', strtolower($request->path())), fn ($x) => $x !== ''));
         if (($raw[0] ?? '') === 'public') {
             array_shift($raw);
+        }
+        // Files, framework and application endpoints that have their own rules (and their own 404/403 behaviour): never resolved here.
+        if (isset($raw[0]) && in_array($raw[0], self::UNTOUCHED, true)) {
+            return null;
         }
         if (isset($raw[1]) && Locales::isSupported($raw[0]) && in_array($raw[1], self::CURRENT_SECTIONS, true)) {
             return null;
