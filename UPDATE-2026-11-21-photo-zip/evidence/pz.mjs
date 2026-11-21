@@ -1,0 +1,54 @@
+import { chromium, login } from './lib.mjs';
+import { execFileSync } from 'child_process'; import fs from 'fs';
+const base = 'http://127.0.0.1:8023', db = 'dev-pz.sqlite', ZIP = '/root/.claude/uploads/0a3fdaf9-e36f-576f-b421-e0836fea1fe2/7cc6e96c-Wadi-Missing-Products-40-Realistic-WebP.zip', out = 'ashots/pz-out';
+fs.mkdirSync(out, { recursive: true });
+const q = (sql) => JSON.parse(execFileSync('php', ['ashots/q.php', db, sql]).toString());
+const res = []; const check = (n, ok, d = '') => { res.push({ name: n, ok: !!ok, detail: String(d).slice(0, 200) }); console.log((ok ? 'PASS ' : 'FAIL ') + n + (ok ? '' : '  -> ' + d)); };
+const b = await chromium.launch(); const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 }); const p = await ctx.newPage();
+p.on('pageerror', e => console.log('pageerror', e.message.slice(0, 120)));
+await login(p, base);
+const snap = () => ({ products: q('select count(*) c from products')[0].c, links: q('select count(*) c from product_images')[0].c, prim: q('select count(*) c from products where primary_image_id is not null')[0].c, media: q('select count(*) c from media_assets')[0].c, rev: q('select count(*) c from catalog_media_reviews')[0].c, pend: q("select count(*) c from catalog_media_reviews where status='pending'")[0].c, assigned: q("select count(*) c from catalog_media_reviews where status='assigned'")[0].c, linkHash: q('select group_concat(id||":"||product_id||":"||media_id||":"||is_primary) h from (select * from product_images order by id)')[0].h, primHash: q('select group_concat(id||":"||ifnull(primary_image_id,0)) h from (select id,primary_image_id from products order by id)')[0].h });
+const before = snap();
+const upload = async (lang) => {
+  await p.goto(base + '/admin/photo-review', { waitUntil: 'networkidle' }); await p.waitForTimeout(800);
+  await p.getByRole('button', { name: lang === 'ar' ? 'رفع ملف ZIP للصور' : 'Upload ZIP of photos' }).click(); await p.waitForTimeout(900);
+  await p.screenshot({ path: `${out}/${lang}-zip-modal-390.png` });
+  await p.setInputFiles('.fi-modal-window input[type=file]', ZIP);
+  await p.waitForFunction(() => { const m = [...document.querySelectorAll('.fi-modal-window')].find(x => x.querySelector('input[type=file]')); return m && m.querySelector('.filepond--item') && !/Uploading|جارٍ/.test(m.innerText); }, null, { timeout: 60000 }); await p.waitForTimeout(800);
+  await p.getByRole('button', { name: lang === 'ar' ? 'استيراد الصور' : 'Import photos', exact: true }).click();
+  await p.waitForSelector('[data-testid="zip-result"]', { timeout: 120000 }); await p.waitForTimeout(1500);
+};
+await upload('en');
+const a1 = snap();
+check('[import] 40 photos from the real ZIP registered in the media library', a1.media === before.media + 40, `${before.media} -> ${a1.media}`);
+check('[import] 40 queued as unassigned (pending)', a1.rev === before.rev + 40 && a1.pend === before.pend + 40, `${before.pend} -> ${a1.pend}`);
+check('[import] no product created, no product photo link added/changed, no primary changed, no assignment changed', a1.products === before.products && a1.links === before.links && a1.prim === before.prim && a1.assigned === before.assigned && a1.linkHash === before.linkHash && a1.primHash === before.primHash, JSON.stringify([before.products, a1.products, before.links, a1.links]));
+const txt = await p.locator('[data-testid="zip-result"]').innerText(); console.log('  summary:', txt.replace(/\s+/g, ' ').slice(0, 200));
+check('[import] summary says 40 imported, 0 duplicates, other files ignored', /40 photo/.test(txt) && /0 duplicate/.test(txt) && /ignored/i.test(txt), txt.replace(/\s+/g, ' '));
+await p.screenshot({ path: `${out}/en-after-import-390.png` });
+await upload('en');
+const a2 = snap();
+const txt2 = await p.locator('[data-testid="zip-result"]').innerText();
+check('[duplicates] importing the same ZIP again adds nothing (40 skipped)', a2.media === a1.media && a2.rev === a1.rev && /0 photo/.test(txt2) && /40 duplicate/.test(txt2), txt2.replace(/\s+/g, ' ').slice(0, 160));
+await p.screenshot({ path: `${out}/en-duplicates-390.png` });
+// assign: pick one photo with a suggestion, choose its product, assign as PRIMARY; another as GALLERY
+const row = q("select r.id rid, r.original_filename fn, r.candidates c from catalog_media_reviews r where r.reason like '%Wadi-Missing%' and status='pending' order by r.id limit 2");
+await p.goto(base + `/admin/photo-review?focus=${row[0].rid}`, { waitUntil: 'networkidle' }); await p.waitForTimeout(1000);
+const sug = await p.locator('[data-testid="suggestion"]').first().innerText().catch(() => '');
+check('[assign] the file name gives a visible product suggestion (nothing assigned)', /Suggested product/.test(sug), sug);
+const slug = JSON.parse(row[0].c)[0]; const pid = q(`select id from products where slug='${slug}'`)[0].id;
+const primBefore = q(`select ifnull(primary_image_id,0) p from products where id=${pid}`)[0].p, linksBefore = q(`select count(*) c from product_images where product_id=${pid}`)[0].c;
+await p.getByRole('button', { name: 'Select this product' }).first().click(); await p.waitForTimeout(1200);
+// 1) assign as GALLERY (Primary unticked): the product's primary must stay as it was
+await p.getByRole('button', { name: 'Assign this photo' }).first().click(); await p.waitForTimeout(1800);
+const g = q(`select count(*) c from product_images where product_id=${pid} and media_id=(select media_id from catalog_media_reviews where id=${row[0].rid})`)[0].c;
+const primAfterG = q(`select ifnull(primary_image_id,0) p from products where id=${pid}`)[0].p;
+check('[assign] gallery assignment links the photo and leaves the primary untouched', g === 1 && primAfterG === primBefore, `${g} ${primBefore} -> ${primAfterG}`);
+// 3) Arabic: switch the panel language through the strip, open the upload dialog and the queue
+await p.goto(base + '/admin/photo-review', { waitUntil: 'networkidle' }); await p.click('.wam-lang[value=ar]'); await p.waitForLoadState('networkidle'); await p.waitForTimeout(900);
+await p.screenshot({ path: `${out}/ar-queue-390.png` });
+await p.getByRole('button', { name: 'رفع ملف ZIP للصور' }).click(); await p.waitForTimeout(900); await p.screenshot({ path: `${out}/ar-zip-modal-390.png` });
+check('[arabic] the upload action and dialog are translated and RTL', await p.evaluate(() => document.documentElement.dir === 'rtl' && /ZIP/.test(document.querySelector('.fi-modal-window')?.innerText || '')));
+const fin = snap();
+check('[final] still no product created and no primary changed after all steps', fin.products === before.products && fin.primHash === before.primHash, '');
+await b.close(); fs.writeFileSync(`${out}/results.json`, JSON.stringify(res, null, 1)); console.log(res.filter(r => !r.ok).length ? 'SOME FAILED' : 'ALL PASSED'); process.exit(0);

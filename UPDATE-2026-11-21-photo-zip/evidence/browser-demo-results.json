@@ -1,0 +1,47 @@
+[
+ {
+  "name": "[import] 40 photos from the real ZIP registered in the media library",
+  "ok": true,
+  "detail": "129 -> 169"
+ },
+ {
+  "name": "[import] 40 queued as unassigned (pending)",
+  "ok": true,
+  "detail": "83 -> 123"
+ },
+ {
+  "name": "[import] no product created, no product photo link added/changed, no primary changed, no assignment changed",
+  "ok": true,
+  "detail": "[66,66,41,41]"
+ },
+ {
+  "name": "[import] summary says 40 imported, 0 duplicates, other files ignored",
+  "ok": true,
+  "detail": "ZIP import: 7cc6e96c-Wadi-Missing-Products-40-Realistic-WebP.zip Dismiss Imported 40 photo(s) to review · 0 duplicate(s) skipped · 0 rejected. 4 other file(s) in the ZIP were ignored."
+ },
+ {
+  "name": "[duplicates] importing the same ZIP again adds nothing (40 skipped)",
+  "ok": true,
+  "detail": "ZIP import: 7cc6e96c-Wadi-Missing-Products-40-Realistic-WebP.zip Dismiss Imported 0 photo(s) to review · 40 duplicate(s) skipped · 0 rejected. 4 other file(s) i"
+ },
+ {
+  "name": "[assign] the file name gives a visible product suggestion (nothing assigned)",
+  "ok": true,
+  "detail": "Suggested product (from the file name): AKS Green Olives – Halves Select this product"
+ },
+ {
+  "name": "[assign] gallery assignment links the photo and leaves the primary untouched",
+  "ok": true,
+  "detail": "1 0 -> 0"
+ },
+ {
+  "name": "[arabic] the upload action and dialog are translated and RTL",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[final] still no product created and no primary changed after all steps",
+  "ok": true,
+  "detail": ""
+ }
+]
