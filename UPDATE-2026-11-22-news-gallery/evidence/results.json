@@ -1,0 +1,62 @@
+[
+ {
+  "name": "[admin] period fields (From / To) are visible and filled on an existing exhibition",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[admin] 4 photos and 1 video saved to the gallery of the exhibition",
+  "ok": true,
+  "detail": "[{\"kind\":\"photo\",\"c\":4},{\"kind\":\"video\",\"c\":1}]"
+ },
+ {
+  "name": "[admin] the four photos are saved in the order added",
+  "ok": true,
+  "detail": "news-1.jpg,news-2.jpg,news-3.jpg,news-4.jpg"
+ },
+ {
+  "name": "[admin] the saved exhibition period (start and end) survives a save of the gallery",
+  "ok": true,
+  "detail": "{\"s\":\"2026-10-17 00:00:00\",\"e\":\"2026-10-21 00:00:00\"}"
+ },
+ {
+  "name": "[public] 4 photos in the grid and 1 video player",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[public] clicking a photo opens the lightbox (modal dialog) with the full image",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[public] arrow key moves to the next photo",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[public] Escape closes the lightbox and focus returns to the thumbnail",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[public] the period is shown as a range",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[public] one H1 only",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[phone en] gallery fits the screen without horizontal overflow",
+  "ok": true,
+  "detail": ""
+ },
+ {
+  "name": "[phone ar] gallery fits the screen without horizontal overflow",
+  "ok": true,
+  "detail": ""
+ }
+]
