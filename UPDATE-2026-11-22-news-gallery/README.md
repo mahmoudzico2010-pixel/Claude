@@ -21,7 +21,11 @@ Rollback: restore the backup of the changed files; the new table can stay (harml
 * The structured data lists the event dates; gallery images are not added to the JSON-LD.
 * Tested in a Chromium copy with demo data (SQLite); MySQL 5.7 — NOT RUN (the migration uses plain columns).
 
-## Thumbnails: fitted and animated (added)
-* **Fitted:** each thumbnail shows the **whole photo** (`object-fit: contain`) on a blurred, enlarged copy of the same picture, so portrait and landscape shots fit one frame **without cropping heads or text**. The blurred copy re-uses the thumbnail already downloaded (no extra request).
-* **Animated:** a shimmer placeholder while a photo loads, the picture fades/zooms in, tiles **reveal one after another** as the gallery scrolls into view, a gentle zoom + expand icon on hover/focus, and the lightbox fades in with a **slide/fade between photos** (direction follows RTL).
-* **Accessible / safe:** with *reduce motion* set, or without JavaScript, every tile is visible immediately and nothing animates; the animation only runs when the script is active.
+## Public page: animated slideshow + manual viewer (latest)
+The photos of a news item / exhibition are now an **animated slideshow** under the article:
+* **Auto-advances** every 5 s with a cross-fade and a slow zoom; a thin progress bar shows the time left. Each photo is shown **whole** (never cropped) over a blurred copy of itself.
+* **Pauses** while the mouse or keyboard focus is on it, when the tab is hidden, and while a photo is open; a **pause / play button**, **previous / next arrows**, a **thumbnail strip** (click a thumbnail to jump) and **swipe** on phones let the visitor move manually. Arrow keys work too (direction follows RTL).
+* **Press a photo → full-size viewer** to browse **manually**: previous / next buttons, ← → keys, swipe, Esc to close; photos slide/fade between each other. Closing returns to the slideshow on the photo the visitor ended on, and autoplay resumes.
+* **Accessible / safe:** with *reduce motion* the slideshow does **not** auto-advance (manual only, play button available); without JavaScript the photos are a swipeable scroll-snap strip with nothing hidden; carousel semantics and translated labels in all 10 languages; the counter stays left-to-right in Arabic.
+* Tested in Chromium on a copy: auto-advance, pause on hover, pause button, resume, arrows, thumbnails, viewer open/next/previous/close, focus return, reduced motion, no-JS, phone EN + AR without overflow — all passed.
+(This replaces the earlier thumbnail grid; the grid description above is superseded.)
